@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+
+@layer base {
+
+  @font-face {
+    font-family: "iranSans";
+    src: url('../src/font/IRANSansWeb.woff2') format('woff2');
+    font-display: swap;
+
+
+  }
+
+  body{
+    font-family: iransans;
+    background: rgba(249, 252, 253, 1);
+  }
+
+
+  input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.tab-btn.active{
+    background-color: rgba(240, 195, 124, 1);
+}
+
+}
+
+@layer components {
+
+  body {
+    /* @apply font-iranSans; */
+  }
+
+  .account-btn{
+    @apply gap-2 h-11 flex items-center justify-center content-center border-sky-500 border rounded-lg p-4
+  }
+
+  .shopping-cart{
+    @apply  rounded-lg flex items-center justify-center h-11 w-11 bg-sky-500
+  }
+  .search-btn{
+    @apply rounded-lg flex items-center justify-center h-11 w-11 bg-amber-50
+  }
+
+  .container{
+    @apply m-auto
+  }
+
+  .discunt-btn{
+    @apply rounded-lg flex items-center justify-center h-11 w-max px-4 text-amber-500 gap-2 bg-amber-50
+  }
+  .has-sub-menu {
+    @apply hover:font-semibold relative  hover:text-sky-500 hover:fill-sky-500 h-10
+  }
+
+  .menu{
+    @apply hover:font-semibold relative  hover:text-sky-500 hover:fill-sky-500 h-20 flex items-center
+
+  }
+  .sub-menu{
+    @apply absolute top-16 hidden bg-white shadow-lg shadow-gray-300 rounded-b-2xl mt-2 w-max
+  }
+
+  /* .color-main{
+    color: rgba(32, 154, 255, 1);
+  }
+  .color-primary{
+    color: rgba(255, 156, 0, 1);
+  } */
+
+
+
+  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    @apply text-white flex items-center justify-center !text-sm bg-gray-300 rounded-full w-8 h-7
+  }
+  .swiper-slide-thumb-active{
+    @apply !border-amber-500 border-2 rounded-xl
+  }
+
+  .swiper-slide{
+    @apply border border-gray-300 rounded-xl
+  }
+
+  .thumbs_movie .swiper-slide:nth-child(4){
+    @apply blur-xs border-0
+  }
+
+  
+
+
+}
+
+
+@layer utilities {
+
+
+
+
+
+  @media(min-width:640px) {}
+
+
+   @media(max-width:640px) {
+    .container{
+        background-color: red;
+            max-width: 95%;
+
+    }
+   }
+
+
+  @media (max-width:976px) {}
+
+
+  @media (max-width:1024px) {
+
+
+  }
+
+  @media (min-width:1280px) {
+    .container{
+        @apply max-w-[1300px] m-auto
+    }
+  }
+
+
+  @media (max-width:992px) {
+    .container{
+        /* @apply max-w-[986px] m-auto */
+    }
+  }
+
+
+
+  @media ((max-width: 1024px)) and (min-width: 768px) {
+  .container {
+    /* background-color: red; */
+    /* font-size: 20px; */
+    max-width: 95%;
+  }
+}
+
+
+  @media(max-width:640px) {}
+
+  @media (max-width:380px) {}
+
+
+
+
+}
