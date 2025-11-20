@@ -352,4 +352,26 @@ document.querySelectorAll(".close-modal").forEach(btn => {
 
 // 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("openBtn");
+  const closeBtn = document.getElementById("closeBtn");
+  const box = document.getElementById("bottomBox");
+
+  openBtn.addEventListener("click", () => {
+    box.classList.remove("hidden");
+    // حرکت به بالا
+    box.classList.remove("translate-y-full");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    // حرکت به پایین
+    box.classList.add("translate-y-full");
+    // بعد از پایان انیمیشن دوباره hidden بشه
+    setTimeout(() => {
+      box.classList.add("hidden");
+    }, 300); // مدت زمان transition
+  });
+});
+
 // 
