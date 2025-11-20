@@ -38,12 +38,11 @@
     background: #fff;
   }
 
-}
+
 
 .fixed-tabs .container{
   transition: all 0.4s;
-  /* padding-right: 40px !important;
-  padding-left: 40px !important; */
+
 
 }
 
@@ -59,44 +58,46 @@
   background-color: #212f49e6;
   filter: blur(1);
 }
-
-
-
-.radio-btn{
-  @apply w-4 h-4 rounded-full border-2 outline-2 outline-amber-500 border-white peer-checked:border-white peer-checked:outline-amber-500 peer-checked:bg-amber-500
+.scroll-hidden {
+  overflow: auto;     
+  scrollbar-width: none;   
+  -ms-overflow-style: none; 
 }
 
-.star-rating{
-  @apply cursor-pointer text-gray-400 peer-checked:text-yellow-400
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+
 }
 
 
-#comment-list  ol > li{
+  .overflow-scroll::-webkit-scrollbar {
+    display: none;
+  }
 
-  @apply bg-gray-50 p-4 rounded-lg
+
+
+  @keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.comment-author{
-  @apply text-2xl font-medium 
+.modal-mobile {
+  animation: slideUp 0.3s ease-out forwards;
 }
 
-.comment-author-role{
-  @apply text-lg text-sky-500
-}
 
-.comment-meta{
-  @apply  flex items-center justify-between
-}
-.comment-content{ 
-  @apply text-gray-900 p-4 py-2 rounded-lg text-right bg-white
-}
 
-.comment-footer{
-  @apply flex items-center justify-between
-}
 
-.comment-reply{
-  @apply flex gap-2 text-sky-500 fill-sky-500
+
+
+
+
 }
 
 @layer components {
@@ -224,12 +225,64 @@
     @apply flex items-center w-fit p-3 h-9 rounded-full gap-2 text-black bg-sky-200 my-4
   }
 
+
+
+
+  .radio-btn{
+  @apply w-4 h-4 rounded-full border-2 outline-2 outline-amber-500 border-white peer-checked:border-white peer-checked:outline-amber-500 peer-checked:bg-amber-500
+}
+
+.star-rating{
+  @apply cursor-pointer text-gray-400 peer-checked:text-yellow-400
+}
+
+
+#comment-list  ol > li{
+
+  @apply bg-gray-50 p-4 rounded-lg
+}
+
+.comment-author{
+  @apply text-2xl font-medium 
+}
+
+.comment-author-role{
+  @apply text-lg text-sky-500
+}
+
+.comment-meta{
+  @apply  flex items-center justify-between
+}
+.comment-content{ 
+  @apply text-gray-900 p-4 py-2 rounded-lg text-right bg-white
+}
+
+.comment-footer{
+  @apply flex items-center justify-between
+}
+
+.comment-reply{
+  @apply flex gap-2 text-sky-500 fill-sky-500
+}
+
+
+
+
 }
 
 
 @layer utilities {
 
 
+
+
+    .scrollbar-hide {
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE/Edge legacy */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;                /* Chrome/Safari */
+  }
 
 
 
@@ -294,3 +347,4 @@
 
 
 }
+
