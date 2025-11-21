@@ -312,17 +312,24 @@ tabs.forEach((tab, index) => {
 const accordionBtns = document.querySelectorAll(".accordion-btn");
 
 accordionBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        // همه آیتم‌ها بسته بشن
-        document.querySelectorAll(".accordion-content").forEach(c => c.classList.add("hidden"));
-        document.querySelectorAll(".accordion-btn .icon").forEach(i => i.classList.remove("rotate-180"));
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling;
+    const icon = btn.querySelector(".icon");
 
-        // آیتم کلیک‌شده باز بشه
-        const content = btn.nextElementSibling;
-        const icon = btn.querySelector(".icon");
-        content.classList.remove("hidden");
-        icon.classList.add("rotate-180"); // چرخش آیکون
-    });
+    // اگر همین آیتم باز بود → ببند
+    if (!content.classList.contains("hidden")) {
+      content.classList.add("hidden");
+      icon.classList.remove("rotate-180");
+    } else {
+      // اول همه رو ببند
+      document.querySelectorAll(".accordion-content").forEach(c => c.classList.add("hidden"));
+      document.querySelectorAll(".accordion-btn .icon").forEach(i => i.classList.remove("rotate-180"));
+
+      // بعد آیتم کلیک‌شده رو باز کن
+      content.classList.remove("hidden");
+      icon.classList.add("rotate-180");
+    }
+  });
 });
 
 

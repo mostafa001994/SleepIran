@@ -239,7 +239,7 @@
 
   
   .accordion-content{
-    @apply  p-4  text-gray-600 text-right
+    @apply  p-4  text-gray-600 text-right flex flex-col
   }
 
   .accordion-more-btn{
