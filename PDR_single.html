@@ -647,21 +647,21 @@
                         </svg>
                     </button>
 
-                    <a href="#">
+                    <button id="lgonBtn" class="open-modal" data-target="loginRegister">
                         <svg class="w-10 h-10">
                             <use xlink:href="#user-rounded"></use>
                         </svg>
-                    </a>
+                    </button>
                 </div>
 
-                <a href="">
+                <a href="#">
                     <img src="./assets/images/logo.png" class="h-10" alt="">
                 </a>
 
 
 
                 <!-- منوی کناری  -->
-                <div id="mobileMenu" class="fixed z-50 overflow-scroll top-0 right-0 h-full w-9/12 pb-14 bg-white shadow-lg 
+                <div id="mobileMenu" class="fixed z-50 overflow-scroll top-0 right-0 h-full w-9/12 bg-white shadow-lg 
             transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
                     <div class="p-4 bg-gray-50">
 
@@ -672,7 +672,7 @@
 
                             <button id="closeMenu">
 
-                                <svg class="w-6 h-6">
+                                <svg class="w-6 h-6 text-sky-500">
                                     <use xlink:href="#close-rounded"></use>
                                 </svg>
 
@@ -904,14 +904,165 @@
                 </div>
                 <!-- -->
 
+
+                <!--  دسته بندی های موبایل  -->
+                <div id="mobileCat" class="fixed z-50 overflow-scroll top-0 right-0 h-full w-9/12 bg-white shadow-lg 
+            transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+                    <div class="p-4 bg-gray-50">
+
+                        <div class="my-4 flex justify-between items-center">
+                            <h3 class="text-lg font-medium">
+                                لیست محصولات
+                            </h3>
+
+                            <button id="closeCat">
+
+                                <svg class="w-6 h-6 text-sky-500">
+                                    <use xlink:href="#close-rounded"></use>
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+                        <nav class="py-4 text-[#2F3136] fill-[#2F3136]">
+                            <ul class="space-y-5 text-right">
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block">تشک رویا</a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="submenu hidden mt-2 text-sm space-y-4 p-2">
+                                        <li><a href="#item1" class="block">تشک رویا1</a></li>
+                                        <li class="relative">
+                                            <div class="flex items-center justify-between">
+                                                <a href="#sub" class="block">تشک رویا2</a>
+                                                <button class="toggle-btn ">
+                                                    <svg class="w-4 h-4 rotate-90">
+                                                        <use xlink:href="#chevron-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul class="submenu hidden mt-2 space-y-2 p-2">
+                                                <li><a href="#sub1" class="block">تشک رویا2 ۱</a></li>
+                                                <li><a href="#sub2" class="block">تشک رویا2 ۲</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#item2" class="block">تشک رویا3</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block">تشک رویا</a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="submenu hidden mt-2 text-sm space-y-4 p-2">
+                                        <li><a href="#item1" class="block">تشک رویا1</a></li>
+                                        <li class="relative">
+                                            <div class="flex items-center justify-between">
+                                                <a href="#sub" class="block">تشک رویا2</a>
+                                                <button class="toggle-btn ">
+                                                    <svg class="w-4 h-4 rotate-90">
+                                                        <use xlink:href="#chevron-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul class="submenu hidden mt-2 space-y-2 p-2">
+                                                <li><a href="#sub1" class="block">تشک رویا2 ۱</a></li>
+                                                <li><a href="#sub2" class="block">تشک رویا2 ۲</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#item2" class="block">تشک رویا3</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block">تشک رویا</a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="submenu hidden mt-2 text-sm space-y-4 p-2">
+                                        <li><a href="#item1" class="block">تشک رویا1</a></li>
+                                        <li class="relative">
+                                            <div class="flex items-center justify-between">
+                                                <a href="#sub" class="block">تشک رویا2</a>
+                                                <button class="toggle-btn ">
+                                                    <svg class="w-4 h-4 rotate-90">
+                                                        <use xlink:href="#chevron-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul class="submenu hidden mt-2 space-y-2 p-2">
+                                                <li><a href="#sub1" class="block">تشک رویا2 ۱</a></li>
+                                                <li><a href="#sub2" class="block">تشک رویا2 ۲</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#item2" class="block">تشک رویا3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block">تشک رویا</a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="submenu hidden mt-2 text-sm space-y-4 p-2">
+                                        <li><a href="#item1" class="block">تشک رویا1</a></li>
+                                        <li class="relative">
+                                            <div class="flex items-center justify-between">
+                                                <a href="#sub" class="block">تشک رویا2</a>
+                                                <button class="toggle-btn ">
+                                                    <svg class="w-4 h-4 rotate-90">
+                                                        <use xlink:href="#chevron-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul class="submenu hidden mt-2 space-y-2 p-2">
+                                                <li><a href="#sub1" class="block">تشک رویا2 ۱</a></li>
+                                                <li><a href="#sub2" class="block">تشک رویا2 ۲</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#item2" class="block">تشک رویا3</a></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </nav>
+
+                    </div>
+
+
+
+
+                </div>
+                <!-- -->
+
+
                 <!-- سبد خرید موبایل -->
-                <div id="mobileCart" class="fixed z-50 overflow-scroll w-9/12 top-0 right-0 h-full pb-14 bg-white shadow-lg 
+                <div id="mobileCart" class="fixed z-50 overflow-scroll w-9/12 top-0 right-0 h-full pb-6 bg-white shadow-lg 
             transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
                     <div class="p-4 ">
 
                         <div class="my-4 flex justify-between items-center">
                             <h3 class="text-lg font-medium">
-                                 سبد خرید
+                                سبد خرید
                             </h3>
 
                             <button id="closeCart">
@@ -923,100 +1074,129 @@
                         </div>
 
 
-                        <section class="flex gap-3 flex-col">
 
-                                                    <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
-                            <img src="./src/img/image 44.png" class="w-16 h-16 rounded">
+                        <section class="relative h-full">
 
- 
-                            <div class="w-full flex flex-col gap-3">
-                                <div class="flex justify-between w-full  items-start">
-                                <h2 class="text-sm">
-                                    تشک تک نفره خوشخواب
-                                </h2>
 
-                                <a href="#">
-                                    <svg class="w-4 h-4 text-red-600">
-                                    <use xlink:href="#close-rounded"></use>
-                                </svg>
-                                </a>
+                            <div class="flex gap-3 flex-col">
+                                <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
+                                    <img src="./src/img/image 44.png" class="w-16 h-16 rounded">
+
+
+                                    <div class="w-full flex flex-col gap-3">
+                                        <div class="flex justify-between w-full  items-start">
+                                            <h2 class="text-sm">
+                                                تشک تک نفره خوشخواب
+                                            </h2>
+
+                                            <a href="#">
+                                                <svg class="w-4 h-4 text-red-600">
+                                                    <use xlink:href="#close-rounded"></use>
+                                                </svg>
+                                            </a>
+
+                                        </div>
+
+                                        <div class="flex justify-between w-full items-end">
+                                            <ul class="text-gray-500 text-[10px]">
+                                                <li>نوع تشک: طبی فنری</li>
+                                                <li>نوع تشک: طبی فنری</li>
+                                            </ul>
+                                            <span class="text-xs">
+                                                تعداد:2
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
+                                    <img src="./src/img/image 44.png" class="w-16 h-16 rounded">
+
+
+                                    <div class="w-full flex flex-col gap-3">
+                                        <div class="flex justify-between w-full  items-start">
+                                            <h2 class="text-sm">
+                                                تشک تک نفره خوشخواب
+                                            </h2>
+
+                                            <a href="#">
+                                                <svg class="w-4 h-4 text-red-600">
+                                                    <use xlink:href="#close-rounded"></use>
+                                                </svg>
+                                            </a>
+
+                                        </div>
+
+                                        <div class="flex justify-between w-full items-end">
+                                            <ul class="text-gray-500 text-[10px]">
+                                                <li>نوع تشک: طبی فنری</li>
+                                                <li>نوع تشک: طبی فنری</li>
+                                            </ul>
+                                            <span class="text-xs">
+                                                تعداد:2
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
+                                    <img src="./src/img/image 44.png" class="w-16 h-16 rounded">
+
+
+                                    <div class="w-full flex flex-col gap-3">
+                                        <div class="flex justify-between w-full  items-start">
+                                            <h2 class="text-sm">
+                                                تشک تک نفره خوشخواب
+                                            </h2>
+
+                                            <a href="#">
+                                                <svg class="w-4 h-4 text-red-600">
+                                                    <use xlink:href="#close-rounded"></use>
+                                                </svg>
+                                            </a>
+
+                                        </div>
+
+                                        <div class="flex justify-between w-full items-end">
+                                            <ul class="text-gray-500 text-[10px]">
+                                                <li>نوع تشک: طبی فنری</li>
+                                                <li>نوع تشک: طبی فنری</li>
+                                            </ul>
+                                            <span class="text-xs">
+                                                تعداد:2
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
 
                             </div>
 
-                            <div class="flex justify-between w-full items-end">
-                                <ul class="text-gray-500 text-[10px]">
-                                    <li>نوع تشک: طبی فنری</li>
-                                    <li>نوع تشک: طبی فنری</li>
-                                </ul>
-                                <span class="text-xs">
-                                    تعداد:2
-                                </span>
-                            </div>
-                            </div>
+                            <div class="cart-footer">
 
-                        </div>
 
-                         <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
-                            <img src="./src/img/image 44.png" class="w-16 h-16 rounded">
+                                <div class="cart-total">
+                                    <span class="font-semibold ">
+                                        جمع کل:
+                                    </span>
 
- 
-                            <div class="w-full flex flex-col gap-3">
-                                <div class="flex justify-between w-full  items-start">
-                                <h2 class="text-sm">
-                                    تشک تک نفره خوشخواب
-                                </h2>
+                                    <span class="font-semibold">
+                                        21,860,000
+                                        <span class="text-xs">
+                                            تومان
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="cart-btns">
+                                    <a href="#">سبد خرید</a>
+                                    <a href="#">سبد خرید</a>
 
-                                <a href="#">
-                                    <svg class="w-4 h-4 text-red-600">
-                                    <use xlink:href="#close-rounded"></use>
-                                </svg>
-                                </a>
+                                </div>
 
                             </div>
 
-                            <div class="flex justify-between w-full items-end">
-                                <ul class="text-gray-500 text-[10px]">
-                                    <li>نوع تشک: طبی فنری</li>
-                                    <li>نوع تشک: طبی فنری</li>
-                                </ul>
-                                <span class="text-xs">
-                                    تعداد:2
-                                </span>
-                            </div>
-                            </div>
-
-                        </div>
-
-                         <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
-                            <img src="./src/img/image 44.png" class="w-16 h-16 rounded">
-
- 
-                            <div class="w-full flex flex-col gap-3">
-                                <div class="flex justify-between w-full  items-start">
-                                <h2 class="text-sm">
-                                    تشک تک نفره خوشخواب
-                                </h2>
-
-                                <a href="#">
-                                    <svg class="w-4 h-4 text-red-600">
-                                    <use xlink:href="#close-rounded"></use>
-                                </svg>
-                                </a>
-
-                            </div>
-
-                            <div class="flex justify-between w-full items-end">
-                                <ul class="text-gray-500 text-[10px]">
-                                    <li>نوع تشک: طبی فنری</li>
-                                    <li>نوع تشک: طبی فنری</li>
-                                </ul>
-                                <span class="text-xs">
-                                    تعداد:2
-                                </span>
-                            </div>
-                            </div>
-
-                        </div>
                         </section>
 
                     </div>
@@ -3665,7 +3845,7 @@
                     <span class="text-[10px]">جستوجو</span>
                 </li>
 
-                <li>
+                <li id="btnCat">
                     <svg class="w-6 h-6">
                         <use xlink:href="#category"></use>
                     </svg>
@@ -3687,7 +3867,7 @@
                         <use xlink:href="#footer-cart"></use>
                     </svg>
 
-                    
+
                     <span class="text-[10px]">انتخاب شده ها </span>
                 </li>
 
@@ -3829,16 +4009,75 @@
 
 
 
+    <!-- loginRegister modal -->
+    <div id="loginRegister" class="modal z-30 fixed inset-0  hidden items-center justify-center">
+        <div class="bg-white p-6 shadow-lg relative rounded-xl overflow-y-auto ">
+
+
+            <button id="closeBtn"
+                class="close-modal w-12 h-12 justify-center rounded-full bg-white fixed top-[121px] right-0 left-0 flex items-center m-auto">
+                <span class="absolute top-2.5">
+                    <svg class="w-5 h-5 text-sky-500">
+                        <use xlink:href="#close-rounded"></use>
+                    </svg>
+                </span>
+            </button>
+
+            <h3 class="text-xl p-4 font-bold">
+                ورود | ثبت نام
+            </h3>
+
+            <form class="flex flex-col gap-2 font-medium">
+
+                <div class="flex flex-col p-2 text-right">
+                    <input type="text" class="rounded-lg px-2 text-left bg-gray-50 h-11" id="name">
+                </div>
+
+                <div class="flex items-center justify-between ">
+
+                    <div class="flex items-center gap-1">
+                        <input id="offers" type="checkbox">
+                        <label for="offers" class="text-[8px] text-gray-400">
+                            منو از تخفیفات مطلع کن
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        class="text-xs bg-sky-500 flex gap-3 items-center rounded-full h-8 px-4 text-center text-white">
+                        ارسال کد
+                        <svg class="w-5 h-5 text-white fill-white">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </button>
+                </div>
+
+
+
+            </form>
+
+
+            </button>
+        </div>
+    </div>
+    <!-- reserve counseling modal -->
+
+
+
+
     <!--  -->
 
 
-    <div id="bottomBox" class="fixed bottom-0 left-0 right-0 bg-white
+    <div id="bottomBox" class="fixed bottom-0 left-0 right-0 z-20 bg-white
             translate-y-full transition-transform rounded-xl duration-300 ease-out hidden">
 
         <button id="closeBtn"
             class=" w-16 h-16 justify-center rounded-full bg-white absolute right-0 left-0 -top-7 flex items-center m-auto">
             <span class="absolute top-2.5">
-                ✕
+                <svg class="w-5 h-5 text-sky-500">
+                    <use xlink:href="#close-rounded"></use>
+                </svg>
             </span>
         </button>
         <ul class="flex flex-col gap-4 p-4 mt-7">

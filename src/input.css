@@ -336,7 +336,19 @@ footer .e-namad img{
     @apply inline-flex flex-col gap-2 items-center justify-center bg-white rounded p-1 relative
   }
 
+  .cart-footer{
+    @apply fixed bottom-0 w-[68%] border-t border-t-gray-200
+  }
+  .cart-btns{
+    @apply flex justify-between items-center mb-4 text-white text-sm
+  }
+  .cart-footer a{
+    @apply bg-[#6ABCFF] h-8 px-4 rounded flex items-center justify-center min-w-3/7
+  }
 
+  .cart-total{
+    @apply flex items-center justify-between py-2
+  }
 
 }
 

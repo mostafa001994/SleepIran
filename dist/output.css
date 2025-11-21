@@ -20,6 +20,7 @@
     --color-sky-800: oklch(44.3% 0.11 240.79);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -262,6 +263,9 @@
   .top-52 {
     top: calc(var(--spacing) * 52);
   }
+  .top-\[121px\] {
+    top: 121px;
+  }
   .top-\[200px\] {
     top: 200px;
   }
@@ -480,6 +484,9 @@
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
+  }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
   }
   .w-14 {
     width: calc(var(--spacing) * 14);
@@ -835,11 +842,11 @@
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
   }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
+  }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
-  }
-  .pb-14 {
-    padding-bottom: calc(var(--spacing) * 14);
   }
   .text-center {
     text-align: center;
@@ -1931,6 +1938,39 @@
     border-radius: 0.25rem;
     background-color: var(--color-white);
     padding: calc(var(--spacing) * 1);
+  }
+  .cart-footer {
+    position: fixed;
+    bottom: calc(var(--spacing) * 0);
+    width: 68%;
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+    border-top-color: var(--color-gray-200);
+  }
+  .cart-btns {
+    margin-bottom: calc(var(--spacing) * 4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    color: var(--color-white);
+  }
+  .cart-footer a {
+    display: flex;
+    height: calc(var(--spacing) * 8);
+    min-width: calc(3/7 * 100%);
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    background-color: #6ABCFF;
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .cart-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: calc(var(--spacing) * 2);
   }
 }
 @layer utilities {

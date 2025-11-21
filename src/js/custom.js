@@ -464,8 +464,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //mobile cart 
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const btnCart = document.getElementById("btnCart");
     const mobileCart = document.getElementById("mobileCart");
@@ -501,9 +499,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-
-
-
 
 // 
 
@@ -542,3 +537,47 @@ document.querySelectorAll(".toggle-btn").forEach(btn => {
         }
     });
 });
+
+
+
+// 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btnCat = document.getElementById("btnCat");
+    const mobileCat = document.getElementById("mobileCat");
+    const closeCat = document.getElementById("closeCat");
+    const backdrop = document.getElementById("backdrop");
+
+
+  // باز کردن منو
+  btnCat.addEventListener("click", () => {
+    mobileCat.classList.remove("translate-x-full");
+    backdrop.classList.remove("hidden");
+});
+
+  // بستن منو با دکمه بستن
+  closeCat.addEventListener("click", () => {
+    mobileCat.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");;
+  });
+
+  // بستن منو با کلیک بیرون
+  document.addEventListener("click", (e) => {
+    const isClickInsideMenu = mobileCat.contains(e.target) || btnCat.contains(e.target);
+    if (!isClickInsideMenu && !mobileCat.classList.contains("translate-x-full")) {
+      mobileCat.classList.add("translate-x-full");
+      backdrop.classList.add("hidden");
+    }
+  });
+
+      // بستن منو با کلیک روی بک‌دراپ
+  backdrop.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
+  });
+
+});
+
+
+// 
