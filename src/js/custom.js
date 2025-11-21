@@ -374,4 +374,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+
+
+
+
+
+
+  window.addEventListener("scroll", () => {
+  let current = "";
+  document.querySelectorAll("section").forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top <= 100 && rect.bottom >= 100) {
+      current = sec.id;
+    }
+  });
+
+  document.querySelectorAll(".fixed-tabs a").forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+
+
 // 

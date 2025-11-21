@@ -101,6 +101,9 @@
 
 
 
+
+
+
 }
 
 @layer components {
@@ -191,6 +194,14 @@
     @apply flex justify-center md:gap-3 gap-1.5 text-center  items-center 
   }
 
+  .quantity{
+    @apply border border-sky-500 md:rounded-lg rounded md:w-[54px] w-7 h-7 md:h-[54px] text-center
+  }
+
+  .quantity-number{
+    @apply px-3 py-1 md:h-[54px] h-7 w-5 md:w-11 border border-sky-500 text-sky-500 md:rounded-lg rounded flex items-center justify-center
+  }
+
     .fixed-tabs  {
     @apply z-20 bg-gray-50 p-4 top-36 rounded-xl transition-opacity left-0 right-0
   }
@@ -211,6 +222,13 @@
     @apply w-full py-2
   }
 
+
+  .fixed-tabs a.active{
+  
+    @apply text-sky-500 font-bold
+  }
+
+
   .accordion-btn{
     @apply  w-full flex justify-between items-center px-4 py-2 font-medium h-[52px]
   }
@@ -229,7 +247,19 @@
   }
 
 
+  .specifications-feature{
+    @apply bg-white h-10 flex items-center md:p-4 p-2 md:rounded-xl rounded text-right font-medium w-1/3 md:w-1/4
+  }
 
+  
+  .specifications-value{
+    @apply bg-white h-10 flex items-center md:p-4 p-2 md:rounded-xl rounded text-right font-medium w-2/3 md:w-3/4
+  }
+
+
+  .counseling-btn{
+    @apply text-sky-800 bg-sky-100 hover:bg-sky-200 text-center m-auto mt-4 h-[46px] p-4 rounded-lg text-xl flex items-center w-fit gap-3
+  }
 
   .radio-btn{
   @apply w-4 h-4 rounded-full border-2 outline-2 outline-amber-500 border-white peer-checked:border-white peer-checked:outline-amber-500 peer-checked:bg-amber-500
@@ -239,6 +269,11 @@
   @apply cursor-pointer text-gray-400 peer-checked:text-yellow-400
 }
 
+
+
+.comment-support-btn{
+  @apply  text-sky-800 bg-sky-100 h-[46px] p-4 rounded-lg text-xl flex items-center w-fit gap-3
+}
 
 #comment-list  ol > li{
 
@@ -271,6 +306,31 @@
 
 
 
+
+
+
+
+
+
+
+
+footer .e-namad > *{
+
+  @apply p-2 bg-white block
+
+}
+
+
+
+footer .e-namad img{
+
+  @apply w-40 h-40 block
+
+}
+
+
+
+
 }
 
 
@@ -295,7 +355,7 @@
   @media(max-width:640px) {
     .container {
       /* background-color: red; */
-      max-width: 95%;
+      max-width: 90%;
 
 
     }
