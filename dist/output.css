@@ -467,6 +467,9 @@
   .w-9 {
     width: calc(var(--spacing) * 9);
   }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
   .w-14 {
     width: calc(var(--spacing) * 14);
   }
@@ -976,13 +979,6 @@
       }
     }
   }
-  .hover\:fill-black {
-    &:hover {
-      @media (hover: hover) {
-        fill: var(--color-black);
-      }
-    }
-  }
   .hover\:text-gray-900 {
     &:hover {
       @media (hover: hover) {
@@ -1227,6 +1223,16 @@
       padding-inline: calc(var(--spacing) * 6);
     }
   }
+  .md\:pt-5 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:pb-3 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 3);
+    }
+  }
   .md\:text-right {
     @media (width >= 48rem) {
       text-align: right;
@@ -1352,15 +1358,6 @@
     @media (width >= 64rem) {
       font-size: var(--text-base);
       line-height: var(--tw-leading, var(--text-base--line-height));
-    }
-  }
-  .dark\:hover\:fill-white {
-    @media (prefers-color-scheme: dark) {
-      &:hover {
-        @media (hover: hover) {
-          fill: var(--color-white);
-        }
-      }
     }
   }
 }
