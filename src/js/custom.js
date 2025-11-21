@@ -312,24 +312,24 @@ tabs.forEach((tab, index) => {
 const accordionBtns = document.querySelectorAll(".accordion-btn");
 
 accordionBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const content = btn.nextElementSibling;
-    const icon = btn.querySelector(".icon");
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector(".icon");
 
-    // اگر همین آیتم باز بود → ببند
-    if (!content.classList.contains("hidden")) {
-      content.classList.add("hidden");
-      icon.classList.remove("rotate-180");
-    } else {
-      // اول همه رو ببند
-      document.querySelectorAll(".accordion-content").forEach(c => c.classList.add("hidden"));
-      document.querySelectorAll(".accordion-btn .icon").forEach(i => i.classList.remove("rotate-180"));
+        // اگر همین آیتم باز بود → ببند
+        if (!content.classList.contains("hidden")) {
+            content.classList.add("hidden");
+            icon.classList.remove("rotate-180");
+        } else {
+            // اول همه رو ببند
+            document.querySelectorAll(".accordion-content").forEach(c => c.classList.add("hidden"));
+            document.querySelectorAll(".accordion-btn .icon").forEach(i => i.classList.remove("rotate-180"));
 
-      // بعد آیتم کلیک‌شده رو باز کن
-      content.classList.remove("hidden");
-      icon.classList.add("rotate-180");
-    }
-  });
+            // بعد آیتم کلیک‌شده رو باز کن
+            content.classList.remove("hidden");
+            icon.classList.add("rotate-180");
+        }
+    });
 });
 
 
@@ -361,24 +361,24 @@ document.querySelectorAll(".close-modal").forEach(btn => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const openBtn = document.getElementById("openBtn");
-  const closeBtn = document.getElementById("closeBtn");
-  const box = document.getElementById("bottomBox");
+    const openBtn = document.getElementById("openBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const box = document.getElementById("bottomBox");
 
-  openBtn.addEventListener("click", () => {
-    box.classList.remove("hidden");
-    // حرکت به بالا
-    box.classList.remove("translate-y-full");
-  });
+    openBtn.addEventListener("click", () => {
+        box.classList.remove("hidden");
+        // حرکت به بالا
+        box.classList.remove("translate-y-full");
+    });
 
-  closeBtn.addEventListener("click", () => {
-    // حرکت به پایین
-    box.classList.add("translate-y-full");
-    // بعد از پایان انیمیشن دوباره hidden بشه
-    setTimeout(() => {
-      box.classList.add("hidden");
-    }, 300); // مدت زمان transition
-  });
+    closeBtn.addEventListener("click", () => {
+        // حرکت به پایین
+        box.classList.add("translate-y-full");
+        // بعد از پایان انیمیشن دوباره hidden بشه
+        setTimeout(() => {
+            box.classList.add("hidden");
+        }, 300); // مدت زمان transition
+    });
 });
 
 
@@ -386,23 +386,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+//
 
+window.addEventListener("scroll", () => {
+    let current = "";
+    document.querySelectorAll("section").forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+            current = sec.id;
+        }
+    });
 
-  window.addEventListener("scroll", () => {
-  let current = "";
-  document.querySelectorAll("section").forEach(sec => {
-    const rect = sec.getBoundingClientRect();
-    if (rect.top <= 100 && rect.bottom >= 100) {
-      current = sec.id;
-    }
-  });
-
-  document.querySelectorAll(".fixed-tabs a").forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
+    document.querySelectorAll(".fixed-tabs a").forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
 });
 
 
@@ -413,54 +413,132 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// 
+//mobile menu 
 
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
   const closeMenu = document.getElementById("closeMenu");
+  const backdrop = document.getElementById("backdrop");
 
+
+  // باز کردن منو
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.remove("translate-x-full");
+    backdrop.classList.remove("hidden");
+
   });
 
+  // بستن منو با دکمه بستن
   closeMenu.addEventListener("click", () => {
     mobileMenu.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
+
   });
+
+  // بستن منو با کلیک بیرون
+  document.addEventListener("click", (e) => {
+    const isClickInsideMenu = mobileMenu.contains(e.target) || menuBtn.contains(e.target);
+    if (!isClickInsideMenu && !mobileMenu.classList.contains("translate-x-full")) {
+      mobileMenu.classList.add("translate-x-full");
+      backdrop.classList.add("hidden");
+    }
+  });
+
+
+    // بستن منو با کلیک روی بک‌دراپ
+  backdrop.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
+  });
+
+
+
 });
 
 // 
 
 
 
-document.querySelectorAll(".toggle-btn").forEach(btn => {
-  btn.addEventListener("click", e => {
-    e.preventDefault(); // جلوگیری از رفتار پیش‌فرض دکمه
 
-    const submenu = btn.parentElement.nextElementSibling;
-    const icon = btn.querySelector("svg"); // آیکون داخل دکمه
+//mobile cart 
 
-    // اگر باز بود → ببند
-    if (!submenu.classList.contains("hidden")) {
-      submenu.classList.add("hidden");
-      // آیکون برگرده به حالت اولیه
-      icon.classList.remove("rotate-180");
-      icon.classList.add("rotate-90");
-    } else {
-      // فقط همین سطح باز بشه، بقیه بسته بمونن
-      const parent = btn.closest("li");
-      parent.querySelectorAll(":scope > .submenu").forEach(s => s.classList.add("hidden"));
-      parent.querySelectorAll(":scope > .toggle-btn svg").forEach(i => {
-        i.classList.remove("rotate-180");
-        i.classList.add("rotate-90");
-      });
 
-      // زیرمنو باز بشه
-      submenu.classList.remove("hidden");
-      // آیکون بچرخه به پایین
-      icon.classList.remove("rotate-90");
-      icon.classList.add("rotate-180");
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btnCart = document.getElementById("btnCart");
+    const mobileCart = document.getElementById("mobileCart");
+    const closeCart = document.getElementById("closeCart");
+    const backdrop = document.getElementById("backdrop");
+
+
+  // باز کردن منو
+  btnCart.addEventListener("click", () => {
+    mobileCart.classList.remove("translate-x-full");
+    backdrop.classList.remove("hidden");
+});
+
+  // بستن منو با دکمه بستن
+  closeCart.addEventListener("click", () => {
+    mobileCart.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");;
+  });
+
+  // بستن منو با کلیک بیرون
+  document.addEventListener("click", (e) => {
+    const isClickInsideMenu = mobileCart.contains(e.target) || btnCart.contains(e.target);
+    if (!isClickInsideMenu && !mobileCart.classList.contains("translate-x-full")) {
+      mobileCart.classList.add("translate-x-full");
+      backdrop.classList.add("hidden");
     }
   });
+
+      // بستن منو با کلیک روی بک‌دراپ
+  backdrop.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
+  });
+
+});
+
+
+
+
+// 
+
+
+
+
+
+// mobile mega menu
+document.querySelectorAll(".toggle-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+        e.preventDefault(); // جلوگیری از رفتار پیش‌فرض دکمه
+
+        const submenu = btn.parentElement.nextElementSibling;
+        const icon = btn.querySelector("svg"); // آیکون داخل دکمه
+
+        // اگر باز بود → ببند
+        if (!submenu.classList.contains("hidden")) {
+            submenu.classList.add("hidden");
+            // آیکون برگرده به حالت اولیه
+            icon.classList.remove("rotate-180");
+            icon.classList.add("rotate-90");
+        } else {
+            // فقط همین سطح باز بشه، بقیه بسته بمونن
+            const parent = btn.closest("li");
+            parent.querySelectorAll(":scope > .submenu").forEach(s => s.classList.add("hidden"));
+            parent.querySelectorAll(":scope > .toggle-btn svg").forEach(i => {
+                i.classList.remove("rotate-180");
+                i.classList.add("rotate-90");
+            });
+
+            // زیرمنو باز بشه
+            submenu.classList.remove("hidden");
+            // آیکون بچرخه به پایین
+            icon.classList.remove("rotate-90");
+            icon.classList.add("rotate-180");
+        }
+    });
 });
