@@ -98,9 +98,34 @@
   box-shadow: 0px -7px 4px 0 #cecece;;
 }
 
+#specifications > h3:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    right: 8px;
+    top: 22px;
+    position: absolute;
+    background: #FF9C00;
+}
 
 
+.bg-change img{
+  filter: blur(10px);
+}
 
+
+.bg-change::before {
+    content: "";
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 15px;
+    background: radial-gradient(circle, rgb(0, 156, 239) 50%, rgba(15, 0, 0, 0) 37%) 0px 0px / 17px 13px repeat-x;
+    z-index: 100;
+}
 
 
 
@@ -153,7 +178,7 @@
 
 
 
-  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  .swiper-button-prev:after, .swiper-button-next:after {
     @apply text-white flex items-center justify-center !text-sm bg-gray-300 rounded-full w-8 h-7
   }
 
@@ -202,6 +227,20 @@
     @apply px-3 py-1 md:h-[54px] h-7 w-5 md:w-11 border border-sky-500 text-sky-500 md:rounded-lg rounded flex items-center justify-center
   }
 
+
+
+
+  .features{
+    @apply grid grid-cols-2 md:grid-cols-4 md:justify-end justify-between md:gap-3 gap-2 gap-y-3 py-7
+  }
+
+  .feature-item{
+
+    @apply flex items-center md:gap-2 gap-1 rounded-lg shadow h-14 bg-white md:p-2 p-1
+  }
+
+
+
     .fixed-tabs  {
     @apply z-20 bg-gray-50 p-4 top-36 rounded-xl transition-opacity left-0 right-0
   }
@@ -226,6 +265,16 @@
   .fixed-tabs a.active{
   
     @apply text-sky-500 font-bold
+  }
+
+
+
+  .product-detail-btn{
+    @apply rounded-lg flex items-center text-center justify-center bg-sky-200 hover:bg-sky-300 md:h-10 h-8 p-2 text-xs font-semibold
+  }
+
+  .product-price{
+    @apply flex w-full lg:flex-row md:flex-col gap-4 md:items-end items-center justify-between font-medium
   }
 
 
@@ -376,7 +425,7 @@ footer .e-namad img{
       /* background-color: red; */
       max-width: 90%;
 
-
+  
     }
 
     .products .swiper-slide{
@@ -388,6 +437,148 @@ footer .e-namad img{
     /* .products .swiper-slide a img{
       width: 30%;
     } */
+
+    .brand-mobile span::after {
+    content: "";
+    position: absolute;
+    left: 15%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 8px solid #D9D9D9;
+}
+
+      .brand-mobile span {
+        position: absolute;
+        width: max-content;
+        width: max-content;
+        top: -20px;
+        right: -28px;
+        padding: 1px 5px;
+        background-color: #D9D9D9;
+        border-radius: 2px;
+    }
+
+
+    .add-to-cart-bg{
+      position: absolute;
+    width: 110%;
+    height: 90px;
+    background: #ffffff;
+    right: -5%;
+    overflow: hidden;
+    top: -12px;
+    }
+ 
+
+    #specifications > h3:before {
+    width: 6px;
+    height: 6px;
+    right: 8px;
+    top: 16px;
+
+  }
+
+  
+  .ir-features li:nth-child(odd){
+    padding: 0 !important;
+  }
+
+    
+  .ir-features li:nth-child(even){
+    padding-right: 0 !important;
+  }
+
+ .ir-features a {
+
+  text-align: center !important;
+ }
+
+
+
+ #specifications {
+  position: relative;
+  max-height: 500px; /* حالت پیش‌فرض */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+ #myContent {
+  position: relative;
+  max-height: 500px; /* حالت پیش‌فرض */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#myContent.open  , #specifications.open{
+  max-height: none; /* وقتی باز شد */
+}
+#myContent .swiper-wrapper{
+      max-height: inherit;
+    overflow: visible;
+}
+
+#specifications .more-content{
+      max-height: inherit;
+    overflow: visible;
+}
+
+    #myContent::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 186px;
+        background: linear-gradient(to top, #f9fcfd, #f9fcfd00);
+        pointer-events: none;
+        transition: opacity 0.3s 
+ease;
+        z-index: 100000;
+    }
+
+
+#toggleBtn2 {
+        display: block;
+        margin: auto;
+        position: relative;
+        top: -16px;
+        z-index: 1000;
+        background: #ffffff;
+        padding: 5px 15px;
+        border: 1px solid #D9D9D9;
+        border-radius: 4px;
+        color: #209AFF;
+        height: 28px;
+        font-size: 13px;
+    }
+
+#toggleBtn2{
+
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -16px;
+    z-index: 1000;
+    background: #f9fcfd;
+    width: 100%;
+    justify-content: center;
+}
+
+
+#toggleBtn .icon , #toggleBtn2 .icon {
+  transition: transform 0.3s ease;
+}
+
+
+
+    
+
+
+
 
   }
 

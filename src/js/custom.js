@@ -1,76 +1,58 @@
-
-
-var thumbs_image_gallery = new Swiper(
-    ".thumbs_image_gallery", {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    // freeMode: true,
-    // watchSlidesProgress: true,
-
-    breakpoints: {
-        // when window width is >= 320px
-
-        300: {
-            // slidesPerView: 2,
-
-        },
-
-        320: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-
-
-        },
-
-        480: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-
-
-        },
-
-        640: {
-            slidesPerView: 4,
-
-        },
-
-        768: {
-            slidesPerView: 4,
-            direction: "horizontal"
-        },
-        1024: {
-            slidesPerView: 4,
-            direction: "horizontal"
-
-
-        },
-        1265: {
-            slidesPerView: 4,
-            direction: "horizontal"
-        }
-
+var thumbs_image_gallery = new Swiper(".thumbs_image_gallery", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    320: { slidesPerView: 4, spaceBetween: 10 },
+    480: { slidesPerView: 4, spaceBetween: 10 },
+    640: { slidesPerView: 4 },
+    768: { slidesPerView: 4, direction: "horizontal" },
+    1024: { slidesPerView: 4, direction: "horizontal" },
+    1265: { slidesPerView: 4, direction: "horizontal" }
+  },
+  on: {
+    init: function () {
+      this.slides.forEach(slide => {
+        slide.classList.remove("bg-change", "open-modal");
+        slide.removeAttribute("data-target");
+      });
+      const lastVisibleIndex = this.activeIndex + this.params.slidesPerView - 1;
+      if (this.slides[lastVisibleIndex]) {
+        this.slides[lastVisibleIndex].classList.add("bg-change", "open-modal");
+        this.slides[lastVisibleIndex].setAttribute("data-target", "product-gallery");
+      }
     },
+    slideChange: function () {
+      this.slides.forEach(slide => {
+        slide.classList.remove("bg-change", "open-modal");
+        slide.removeAttribute("data-target");
+      });
+      const lastVisibleIndex = this.activeIndex + this.params.slidesPerView - 1;
+      if (this.slides[lastVisibleIndex]) {
+        this.slides[lastVisibleIndex].classList.add("bg-change", "open-modal");
+        this.slides[lastVisibleIndex].setAttribute("data-target", "product-gallery");
+      }
+    }
+  }
 });
 
 
-var slider_image_gallery = new Swiper(
-
-    ".slider_image_gallery", {
+var slider_image_gallery = new Swiper(".slider_image_gallery", {
     spaceBetween: 10,
-
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-
     pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-
+        el: ".swiper-pagination",
+        clickable: true,
     },
     thumbs: {
         swiper: thumbs_image_gallery,
     },
+
+   
 });
 
 
@@ -85,25 +67,16 @@ var thumbs_image_gallery2 = new Swiper(
     // watchSlidesProgress: true,
 
     breakpoints: {
-        // when window width is >= 320px
 
-        300: {
-            // slidesPerView: 2,
-
-        },
 
         320: {
             slidesPerView: 4,
             spaceBetween: 10,
-
-
         },
 
         480: {
             slidesPerView: 4,
             spaceBetween: 10,
-
-
         },
 
         640: {
@@ -127,7 +100,11 @@ var thumbs_image_gallery2 = new Swiper(
         }
 
     },
+
+
 });
+
+
 
 
 var slider_image_gallery2 = new Swiper(
@@ -141,7 +118,16 @@ var slider_image_gallery2 = new Swiper(
     thumbs: {
         swiper: thumbs_image_gallery2,
     },
+
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    // },
+
 });
+
+
+
 
 
 
@@ -149,7 +135,7 @@ var slider_image_gallery2 = new Swiper(
 
 const products = new Swiper(
     ".products", {
-    spaceBetween: 10
+    spaceBetween: 15
     ,
 
     loop: true,
@@ -182,10 +168,10 @@ const products = new Swiper(
             // spaceBetween: 20,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 2,
         },
         1024: {
-            slidesPerView: 4,
+            slidesPerView: 3,
 
         },
         1265: {
@@ -194,16 +180,12 @@ const products = new Swiper(
 
 
     },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
 
-    },
     // Navigation arrows
-    // navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    // },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 
 }
 )
@@ -243,11 +225,7 @@ const testimonials = new Swiper(
 
 
     },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
 
-    },
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
@@ -417,41 +395,41 @@ window.addEventListener("scroll", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const closeMenu = document.getElementById("closeMenu");
-  const backdrop = document.getElementById("backdrop");
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const backdrop = document.getElementById("backdrop");
 
 
-  // باز کردن منو
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("translate-x-full");
-    backdrop.classList.remove("hidden");
+    // باز کردن منو
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-full");
+        backdrop.classList.remove("hidden");
 
-  });
+    });
 
-  // بستن منو با دکمه بستن
-  closeMenu.addEventListener("click", () => {
-    mobileMenu.classList.add("translate-x-full");
-    backdrop.classList.add("hidden");
+    // بستن منو با دکمه بستن
+    closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-x-full");
+        backdrop.classList.add("hidden");
 
-  });
+    });
 
-  // بستن منو با کلیک بیرون
-  document.addEventListener("click", (e) => {
-    const isClickInsideMenu = mobileMenu.contains(e.target) || menuBtn.contains(e.target);
-    if (!isClickInsideMenu && !mobileMenu.classList.contains("translate-x-full")) {
-      mobileMenu.classList.add("translate-x-full");
-      backdrop.classList.add("hidden");
-    }
-  });
+    // بستن منو با کلیک بیرون
+    document.addEventListener("click", (e) => {
+        const isClickInsideMenu = mobileMenu.contains(e.target) || menuBtn.contains(e.target);
+        if (!isClickInsideMenu && !mobileMenu.classList.contains("translate-x-full")) {
+            mobileMenu.classList.add("translate-x-full");
+            backdrop.classList.add("hidden");
+        }
+    });
 
 
     // بستن منو با کلیک روی بک‌دراپ
-  backdrop.addEventListener("click", () => {
-    mobileMenu.classList.add("translate-x-full");
-    backdrop.classList.add("hidden");
-  });
+    backdrop.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-x-full");
+        backdrop.classList.add("hidden");
+    });
 
 
 
@@ -471,32 +449,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const backdrop = document.getElementById("backdrop");
 
 
-  // باز کردن منو
-  btnCart.addEventListener("click", () => {
-    mobileCart.classList.remove("translate-x-full");
-    backdrop.classList.remove("hidden");
-});
+    // باز کردن منو
+    btnCart.addEventListener("click", () => {
+        mobileCart.classList.remove("translate-x-full");
+        backdrop.classList.remove("hidden");
+    });
 
-  // بستن منو با دکمه بستن
-  closeCart.addEventListener("click", () => {
-    mobileCart.classList.add("translate-x-full");
-    backdrop.classList.add("hidden");;
-  });
+    // بستن منو با دکمه بستن
+    closeCart.addEventListener("click", () => {
+        mobileCart.classList.add("translate-x-full");
+        backdrop.classList.add("hidden");;
+    });
 
-  // بستن منو با کلیک بیرون
-  document.addEventListener("click", (e) => {
-    const isClickInsideMenu = mobileCart.contains(e.target) || btnCart.contains(e.target);
-    if (!isClickInsideMenu && !mobileCart.classList.contains("translate-x-full")) {
-      mobileCart.classList.add("translate-x-full");
-      backdrop.classList.add("hidden");
-    }
-  });
+    // بستن منو با کلیک بیرون
+    document.addEventListener("click", (e) => {
+        const isClickInsideMenu = mobileCart.contains(e.target) || btnCart.contains(e.target);
+        if (!isClickInsideMenu && !mobileCart.classList.contains("translate-x-full")) {
+            mobileCart.classList.add("translate-x-full");
+            backdrop.classList.add("hidden");
+        }
+    });
 
-      // بستن منو با کلیک روی بک‌دراپ
-  backdrop.addEventListener("click", () => {
-    mobileMenu.classList.add("translate-x-full");
-    backdrop.classList.add("hidden");
-  });
+    // بستن منو با کلیک روی بک‌دراپ
+    backdrop.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-x-full");
+        backdrop.classList.add("hidden");
+    });
 
 });
 
@@ -550,34 +528,132 @@ document.addEventListener("DOMContentLoaded", () => {
     const backdrop = document.getElementById("backdrop");
 
 
-  // باز کردن منو
-  btnCat.addEventListener("click", () => {
-    mobileCat.classList.remove("translate-x-full");
-    backdrop.classList.remove("hidden");
-});
+    // باز کردن منو
+    btnCat.addEventListener("click", () => {
+        mobileCat.classList.remove("translate-x-full");
+        backdrop.classList.remove("hidden");
+    });
 
-  // بستن منو با دکمه بستن
-  closeCat.addEventListener("click", () => {
-    mobileCat.classList.add("translate-x-full");
-    backdrop.classList.add("hidden");;
-  });
+    // بستن منو با دکمه بستن
+    closeCat.addEventListener("click", () => {
+        mobileCat.classList.add("translate-x-full");
+        backdrop.classList.add("hidden");;
+    });
 
-  // بستن منو با کلیک بیرون
-  document.addEventListener("click", (e) => {
-    const isClickInsideMenu = mobileCat.contains(e.target) || btnCat.contains(e.target);
-    if (!isClickInsideMenu && !mobileCat.classList.contains("translate-x-full")) {
-      mobileCat.classList.add("translate-x-full");
-      backdrop.classList.add("hidden");
-    }
-  });
+    // بستن منو با کلیک بیرون
+    document.addEventListener("click", (e) => {
+        const isClickInsideMenu = mobileCat.contains(e.target) || btnCat.contains(e.target);
+        if (!isClickInsideMenu && !mobileCat.classList.contains("translate-x-full")) {
+            mobileCat.classList.add("translate-x-full");
+            backdrop.classList.add("hidden");
+        }
+    });
 
-      // بستن منو با کلیک روی بک‌دراپ
-  backdrop.addEventListener("click", () => {
-    mobileMenu.classList.add("translate-x-full");
-    backdrop.classList.add("hidden");
-  });
+    // بستن منو با کلیک روی بک‌دراپ
+    backdrop.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-x-full");
+        backdrop.classList.add("hidden");
+    });
 
 });
 
 
 // 
+
+
+
+
+
+
+
+
+document.querySelectorAll(".brand-mobile").forEach(el => {
+    el.addEventListener("click", e => {
+        e.preventDefault(); // جلوگیری از رفتن به لینک
+
+        const targetSpan = el.querySelector(".brand-mobile span");
+        targetSpan.classList.toggle("block!"); // اضافه/حذف کلاس فقط روی span پایینی
+    });
+});
+
+
+
+
+
+document.querySelectorAll(".brand-mobile").forEach(el => {
+    const targetSpan = el.querySelector("span");
+
+    // کلیک
+    el.addEventListener("click", e => {
+        e.preventDefault();
+        targetSpan.classList.toggle("block!"); // اضافه/حذف کلاس روی span
+    });
+
+    // هاور (mouseenter و mouseleave)
+    el.addEventListener("mouseenter", () => {
+        targetSpan.classList.add("block!");
+    });
+
+    el.addEventListener("mouseleave", () => {
+        targetSpan.classList.remove("block!");
+    });
+});
+
+
+
+// مشاهده بیشتر در حالت موبایل 1
+
+document.addEventListener("DOMContentLoaded", function () {
+  const wrapper = document.getElementById("myContent");
+  const content = wrapper.querySelector(".swiper-wrapper");
+  const btn = document.getElementById("toggleBtn");
+  const textSpan = btn.querySelector(".btn-text");
+  const icon = btn.querySelector(".icon");
+
+  if (content.scrollHeight > 500) {
+    btn.style.display = "flex";
+  }
+
+  btn.addEventListener("click", function () {
+    wrapper.classList.toggle("open");
+
+    if (wrapper.classList.contains("open")) {
+      textSpan.textContent = "بستن";   // فقط متن تغییر می‌کنه
+      icon.classList.add("rotate-180");    // آیکون می‌چرخه
+    } else {
+      textSpan.textContent = "نمایش بیشتر";
+      icon.classList.remove("rotate-180");
+    }
+  });
+});
+
+
+
+
+
+
+// مشاهده بیشتر در حالت موبایل 2
+
+document.addEventListener("DOMContentLoaded", function () {
+  const wrapper = document.getElementById("specifications");
+  const content = wrapper.querySelector(".more-content");
+  const btn = document.getElementById("toggleBtn2");
+  const textSpan = btn.querySelector(".btn-text");
+  const icon = btn.querySelector(".icon");
+
+  if (content.scrollHeight > 500) {
+    btn.style.display = "flex";
+  }
+
+  btn.addEventListener("click", function () {
+    wrapper.classList.toggle("open");
+
+    if (wrapper.classList.contains("open")) {
+      textSpan.textContent = "بستن";   // فقط متن تغییر می‌کنه
+      icon.classList.add("rotate-180");    // آیکون می‌چرخه
+    } else {
+      textSpan.textContent = "نمایش بیشتر";
+      icon.classList.remove("rotate-180");
+    }
+  });
+});
