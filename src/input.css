@@ -328,6 +328,13 @@ footer .e-namad img{
 
 }
 
+ #mobole-footer ul {
+    @apply grid w-[96%] h-12 m-auto max-w-lg grid-cols-5 mx-auto font-bold text-xs gap-2
+  }
+
+  #mobole-footer ul li {
+    @apply inline-flex flex-col gap-2 items-center justify-center bg-white rounded p-1 relative
+  }
 
 
 
