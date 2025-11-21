@@ -15,6 +15,13 @@
 
     <svg class="hidden">
 
+        <symbol id="close-rounded" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="#209AFF" stroke-width="1.5" />
+            <path d="M14.5 9.49999L9.5 14.5M9.49998 9.49997L14.5 14.4999" stroke="#209AFF" stroke-width="1.5"
+                stroke-linecap="round" />
+        </symbol>
+
+
         <symbol id="menu" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M4 24C4 14.5719 4 9.85786 6.92893 6.92893C9.85786 4 14.5719 4 24 4C33.4281 4 38.1421 4 41.0711 6.92893C44 9.85786 44 14.5719 44 24C44 33.4281 44 38.1421 41.0711 41.0711C38.1421 44 33.4281 44 24 44C14.5719 44 9.85786 44 6.92893 41.0711C4 38.1421 4 33.4281 4 24Z"
@@ -630,7 +637,7 @@
 
 
                 <div class="flex items-center gap-4">
-                    <button>
+                    <button id="menuBtn">
                         <svg class="w-10 h-10">
                             <use xlink:href="#menu"></use>
                         </svg>
@@ -649,6 +656,255 @@
 
 
 
+                <!-- منوی کناری  -->
+                <div id="mobileMenu" class="fixed overflow-scroll top-0 right-0 h-full w-64 pb-14 bg-white shadow-lg 
+            transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+                    <div class="p-4 bg-gray-50">
+
+                        <div class="my-4 flex justify-between items-center">
+                            <h3 class="text-lg font-medium">
+                                دسترسی سریع
+                            </h3>
+
+                            <button id="closeMenu">
+
+                                <svg class="w-6 h-6">
+                                    <use xlink:href="#close-rounded"></use>
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+                        <nav class="bg-gray-50 py-4 text-[#2F3136] fill-[#2F3136]">
+                            <ul class="space-y-5 text-right">
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block">تشک رویا</a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="submenu hidden mt-2 text-sm space-y-4 p-2">
+                                        <li><a href="#item1" class="block">تشک رویا1</a></li>
+                                        <li class="relative">
+                                            <div class="flex items-center justify-between">
+                                                <a href="#sub" class="block">تشک رویا2</a>
+                                                <button class="toggle-btn ">
+                                                    <svg class="w-4 h-4 rotate-90">
+                                                        <use xlink:href="#chevron-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul class="submenu hidden mt-2 space-y-2 p-2">
+                                                <li><a href="#sub1" class="block">تشک رویا2 ۱</a></li>
+                                                <li><a href="#sub2" class="block">تشک رویا2 ۲</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#item2" class="block">تشک رویا3</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block">تشک رویا</a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="submenu hidden mt-2 text-sm space-y-4 p-2">
+                                        <li><a href="#item1" class="block">تشک رویا1</a></li>
+                                        <li class="relative">
+                                            <div class="flex items-center justify-between">
+                                                <a href="#sub" class="block">تشک رویا2</a>
+                                                <button class="toggle-btn ">
+                                                    <svg class="w-4 h-4 rotate-90">
+                                                        <use xlink:href="#chevron-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul class="submenu hidden mt-2 space-y-2 p-2">
+                                                <li><a href="#sub1" class="block">تشک رویا2 ۱</a></li>
+                                                <li><a href="#sub2" class="block">تشک رویا2 ۲</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#item2" class="block">تشک رویا3</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block">تشک رویا</a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="submenu hidden mt-2 text-sm space-y-4 p-2">
+                                        <li><a href="#item1" class="block">تشک رویا1</a></li>
+                                        <li class="relative">
+                                            <div class="flex items-center justify-between">
+                                                <a href="#sub" class="block">تشک رویا2</a>
+                                                <button class="toggle-btn ">
+                                                    <svg class="w-4 h-4 rotate-90">
+                                                        <use xlink:href="#chevron-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul class="submenu hidden mt-2 space-y-2 p-2">
+                                                <li><a href="#sub1" class="block">تشک رویا2 ۱</a></li>
+                                                <li><a href="#sub2" class="block">تشک رویا2 ۲</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#item2" class="block">تشک رویا3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block">تشک رویا</a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="submenu hidden mt-2 text-sm space-y-4 p-2">
+                                        <li><a href="#item1" class="block">تشک رویا1</a></li>
+                                        <li class="relative">
+                                            <div class="flex items-center justify-between">
+                                                <a href="#sub" class="block">تشک رویا2</a>
+                                                <button class="toggle-btn ">
+                                                    <svg class="w-4 h-4 rotate-90">
+                                                        <use xlink:href="#chevron-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul class="submenu hidden mt-2 space-y-2 p-2">
+                                                <li><a href="#sub1" class="block">تشک رویا2 ۱</a></li>
+                                                <li><a href="#sub2" class="block">تشک رویا2 ۲</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#item2" class="block">تشک رویا3</a></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </nav>
+
+                    </div>
+
+
+                    <div class="p-4 ">
+
+
+                        <nav class=" py-4 text-[#2F3136] fill-[#2F3136]">
+                            <ul class="space-y-5 text-right">
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block"> درباره ما</a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="submenu hidden mt-2 text-sm space-y-4 p-2">
+                                        <li><a href="#item1" class="block">تشک رویا1</a></li>
+                                        <li class="relative">
+                                            <div class="flex items-center justify-between">
+                                                <a href="#sub" class="block">تشک رویا2</a>
+                                                <button class="toggle-btn ">
+                                                    <svg class="w-4 h-4 rotate-90">
+                                                        <use xlink:href="#chevron-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul class="submenu hidden mt-2 space-y-2 p-2">
+                                                <li><a href="#sub1" class="block">تشک رویا2 ۱</a></li>
+                                                <li><a href="#sub2" class="block">تشک رویا2 ۲</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#item2" class="block">تشک رویا3</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block">تماس باما </a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </li>
+
+
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block">راهنمای خرید</a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </li>
+
+
+                                <li class="relative">
+                                    <div class="flex items-center justify-between">
+                                        <a href="#home" class="block">مجله اسلیپیران</a>
+                                        <button class="toggle-btn">
+                                            <svg class="w-5 h-5 rotate-90">
+                                                <use xlink:href="#chevron-down"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </li>
+
+
+                            </ul>
+                        </nav>
+
+
+                        <a href="#" class="bg-gray-50 h-14 w-full rounded flex items-center gap-4 px-4 my-4">
+
+                            <svg class="w-9 h-9 fill-sky-500 text-sky-500">
+                                <use xlink:href="#call"></use>
+                            </svg>
+                            <div class="flex flex-col gap-1 text-right">
+
+                                <h5 class="text-[10px] w-full text-gray-500">
+                                    مشاوره تلفنی
+                                </h5>
+                                <p class="font-semibold w-full">
+                                    090359905359
+                                </p>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+                <!-- -->
+
+
+
+
+
             </section>
 
         </div>
@@ -656,7 +912,7 @@
     </header>
 
 
-    <main class="container pt-36 pb-10">
+    <main class="container md:pt-36 pt-14 pb-10">
 
 
 
