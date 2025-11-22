@@ -129,6 +129,22 @@
 
 
 
+.menu-item .submenu li{
+  position: relative;
+}
+
+.menu-item .submenu li:before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: #808184;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    border-radius: 50px;
+}
+
+
 }
 
 @layer components {
@@ -161,7 +177,7 @@
     @apply hover:font-semibold relative hover:text-sky-500 hover:fill-sky-500 h-10
   }
 
-  .menu {
+  .menu-item {
     @apply hover:font-semibold relative hover:text-sky-500 hover:fill-sky-500 h-20 flex items-center
   }
 

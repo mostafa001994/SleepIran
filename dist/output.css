@@ -266,6 +266,9 @@
   .top-52 {
     top: calc(var(--spacing) * 52);
   }
+  .top-\[75px\] {
+    top: 75px;
+  }
   .top-\[200px\] {
     top: 200px;
   }
@@ -539,6 +542,9 @@
   .max-w-\[85lvh\] {
     max-width: 85lvh;
   }
+  .min-w-60 {
+    min-width: calc(var(--spacing) * 60);
+  }
   .translate-x-full {
     --tw-translate-x: 100%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -683,6 +689,10 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
+  .rounded-b-xl {
+    border-bottom-right-radius: var(--radius-xl);
+    border-bottom-left-radius: var(--radius-xl);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -739,6 +749,9 @@
   }
   .fill-\[\#2F3136\] {
     fill: #2F3136;
+  }
+  .fill-\[\#D98B31\] {
+    fill: #D98B31;
   }
   .fill-amber-500 {
     fill: var(--color-amber-500);
@@ -847,6 +860,9 @@
   }
   .pt-44 {
     padding-top: calc(var(--spacing) * 44);
+  }
+  .pr-5 {
+    padding-right: calc(var(--spacing) * 5);
   }
   .pr-6 {
     padding-right: calc(var(--spacing) * 6);
@@ -969,6 +985,9 @@
   }
   .text-\[\#808184\] {
     color: #808184;
+  }
+  .text-\[\#D98B31\] {
+    color: #D98B31;
   }
   .text-amber-500 {
     color: var(--color-amber-500);
@@ -1605,6 +1624,19 @@
     background: radial-gradient(circle, rgb(0, 156, 239) 50%, rgba(15, 0, 0, 0) 37%) 0px 0px / 17px 13px repeat-x;
     z-index: 100;
   }
+  .menu-item .submenu li {
+    position: relative;
+  }
+  .menu-item .submenu li:before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: #808184;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    border-radius: 50px;
+  }
 }
 @layer components {
   .account-btn {
@@ -1674,7 +1706,7 @@
       }
     }
   }
-  .menu {
+  .menu-item {
     position: relative;
     display: flex;
     height: calc(var(--spacing) * 20);
