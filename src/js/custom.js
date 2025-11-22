@@ -440,31 +440,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const levels = document.querySelectorAll(".menu-level");
-const items = document.querySelectorAll(".menu-level.level-1 li");
 
-items.forEach(item => {
-  item.addEventListener("click", () => {
-    const targetId = item.getAttribute("data-target");
+const toggleBtns = document.querySelectorAll(".toggle-btn");
+const submenuPage = document.getElementById("submenu-page");
+const submenuContent = document.getElementById("submenu-content");
+const backBtn = document.getElementById("back-btn");
 
-    // همه سطح‌ها رو مخفی کن
-    levels.forEach(l => l.classList.remove("active"));
-
-    // سطح دوم مربوطه رو نشون بده
-    document.getElementById(targetId).classList.add("active");
+toggleBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const submenu = btn.closest("li").querySelector(".submenu");
+    if (submenu) {
+      // محتوای زیرمنو رو کپی کن داخل صفحه کامل
+      submenuContent.innerHTML = submenu.innerHTML;
+      // نمایش صفحه کامل
+      submenuPage.classList.remove("hidden");
+    }
   });
 });
 
-// دکمه بازگشت
-document.querySelectorAll(".back").forEach(backBtn => {
-  backBtn.addEventListener("click", () => {
-    levels.forEach(l => l.classList.remove("active"));
-    document.querySelector(".level-1").classList.add("active");
-  });
+backBtn.addEventListener("click", () => {
+  submenuPage.classList.add("hidden");
 });
 
-// نمایش سطح اول در حالت اولیه
-document.querySelector(".level-1").classList.add("active");
 
 
 
@@ -514,36 +511,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // mobile mega menu
-document.querySelectorAll(".toggle-btn").forEach(btn => {
-    btn.addEventListener("click", e => {
-        e.preventDefault(); // جلوگیری از رفتار پیش‌فرض دکمه
+// document.querySelectorAll(".toggle-btn").forEach(btn => {
+//     btn.addEventListener("click", e => {
+//         e.preventDefault(); // جلوگیری از رفتار پیش‌فرض دکمه
 
-        const submenu = btn.parentElement.nextElementSibling;
-        const icon = btn.querySelector("svg"); // آیکون داخل دکمه
+//         const submenu = btn.parentElement.nextElementSibling;
+//         const icon = btn.querySelector("svg"); // آیکون داخل دکمه
 
-        // اگر باز بود → ببند
-        if (!submenu.classList.contains("hidden")) {
-            submenu.classList.add("hidden");
-            // آیکون برگرده به حالت اولیه
-            icon.classList.remove("rotate-180");
-            icon.classList.add("rotate-90");
-        } else {
-            // فقط همین سطح باز بشه، بقیه بسته بمونن
-            const parent = btn.closest("li");
-            parent.querySelectorAll(":scope > .submenu").forEach(s => s.classList.add("hidden"));
-            parent.querySelectorAll(":scope > .toggle-btn svg").forEach(i => {
-                i.classList.remove("rotate-180");
-                i.classList.add("rotate-90");
-            });
+//         // اگر باز بود → ببند
+//         if (!submenu.classList.contains("hidden")) {
+//             submenu.classList.add("hidden");
+//             // آیکون برگرده به حالت اولیه
+//             icon.classList.remove("rotate-180");
+//             icon.classList.add("rotate-90");
+//         } else {
+//             // فقط همین سطح باز بشه، بقیه بسته بمونن
+//             const parent = btn.closest("li");
+//             parent.querySelectorAll(":scope > .submenu").forEach(s => s.classList.add("hidden"));
+//             parent.querySelectorAll(":scope > .toggle-btn svg").forEach(i => {
+//                 i.classList.remove("rotate-180");
+//                 i.classList.add("rotate-90");
+//             });
 
-            // زیرمنو باز بشه
-            submenu.classList.remove("hidden");
-            // آیکون بچرخه به پایین
-            icon.classList.remove("rotate-90");
-            icon.classList.add("rotate-180");
-        }
-    });
-});
+//             // زیرمنو باز بشه
+//             submenu.classList.remove("hidden");
+//             // آیکون بچرخه به پایین
+//             icon.classList.remove("rotate-90");
+//             icon.classList.add("rotate-180");
+//         }
+//     });
+// });
 
 
 
