@@ -144,6 +144,12 @@
     border-radius: 50px;
 }
 
+.menu-item.group ul , .search-btn section{
+  box-shadow: #00000025 0 8px 12px 0;
+}
+
+
+
 
 }
 
@@ -191,6 +197,10 @@
   .color-primary{
     color: rgba(255, 156, 0, 1);
   } */
+
+  .search-resault{
+    @apply   flex-col group-hover:flex absolute top-[54px] right-0 w-[365px] p-4 rounded-b-xl bg-white
+  }
 
 
 

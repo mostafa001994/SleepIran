@@ -556,10 +556,35 @@ document.querySelectorAll(".toggle-third").forEach(btn => {
 });
 
 
+
+// 
+
 // 
 
 
+const searchBtn = document.querySelector(".search-btn svg");
+const searchBox = document.querySelector(".search-resault");
 
+searchBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  searchBox.classList.toggle("hidden");
+});
+
+// بستن فقط وقتی بیرون کلیک بشه
+document.addEventListener("click", (e) => {
+  const clickedInsideBtn = searchBtn.contains(e.target);
+  const clickedInsideBox = searchBox.contains(e.target);
+
+  // اگر کلیک داخل دکمه یا داخل باکس بود، کاری نکن
+  if (clickedInsideBtn || clickedInsideBox) {
+    return;
+  }
+
+  // در غیر این صورت، باکس بسته بشه
+  searchBox.classList.add("hidden");
+});
+
+// 
 
 
 
