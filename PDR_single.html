@@ -597,7 +597,7 @@
                                 </svg>
                             </a>
                             <ul
-                                class="absolute hidden group-hover:block top-[75px] text-right min-w-60 text-black fill-black font-medium right-0 p-4 rounded-b-xl bg-white w-max">
+                                class="absolute hidden group-hover:block top-[74px] text-right min-w-60 text-black fill-black font-medium right-0 p-4 rounded-b-xl bg-white w-max">
                                 <li class="relative">
                                     <div class="flex justify-between py-2 ">
                                         <a>بر اساس برند</a>
@@ -802,7 +802,7 @@
 
                             <div class="flex flex-col gap-4 py-6">
 
-                                <div class="relative flex border border-[#F9F9F9] rounded flex-wrap gap-2 px-1.5 py-1 bg-white">
+                                <div class="product-item">
 
                                     <div class="absolute w-full flex items-start justify-between  top-0 ">
 
@@ -826,16 +826,22 @@
                                                 <span class="hidden ">
                                                     مناسب کمردرد
                                                 </span>
-
-                                                <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
+                                                <figure>
+                                                    <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
                                                     alt="تشک برند رویا">
+                                                </figure>
+
+                                                
                                             </a>
                                             <a href="#" class="brand-mobile relative flex group gap-2">
                                                 <span class="hidden">
                                                     تشک برند رویا
                                                 </span>
-                                                <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
-                                                    alt="تشک برند رویا">
+                                                <figure>
+                                                   <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
+                                                    alt="تشک برند رویا"> 
+                                                </figure>
+                                                
                                             </a>
 
 
@@ -845,8 +851,11 @@
 
                                     <a class="w-[32%]" href="#">
 
-                                        <img src="./src/img/image 44.png" class="w-full"
+                                        <figure>
+                                            <img src="./src/img/image 44.png" class="w-full"
                                             alt="تشک دو نفره طبی فنر اطلس مدل لواترا پلامن">
+                                        </figure>
+                                        
 
                                     </a>
 
@@ -955,9 +964,11 @@
 
                                 </div>
 
-                                <div class="relative flex border border-[#F9F9F9] rounded flex-wrap gap-2 px-1.5 py-1 bg-white">
+                                
+                                <div
+                                    class="relative flex border border-[#F9F9F9] rounded flex-wrap gap-2 px-1.5 py-1 bg-white">
 
-                                    <div class="absolute w-full flex items-start justify-between top-0 ">
+                                    <div class="absolute w-full flex items-start justify-between  top-0 ">
 
                                         <div class="flex flex-col gap-2 ">
                                             <span>
@@ -979,16 +990,22 @@
                                                 <span class="hidden ">
                                                     مناسب کمردرد
                                                 </span>
-
-                                                <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
+                                                <figure>
+                                                    <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
                                                     alt="تشک برند رویا">
+                                                </figure>
+
+                                                
                                             </a>
                                             <a href="#" class="brand-mobile relative flex group gap-2">
                                                 <span class="hidden">
                                                     تشک برند رویا
                                                 </span>
-                                                <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
-                                                    alt="تشک برند رویا">
+                                                <figure>
+                                                   <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
+                                                    alt="تشک برند رویا"> 
+                                                </figure>
+                                                
                                             </a>
 
 
@@ -998,8 +1015,11 @@
 
                                     <a class="w-[32%]" href="#">
 
-                                        <img src="./src/img/image 44.png" class="w-full"
+                                        <figure>
+                                            <img src="./src/img/image 44.png" class="w-full"
                                             alt="تشک دو نفره طبی فنر اطلس مدل لواترا پلامن">
+                                        </figure>
+                                        
 
                                     </a>
 
@@ -1107,7 +1127,6 @@
                                     </div>
 
                                 </div>
-                                
 
                             </div>
 
@@ -1167,8 +1186,7 @@
 
 
                 <!-- منوی کناری  -->
-                <div id="mobileMenu" class="fixed z-50 overflow-scroll top-0 right-0 h-full w-9/12 bg-white shadow-lg 
-            transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+                <div id="mobileMenu" class="translate-x-full  top-0 right-0">
                     <div class="p-6 bg-gray-50">
 
                         <div class="my-4 flex justify-between items-center">
@@ -2103,8 +2121,7 @@
 
 
                 <!-- سبد خرید موبایل -->
-                <div id="mobileCart" class="fixed z-50 overflow-scroll w-9/12 top-0 right-0 h-full pb-6 bg-white shadow-lg 
-            transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+                <div id="mobileCart" class="translate-x-full  top-0 right-0">
                     <div class="p-4 ">
 
                         <div class="my-4 flex justify-between items-center">
@@ -2127,39 +2144,10 @@
 
                             <div class="flex gap-3 flex-col">
                                 <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
-                                    <img src="./src/img/image 44.png" class="w-16 h-16 rounded">
-
-
-                                    <div class="w-full flex flex-col gap-3">
-                                        <div class="flex justify-between w-full  items-start">
-                                            <h2 class="text-sm">
-                                                تشک تک نفره خوشخواب
-                                            </h2>
-
-                                            <a href="#">
-                                                <svg class="w-4 h-4 text-red-600">
-                                                    <use xlink:href="#close-rounded"></use>
-                                                </svg>
-                                            </a>
-
-                                        </div>
-
-                                        <div class="flex justify-between w-full items-end">
-                                            <ul class="text-gray-500 text-[10px]">
-                                                <li>نوع تشک: طبی فنری</li>
-                                                <li>نوع تشک: طبی فنری</li>
-                                            </ul>
-                                            <span class="text-xs">
-                                                تعداد:2
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
-                                    <img src="./src/img/image 44.png" class="w-16 h-16 rounded">
-
+                                    <figure>
+                                       <img src="./src/img/image 44.png" class="w-16 h-16 rounded"> 
+                                    </figure>
+                                
 
                                     <div class="w-full flex flex-col gap-3">
                                         <div class="flex justify-between w-full  items-start">
@@ -2188,9 +2176,11 @@
 
                                 </div>
 
-                                <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
-                                    <img src="./src/img/image 44.png" class="w-16 h-16 rounded">
-
+                                                                <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
+                                    <figure>
+                                       <img src="./src/img/image 44.png" class="w-16 h-16 rounded"> 
+                                    </figure>
+                                
 
                                     <div class="w-full flex flex-col gap-3">
                                         <div class="flex justify-between w-full  items-start">
@@ -2218,10 +2208,45 @@
                                     </div>
 
                                 </div>
+
+                                                                <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
+                                    <figure>
+                                       <img src="./src/img/image 44.png" class="w-16 h-16 rounded"> 
+                                    </figure>
+                                
+
+                                    <div class="w-full flex flex-col gap-3">
+                                        <div class="flex justify-between w-full  items-start">
+                                            <h2 class="text-sm">
+                                                تشک تک نفره خوشخواب
+                                            </h2>
+
+                                            <a href="#">
+                                                <svg class="w-4 h-4 text-red-600">
+                                                    <use xlink:href="#close-rounded"></use>
+                                                </svg>
+                                            </a>
+
+                                        </div>
+
+                                        <div class="flex justify-between w-full items-end">
+                                            <ul class="text-gray-500 text-[10px]">
+                                                <li>نوع تشک: طبی فنری</li>
+                                                <li>نوع تشک: طبی فنری</li>
+                                            </ul>
+                                            <span class="text-xs">
+                                                تعداد:2
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
 
                             </div>
 
-                            <div class="cart-footer">
+                            <div class="cart-footer bg-white">
 
 
                                 <div class="cart-total">
@@ -2238,7 +2263,7 @@
                                 </div>
                                 <div class="cart-btns">
                                     <a href="#">سبد خرید</a>
-                                    <a href="#">سبد خرید</a>
+                                    <a href="#">ثبت سفارش </a>
 
                                 </div>
 
@@ -2253,6 +2278,168 @@
                 </div>
                 <!--  -->
 
+
+                <!-- سرچ  موبایل -->
+                <div id="mobileSearch" class="translate-x-full  top-0 right-0">
+                    <div class="p-4 ">
+
+                        <div class="my-4 flex justify-between items-center">
+                            <h3 class="text-lg font-medium">
+                                جستجو
+                            </h3>
+
+                            <button id="closeSearch">
+                                <svg class="w-6 h-6 text-sky-500">
+                                    <use xlink:href="#close-rounded"></use>
+                                </svg>
+                            </button>
+
+                        </div>
+
+
+                        <form>
+                            <input placeholder="دنبال چه محصولی هستی؟"
+                                class="h-11 my-3 px-3 w-full bg-[#f9f9f9] text-sm rounded">
+                        </form>
+
+
+
+                        <div class="flex gap-3 flex-col">
+                            
+                            <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
+                                <figure>
+                                   <img src="./src/img/image 44.png" class="w-16 h-16 rounded"> 
+                                </figure>
+                                
+
+
+                                <div class="w-full flex flex-col gap-3">
+                                    <div class="flex justify-between w-full  items-start">
+                                        <h2 class="text-sm">
+                                            تشک تک نفره خوشخواب
+                                        </h2>
+
+                                        <a href="#">
+                                            <svg class="w-4 h-4 text-red-600">
+                                                <use xlink:href="#close-rounded"></use>
+                                            </svg>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="flex justify-between w-full items-end">
+                                        <ul class="text-gray-500 text-[10px]">
+                                            <li>نوع تشک: طبی فنری</li>
+                                            <li>نوع تشک: طبی فنری</li>
+                                        </ul>
+                                        <span class="text-xs">
+                                            تعداد:2
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
+                                <figure>
+                                   <img src="./src/img/image 44.png" class="w-16 h-16 rounded"> 
+                                </figure>
+                                
+
+
+                                <div class="w-full flex flex-col gap-3">
+                                    <div class="flex justify-between w-full  items-start">
+                                        <h2 class="text-sm">
+                                            تشک تک نفره خوشخواب
+                                        </h2>
+
+                                        <a href="#">
+                                            <svg class="w-4 h-4 text-red-600">
+                                                <use xlink:href="#close-rounded"></use>
+                                            </svg>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="flex justify-between w-full items-end">
+                                        <ul class="text-gray-500 text-[10px]">
+                                            <li>نوع تشک: طبی فنری</li>
+                                            <li>نوع تشک: طبی فنری</li>
+                                        </ul>
+                                        <span class="text-xs">
+                                            تعداد:2
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="cart-items flex gap-2 items-center p-2 rounded border border-gray-100">
+                                <figure>
+                                   <img src="./src/img/image 44.png" class="w-16 h-16 rounded"> 
+                                </figure>
+                                
+
+
+                                <div class="w-full flex flex-col gap-3">
+                                    <div class="flex justify-between w-full  items-start">
+                                        <h2 class="text-sm">
+                                            تشک تک نفره خوشخواب
+                                        </h2>
+
+                                        <a href="#">
+                                            <svg class="w-4 h-4 text-red-600">
+                                                <use xlink:href="#close-rounded"></use>
+                                            </svg>
+                                        </a>
+
+                                    </div>
+
+                                    <div class="flex justify-between w-full items-end">
+                                        <ul class="text-gray-500 text-[10px]">
+                                            <li>نوع تشک: طبی فنری</li>
+                                            <li>نوع تشک: طبی فنری</li>
+                                        </ul>
+                                        <span class="text-xs">
+                                            تعداد:2
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="flex justify-end my-6">
+                            <a href="#"
+                                class="bg-sky-500 h-7 text-white rounded-full p-4 flex items-center gap-4 text-xs">
+                                نمایش همه
+                                <svg class="w-4 h-4 fill-white">
+                                    <use xlink:href="#arrow-left"></use>
+                                </svg>
+
+                            </a>
+                        </div>
+
+
+                        <ul class="my-6 text-right">
+                            <li>
+                                <a> #_تشک رویا</a>
+                            </li>
+
+                            <li>
+                                <a> #_تشک دو نفره طبی</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+
+                </div>
+                <!--  -->
 
 
 
@@ -2921,22 +3108,27 @@
 
 
             <div class="w-full md:py-14 py-6">
-                <h3 class="md:hidden text-right text-sm py-3">
-                    لیست محصولات مرتبط
-                </h3>
 
-                <div class="flex justify-between md:justify-start md:gap-4 gap-1 md:text-xl text-[8px]">
-                    <button class="tab-btn md:px-6 p-2 md:rounded-xl rounded md:h-12 h-[30px] active">
-                        تشک های سایز L رویال
-                    </button>
-                    <button class="tab-btn md:px-6 md:rounded-xl rounded md:h-12 h-[30px] -12 p-2 ">
-                        تشک های سایز XL خوشخواب
-                    </button>
-                    <button class="tab-btn md:px-6 md:rounded-xl rounded md:h-12 h-[30px] p-2 ">
-                        تشک های سایز L رویا
-                    </button>
+
+
+                <div class="overflow-scroll">
+                    <h3 class="md:hidden text-right text-sm py-3">
+                        لیست محصولات مرتبط
+                    </h3>
+
+                    <div class="flex w-max justify-between md:justify-start md:gap-4 gap-1 md:text-xl text-[10px]">
+                        <button class="tab-btn md:px-6 p-2 md:rounded-xl rounded md:h-12 h-[30px] active">
+                            تشک های سایز L رویال
+                        </button>
+                        <button class="tab-btn md:px-6 md:rounded-xl rounded md:h-12 h-[30px] -12 p-2 ">
+                            تشک های سایز XL خوشخواب
+                        </button>
+                        <button class="tab-btn md:px-6 md:rounded-xl rounded md:h-12 h-[30px] p-2 ">
+                            تشک های سایز L رویا
+                        </button>
+                    </div>
+
                 </div>
-
                 <div class="tab-content">
 
 
@@ -2944,8 +3136,7 @@
 
                         <div class="swiper-wrapper md:flex! block! items-center md:pt-10 pt-4">
 
-                            <div
-                                class="swiper-slide relative flex! rounded-xl md:flex-col md:gap-5 gap-2 md:p-3 px-1.5 py-1 bg-white">
+                            <div class="swiper-slide ">
 
                                 <div
                                     class="absolute w-full flex md:items-center items-start justify-between right-0 top-0 p-3">
@@ -2971,15 +3162,21 @@
                                                 مناسب کمردرد
                                             </span>
 
-                                            <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
+                                            <figure>
+                                               <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
+                                                alt="تشک برند رویا"> 
+                                            </figure>
+                                            
                                         </a>
                                         <a href="#" class="brand-mobile relative flex group gap-2">
                                             <span class="hidden md:block ">
                                                 تشک برند رویا
                                             </span>
-                                            <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
+                                            <figure>
+                                               <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
+                                                alt="تشک برند رویا"> 
+                                            </figure>
+                                            
                                         </a>
 
 
@@ -2988,9 +3185,12 @@
 
 
                                 <a class="md:w-full w-[32%]" href="#" class="rounded-xl block">
-
-                                    <img src="./src/img/image 44.png" class="w-full"
+                                    <figure>
+                                        <img src="./src/img/image 44.png" class="w-full"
                                         alt="تشک دو نفره طبی فنر اطلس مدل لواترا پلامن">
+                                    </figure>
+
+                                    
 
                                 </a>
 
@@ -2999,7 +3199,7 @@
                                 <div class="md:w-full  w-[65%] flex flex-col gap-4">
 
                                     <h1
-                                        class="font-medium hover:text-gray-900 md:-mt-8 md:w-full w-[75%] text-right leading-5">
+                                        class="font-medium hover:text-gray-900 md:-mt-8 md:w-full w-[74%] text-right leading-5">
                                         <a href="#" class="md:text-[15px] text-right text-xs md:font-medium font-bold">
                                             تشک دو نفره طبی فنر اطلس مدل لواترا پلامن
                                         </a>
@@ -3101,8 +3301,7 @@
                             </div>
 
 
-                            <div
-                                class="swiper-slide relative flex! rounded-xl md:flex-col md:gap-5 gap-2 md:p-3 px-1.5 py-1 bg-white">
+                                                        <div class="swiper-slide ">
 
                                 <div
                                     class="absolute w-full flex md:items-center items-start justify-between right-0 top-0 p-3">
@@ -3128,15 +3327,21 @@
                                                 مناسب کمردرد
                                             </span>
 
-                                            <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
+                                            <figure>
+                                               <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
+                                                alt="تشک برند رویا"> 
+                                            </figure>
+                                            
                                         </a>
                                         <a href="#" class="brand-mobile relative flex group gap-2">
                                             <span class="hidden md:block ">
                                                 تشک برند رویا
                                             </span>
-                                            <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
+                                            <figure>
+                                               <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
+                                                alt="تشک برند رویا"> 
+                                            </figure>
+                                            
                                         </a>
 
 
@@ -3145,9 +3350,12 @@
 
 
                                 <a class="md:w-full w-[32%]" href="#" class="rounded-xl block">
-
-                                    <img src="./src/img/image 44.png" class="w-full"
+                                    <figure>
+                                        <img src="./src/img/image 44.png" class="w-full"
                                         alt="تشک دو نفره طبی فنر اطلس مدل لواترا پلامن">
+                                    </figure>
+
+                                    
 
                                 </a>
 
@@ -3156,7 +3364,7 @@
                                 <div class="md:w-full  w-[65%] flex flex-col gap-4">
 
                                     <h1
-                                        class="font-medium hover:text-gray-900 md:-mt-8 md:w-full w-[75%] text-right leading-5">
+                                        class="font-medium hover:text-gray-900 md:-mt-8 md:w-full w-[74%] text-right leading-5">
                                         <a href="#" class="md:text-[15px] text-right text-xs md:font-medium font-bold">
                                             تشک دو نفره طبی فنر اطلس مدل لواترا پلامن
                                         </a>
@@ -3258,8 +3466,7 @@
                             </div>
 
 
-                            <div
-                                class="swiper-slide relative flex! rounded-xl md:flex-col md:gap-5 gap-2 md:p-3 px-1.5 py-1 bg-white">
+                                                        <div class="swiper-slide ">
 
                                 <div
                                     class="absolute w-full flex md:items-center items-start justify-between right-0 top-0 p-3">
@@ -3285,15 +3492,21 @@
                                                 مناسب کمردرد
                                             </span>
 
-                                            <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
+                                            <figure>
+                                               <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
+                                                alt="تشک برند رویا"> 
+                                            </figure>
+                                            
                                         </a>
                                         <a href="#" class="brand-mobile relative flex group gap-2">
                                             <span class="hidden md:block ">
                                                 تشک برند رویا
                                             </span>
-                                            <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
+                                            <figure>
+                                               <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
+                                                alt="تشک برند رویا"> 
+                                            </figure>
+                                            
                                         </a>
 
 
@@ -3302,9 +3515,12 @@
 
 
                                 <a class="md:w-full w-[32%]" href="#" class="rounded-xl block">
-
-                                    <img src="./src/img/image 44.png" class="w-full"
+                                    <figure>
+                                        <img src="./src/img/image 44.png" class="w-full"
                                         alt="تشک دو نفره طبی فنر اطلس مدل لواترا پلامن">
+                                    </figure>
+
+                                    
 
                                 </a>
 
@@ -3313,7 +3529,7 @@
                                 <div class="md:w-full  w-[65%] flex flex-col gap-4">
 
                                     <h1
-                                        class="font-medium hover:text-gray-900 md:-mt-8 md:w-full w-[75%] text-right leading-5">
+                                        class="font-medium hover:text-gray-900 md:-mt-8 md:w-full w-[74%] text-right leading-5">
                                         <a href="#" class="md:text-[15px] text-right text-xs md:font-medium font-bold">
                                             تشک دو نفره طبی فنر اطلس مدل لواترا پلامن
                                         </a>
@@ -3415,8 +3631,7 @@
                             </div>
 
 
-                            <div
-                                class="swiper-slide relative flex! rounded-xl md:flex-col md:gap-5 gap-2 md:p-3 px-1.5 py-1 bg-white">
+                                                        <div class="swiper-slide ">
 
                                 <div
                                     class="absolute w-full flex md:items-center items-start justify-between right-0 top-0 p-3">
@@ -3442,15 +3657,21 @@
                                                 مناسب کمردرد
                                             </span>
 
-                                            <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
+                                            <figure>
+                                               <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
+                                                alt="تشک برند رویا"> 
+                                            </figure>
+                                            
                                         </a>
                                         <a href="#" class="brand-mobile relative flex group gap-2">
                                             <span class="hidden md:block ">
                                                 تشک برند رویا
                                             </span>
-                                            <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
+                                            <figure>
+                                               <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
+                                                alt="تشک برند رویا"> 
+                                            </figure>
+                                            
                                         </a>
 
 
@@ -3459,9 +3680,12 @@
 
 
                                 <a class="md:w-full w-[32%]" href="#" class="rounded-xl block">
-
-                                    <img src="./src/img/image 44.png" class="w-full"
+                                    <figure>
+                                        <img src="./src/img/image 44.png" class="w-full"
                                         alt="تشک دو نفره طبی فنر اطلس مدل لواترا پلامن">
+                                    </figure>
+
+                                    
 
                                 </a>
 
@@ -3470,7 +3694,7 @@
                                 <div class="md:w-full  w-[65%] flex flex-col gap-4">
 
                                     <h1
-                                        class="font-medium hover:text-gray-900 md:-mt-8 md:w-full w-[75%] text-right leading-5">
+                                        class="font-medium hover:text-gray-900 md:-mt-8 md:w-full w-[74%] text-right leading-5">
                                         <a href="#" class="md:text-[15px] text-right text-xs md:font-medium font-bold">
                                             تشک دو نفره طبی فنر اطلس مدل لواترا پلامن
                                         </a>
@@ -3571,9 +3795,7 @@
 
                             </div>
 
-
-                            <div
-                                class="swiper-slide relative flex! rounded-xl md:flex-col md:gap-5 gap-2 md:p-3 px-1.5 py-1 bg-white">
+                                                        <div class="swiper-slide ">
 
                                 <div
                                     class="absolute w-full flex md:items-center items-start justify-between right-0 top-0 p-3">
@@ -3599,15 +3821,21 @@
                                                 مناسب کمردرد
                                             </span>
 
-                                            <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
+                                            <figure>
+                                               <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
+                                                alt="تشک برند رویا"> 
+                                            </figure>
+                                            
                                         </a>
                                         <a href="#" class="brand-mobile relative flex group gap-2">
                                             <span class="hidden md:block ">
                                                 تشک برند رویا
                                             </span>
-                                            <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
+                                            <figure>
+                                               <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
+                                                alt="تشک برند رویا"> 
+                                            </figure>
+                                            
                                         </a>
 
 
@@ -3616,9 +3844,12 @@
 
 
                                 <a class="md:w-full w-[32%]" href="#" class="rounded-xl block">
-
-                                    <img src="./src/img/image 44.png" class="w-full"
+                                    <figure>
+                                        <img src="./src/img/image 44.png" class="w-full"
                                         alt="تشک دو نفره طبی فنر اطلس مدل لواترا پلامن">
+                                    </figure>
+
+                                    
 
                                 </a>
 
@@ -3627,7 +3858,7 @@
                                 <div class="md:w-full  w-[65%] flex flex-col gap-4">
 
                                     <h1
-                                        class="font-medium hover:text-gray-900 md:-mt-8 md:w-full w-[75%] text-right leading-5">
+                                        class="font-medium hover:text-gray-900 md:-mt-8 md:w-full w-[74%] text-right leading-5">
                                         <a href="#" class="md:text-[15px] text-right text-xs md:font-medium font-bold">
                                             تشک دو نفره طبی فنر اطلس مدل لواترا پلامن
                                         </a>
@@ -3727,177 +3958,22 @@
                                 </div>
 
                             </div>
-
-
-                            <div
-                                class="swiper-slide relative flex! rounded-xl md:flex-col md:gap-5 gap-2 md:p-3 px-1.5 py-1 bg-white">
-
-                                <div
-                                    class="absolute w-full flex md:items-center items-start justify-between right-0 top-0 p-3">
-
-                                    <div class="flex flex-col gap-2 ">
-                                        <button>
-                                            <svg class="md:w-8 w-6 h-6 md:h-8">
-                                                <use xlink:href="#heart"></use>
-                                            </svg>
-                                        </button>
-                                        <button>
-                                            <svg class="md:w-8 w-6 h-6 md:h-8">
-                                                <use xlink:href="#statistic"></use>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                    <div class="flex  md:flex-col gap-3 text-[6px]">
-
-
-                                        <a href="#" class="brand-mobile relative flex gap-2">
-                                            <span class="hidden md:block">
-                                                مناسب کمردرد
-                                            </span>
-
-                                            <img src="./src/img/Frame 1984078262.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
-                                        </a>
-                                        <a href="#" class="brand-mobile relative flex group gap-2">
-                                            <span class="hidden md:block ">
-                                                تشک برند رویا
-                                            </span>
-                                            <img src="./src/img/Frame 1984078261.png" class="w-6 h-6"
-                                                alt="تشک برند رویا">
-                                        </a>
-
-
-                                    </div>
-                                </div>
-
-
-                                <a class="md:w-full w-[32%]" href="#" class="rounded-xl block">
-
-                                    <img src="./src/img/image 44.png" class="w-full"
-                                        alt="تشک دو نفره طبی فنر اطلس مدل لواترا پلامن">
-
-                                </a>
-
-
-
-                                <div class="md:w-full  w-[65%] flex flex-col gap-4">
-
-                                    <h1
-                                        class="font-medium hover:text-gray-900 md:-mt-8 md:w-full w-[75%] text-right leading-5">
-                                        <a href="#" class="md:text-[15px] text-right text-xs md:font-medium font-bold">
-                                            تشک دو نفره طبی فنر اطلس مدل لواترا پلامن
-                                        </a>
-                                    </h1>
-                                    <a href="#" class="text-gray-400 text-[15px] m:block hidden">
-                                        رویا سایز 200*140
-                                    </a>
-
-                                    <div class="grid md:grid-cols-3 grid-cols-2 md:gap-y-3 gap-y-2">
-
-
-
-                                        <span class="flex items-center gap-1 text-[9px] text-gray-400">
-
-                                            <svg class="w-2.5 h-2.5">
-                                                <use xlink:href="#bed"></use>
-                                            </svg>
-                                            <span>
-                                                نوع تشک: طبی فنری
-                                            </span>
-                                        </span>
-
-                                        <span class="flex items-center gap-1 text-[9px] text-gray-400">
-
-                                            <svg class="w-2.5 h-2.5">
-                                                <use xlink:href="#difficulity"></use>
-                                            </svg>
-                                            <span>
-                                                درجه سفتی: متوسط
-                                            </span>
-                                        </span>
-
-                                        <span class="flex items-center gap-1 text-[9px] text-gray-400">
-
-                                            <svg class="w-2.5 h-2.5">
-                                                <use xlink:href="#ruler"></use>
-                                            </svg>
-                                            <span>
-                                                ارتفاع: 25 سانت
-                                            </span>
-                                        </span>
-
-
-                                        <span class="flex items-center gap-1 text-[9px] text-gray-400">
-
-                                            <svg class="w-2.5 h-2.5">
-                                                <use xlink:href="#dumbbell"></use>
-                                            </svg>
-                                            <span>
-                                                تحمل وزن: 120 Kg
-                                            </span>
-                                        </span>
-
-
-                                        <span class="flex items-center gap-1 text-[9px] text-gray-400">
-
-                                            <svg class="w-2.5 h-2.5">
-                                                <use xlink:href="#garanty"></use>
-                                            </svg>
-                                            <span>
-                                                گارانتی: 5 سال
-                                            </span>
-                                        </span>
-
-
-                                        <span class="flex items-center gap-1 text-[9px] text-gray-400">
-
-                                            <svg class="w-2.5 h-2.5">
-                                                <use xlink:href="#waist-arounded"></use>
-                                            </svg>
-                                            <span>
-                                                مناسب: افراد کمردرد
-                                            </span>
-                                        </span>
-
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="product-price">
-
-                                    <span class="flex flex-col gap-1 text-right md:pb-2">
-                                        <del class="text-[#808184] text-sm">55,000,000</del>
-                                        <ins class="md:font-medium font-bold text-lg md:text-base">22,000,000
-                                            <span class="text-[10px]">
-                                                تومان
-                                            </span>
-                                        </ins>
-                                    </span>
-
-                                    <a href="#" class="product-detail-btn">
-                                        جزییات و خرید محصول
-                                    </a>
-
-                                </div>
-
-                            </div>
-
 
 
 
                         </div>
 
-                        <div class="hidden md:flex">
-                            <div class="swiper-button-prev text-white"></div>
-                            <div class="swiper-button-next text-white"></div>
-                        </div>
+
 
 
 
                     </div>
+
+                    <div class="hidden md:flex swiper-navs">
+                        <div class="swiper-button-prev text-white"></div>
+                        <div class="swiper-button-next text-white"></div>
+                    </div>
+
                     <button id="toggleBtn" class="md:hidden m-auto flex gap-3 items-center" style="display:none;">
 
                         <span class="btn-text">
@@ -3948,7 +4024,7 @@
                             <div class="md:hidden block">
                                 <ul>
                                     <li
-                                        class="rounded mb-2 h-8 p-4 flex items-center justify-between font-semibold bg-gray-50">
+                                        class="rounded mb-2 h-10 p-4 flex items-center justify-between font-semibold bg-gray-50">
                                         <span>
                                             برند:
                                         </span>
@@ -3958,7 +4034,7 @@
                                     </li>
 
                                     <li
-                                        class="rounded mb-2 h-8 p-4 flex items-center justify-between font-semibold bg-gray-50">
+                                        class="rounded mb-2 h-10 p-4 flex items-center justify-between font-semibold bg-gray-50">
                                         <span>
                                             دسته بندی:
                                         </span>
@@ -3975,7 +4051,7 @@
 
                                 <div class="accordion-item pt-0 md:rounded-xl rounded bg-gray-50">
                                     <button
-                                        class="accordion-btn h-16 md:text-xl text-sm text-right md:font-medium font-semibold">
+                                        class="accordion-btn h-16!">
                                         ویژگی های ساختاری انواع ساخت و تکنولوژی
                                         <span class="icon">
                                             <svg class="w-5 h-5 fill-black">
@@ -3989,8 +4065,6 @@
                                         <ul class="flex flex-col gap-4">
 
 
-
-
                                             <li class="flex gap-3 items-center justify-between">
 
                                                 <span class="specifications-feature">
@@ -3999,11 +4073,11 @@
 
                                                 <span class="specifications-value">
 
-                                                    <a href="#">فنری</a>
+                                                    <a href="#">فنری</a>,
                                                     <a href="#">طبی</a>,
                                                     <a href="#">فوم</a>,
                                                     <a href="#">بادی</a>,
-                                                    <a href="#">آبی</a>,
+                                                    <a href="#">آبی</a>
                                                 </span>
 
 
@@ -4012,16 +4086,15 @@
                                             <li class="flex gap-3 items-center justify-between">
 
                                                 <span class="specifications-feature">
-                                                    نوع تشک:
+                                                   نوع فنر:
                                                 </span>
 
                                                 <span class="specifications-value">
 
-                                                    <a href="#">فنری</a>
-                                                    <a href="#">طبی</a>,
-                                                    <a href="#">فوم</a>,
-                                                    <a href="#">بادی</a>,
-                                                    <a href="#">آبی</a>,
+                                                    <a href="#" class="text-sky-500">فنر متصل</a>,
+                                                    <a href="#"> فنر منفصل (پاکتی)</a>,
+                                                    <a href="#"> بدون فنر</a>
+        
                                                 </span>
 
 
@@ -4030,16 +4103,30 @@
                                             <li class="flex gap-3 items-center justify-between">
 
                                                 <span class="specifications-feature">
-                                                    نوع تشک:
+                                                   لایه میانی:
+                                                </span>
+
+                                                <span class="specifications-value gap-1">
+
+                                                    <a href="#" class="text-sky-500">مموری فوم</a>,
+                                                    <a href="#">لاتکس</a>,
+                                                    <a href="#">فوم HR</a>,
+                                                    <a href="#">فوم سرد</a>,
+                                                    <a href="#"> فوم پلی اورتان</a>
+                                                </span>
+
+                                            </li>
+
+                                            <li class="flex gap-3 items-center justify-between">
+
+                                                <span class="specifications-feature">
+                                                    ساختار تشک:
                                                 </span>
 
                                                 <span class="specifications-value">
 
-                                                    <a href="#">فنری</a>
-                                                    <a href="#">طبی</a>,
-                                                    <a href="#">فوم</a>,
-                                                    <a href="#">بادی</a>,
-                                                    <a href="#">آبی</a>,
+                                                    <a href="#">یک طرفه / دو طرفه</a>
+  
                                                 </span>
 
 
@@ -4048,34 +4135,15 @@
                                             <li class="flex gap-3 items-center justify-between">
 
                                                 <span class="specifications-feature">
-                                                    نوع تشک:
+                                                     طراحی:
                                                 </span>
 
                                                 <span class="specifications-value">
 
-                                                    <a href="#">فنری</a>
-                                                    <a href="#">طبی</a>,
-                                                    <a href="#">فوم</a>,
-                                                    <a href="#">بادی</a>,
-                                                    <a href="#">آبی</a>,
-                                                </span>
-
-
-                                            </li>
-
-                                            <li class="flex gap-3 items-center justify-between">
-
-                                                <span class="specifications-feature">
-                                                    نوع تشک:
-                                                </span>
-
-                                                <span class="specifications-value">
-
-                                                    <a href="#">فنری</a>
-                                                    <a href="#">طبی</a>,
-                                                    <a href="#">فوم</a>,
-                                                    <a href="#">بادی</a>,
-                                                    <a href="#">آبی</a>,
+                                                    <a href="#">ارگونوکیک</a>,
+                                                    <a href="#">ارتوپدیک</a>,
+                                                    <a href="#" class="text-sky-500"> مناسب برای درد کمر</a>
+                                         
                                                 </span>
 
                                             </li>
@@ -4090,7 +4158,7 @@
 
                                 <div class="accordion-item pt-0 md:rounded-xl rounded bg-gray-50">
                                     <button
-                                        class="accordion-btn h-16 md:text-xl text-sm text-right md:font-medium font-semibold">
+                                        class="accordion-btn">
                                         ویژگی های ساختاری انواع ساخت و تکنولوژی
                                         <span class="icon">
                                             <svg class="w-5 h-5 fill-black">
@@ -4208,7 +4276,7 @@
 
                                 <div class="accordion-item pt-0 md:rounded-xl rounded bg-gray-50">
                                     <button
-                                        class="accordion-btn h-16 md:text-xl text-sm text-right md:font-medium font-semibold">
+                                        class="accordion-btn">
                                         ویژگی های ساختاری انواع ساخت و تکنولوژی
                                         <span class="icon">
                                             <svg class="w-5 h-5 fill-black">
@@ -4421,8 +4489,11 @@
 
 
                     <div class="rounded-xl sticky top-52 shadow-md shadow-gray-400 p-4 flex flex-col gap-4">
-                        <img src="./src/img/image 44.png" class="w-full" alt="تشک دو نفره ارژیک هایپو
+                        <figure>
+                            <img src="./src/img/image 44.png" class="w-full" alt="تشک دو نفره ارژیک هایپو
 طبی فنر منفصل سایز 148*200 برند فالومو">
+                        </figure>
+                        
 
                         <h1 class="font-medium">
                             تشک دو نفره ارژیک هایپو
@@ -4694,7 +4765,10 @@
                     <div id="tell-counseling"
                         class="bg-white rounded-xl md:sticky top-[200px] p-4 text-center border border-gray-300">
                         <figure class="flex flex-col gap-4 items-center">
-                            <img src="./src/img/image 74.png" class="rounded-full w-36 h-36 p-2" alt="">
+                            <figure>
+                               <img src="./src/img/image 74.png" class="rounded-full w-36 h-36 p-2" alt=""> 
+                            </figure>
+                            
 
                             <figcaption class="flex flex-col gap-4">
                                 <h4 class="text-2xl">
@@ -4736,10 +4810,13 @@
         <!-- testimonials -->
         <section id="testimonials" class="my-10">
 
-            <h3 class="text-2xl font-medium text-right py-4">
+            <h3 class="text-2xl font-medium md:text-right text-center py-4">
                 تجربه خریداران
             </h3>
 
+            <p class="text-sm text-center text-[#808184] md:hidden">
+                تجربه های خرید خود را با ما به اشتراک بذارید هدیه بگیرید
+            </p>
 
 
             <div class="swiper testimonials">
@@ -4749,14 +4826,17 @@
                     <div class="swiper-slide relative flex! rounded-xl flex-col gap-5 p-3 bg-white">
 
 
-                        <div class="flex md:flex-row flex-col  items-center gap-4">
+                        <div class="flex md:flex-row flex-col md:text-base text-xs items-center gap-4">
 
-                            <img src="./src/img/image 72.jpg" class="md:w-52 w-full md:h-52 rounded-lg" alt="">
-                            <div class="flex flex-col gap-4 md:text-right">
-                                <h5 class="text-2xl">
+                            <figure>
+                               <img src="./src/img/image 72.jpg" class="md:w-52 w-full md:h-52 rounded-lg" alt=""> 
+                            </figure>
+                            
+                            <div class="flex flex-col gap-4 text-right">
+                                <h5 class="md:text-2xl font-medium text-base md:text-right text-center">
                                     محمد احمدی
                                 </h5>
-                                <p>
+                                <p calss="md:text-base">
                                     من نزدیک به ده ساله خوشخواب های مارک رویا رو استفاده میکنم برای همین بر اساس برند
                                     تولیدی خرید زدم پنج تا و به احتمال زیاد دوباره هم خرید بزنم اندازه تشک 195*80تنها
                                     ایرادی که میشه از این تشک گرفت....
@@ -4765,41 +4845,7 @@
 
                                 <span class="text-left md:block hidden">
                                     <a href="#"
-                                        class="text-xs text-right py-1.5 px-4 rounded-full text-sky-600 inline-flex justify-end items-center bg-sky-100">
-                                        تشک دو نفره طبی منفصل مدل اولترا پلاس رویا سایز 300*200
-                                        <svg class="w-3 h-3">
-                                            <use xlink:href="#arrow-left"></use>
-                                        </svg>
-                                    </a>
-                                </span>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="swiper-slide relative flex! rounded-xl flex-col gap-5 p-3 bg-white">
-
-
-                        <div class="flex md:flex-row flex-col  items-center gap-4">
-
-                            <img src="./src/img/image 72.jpg" class="md:w-52 w-full md:h-52 rounded-lg" alt="">
-                            <div class="flex flex-col gap-4 md:text-right">
-                                <h5 class="text-2xl">
-                                    محمد احمدی
-                                </h5>
-                                <p>
-                                    من نزدیک به ده ساله خوشخواب های مارک رویا رو استفاده میکنم برای همین بر اساس برند
-                                    تولیدی خرید زدم پنج تا و به احتمال زیاد دوباره هم خرید بزنم اندازه تشک 195*80تنها
-                                    ایرادی که میشه از این تشک گرفت....
-                                </p>
-
-
-                                <span class="text-left md:block hidden">
-                                    <a href="#"
-                                        class="text-xs text-right py-1.5 px-4 rounded-full text-sky-600 inline-flex justify-end items-center bg-sky-100">
+                                        class="text-xs text-right py-1.5 px-4 gap-3 rounded-full text-[#209AFF] inline-flex justify-end items-center bg-sky-100">
                                         تشک دو نفره طبی منفصل مدل اولترا پلاس رویا سایز 300*200
                                         <svg class="w-3 h-3">
                                             <use xlink:href="#arrow-left"></use>
@@ -4816,14 +4862,17 @@
                     <div class="swiper-slide relative flex! rounded-xl flex-col gap-5 p-3 bg-white">
 
 
-                        <div class="flex md:flex-row flex-col  items-center gap-4">
+                        <div class="flex md:flex-row flex-col md:text-base text-xs items-center gap-4">
 
-                            <img src="./src/img/image 72.jpg" class="md:w-52 w-full md:h-52 rounded-lg" alt="">
-                            <div class="flex flex-col gap-4 md:text-right">
-                                <h5 class="text-2xl">
+                            <figure>
+                              <img src="./src/img/image 72.jpg" class="md:w-52 w-full md:h-52 rounded-lg" alt="">  
+                            </figure>
+                            
+                            <div class="flex flex-col gap-4 text-right">
+                                <h5 class="md:text-2xl font-medium text-base md:text-right text-center">
                                     محمد احمدی
                                 </h5>
-                                <p>
+                                <p calss="md:text-base">
                                     من نزدیک به ده ساله خوشخواب های مارک رویا رو استفاده میکنم برای همین بر اساس برند
                                     تولیدی خرید زدم پنج تا و به احتمال زیاد دوباره هم خرید بزنم اندازه تشک 195*80تنها
                                     ایرادی که میشه از این تشک گرفت....
@@ -4832,7 +4881,7 @@
 
                                 <span class="text-left md:block hidden">
                                     <a href="#"
-                                        class="text-xs text-right py-1.5 px-4 rounded-full text-sky-600 inline-flex justify-end items-center bg-sky-100">
+                                        class="text-xs text-right py-1.5 px-4 gap-3 rounded-full text-[#209AFF] inline-flex justify-end items-center bg-sky-100">
                                         تشک دو نفره طبی منفصل مدل اولترا پلاس رویا سایز 300*200
                                         <svg class="w-3 h-3">
                                             <use xlink:href="#arrow-left"></use>
@@ -4844,16 +4893,57 @@
                         </div>
 
                     </div>
+
+                    <div class="swiper-slide relative flex! rounded-xl flex-col gap-5 p-3 bg-white">
+
+
+                        <div class="flex md:flex-row flex-col md:text-base text-xs items-center gap-4">
+
+                            <figure>
+                               <img src="./src/img/image 72.jpg" class="md:w-52 w-full md:h-52 rounded-lg" alt=""> 
+                            </figure>
+                            
+                            <div class="flex flex-col gap-4 text-right">
+                                <h5 class="md:text-2xl font-medium text-base md:text-right text-center">
+                                    محمد احمدی
+                                </h5>
+                                <p calss="md:text-base">
+                                    من نزدیک به ده ساله خوشخواب های مارک رویا رو استفاده میکنم برای همین بر اساس برند
+                                    تولیدی خرید زدم پنج تا و به احتمال زیاد دوباره هم خرید بزنم اندازه تشک 195*80تنها
+                                    ایرادی که میشه از این تشک گرفت....
+                                </p>
+
+
+                                <span class="text-left md:block hidden">
+                                    <a href="#"
+                                        class="text-xs text-right py-1.5 px-4 gap-3 rounded-full text-[#209AFF] inline-flex justify-end items-center bg-sky-100">
+                                        تشک دو نفره طبی منفصل مدل اولترا پلاس رویا سایز 300*200
+                                        <svg class="w-3 h-3">
+                                            <use xlink:href="#arrow-left"></use>
+                                        </svg>
+                                    </a>
+                                </span>
+
+                            </div>
+                        </div>
+
+                    </div>
+  
+
+
 
 
                 </div>
 
-                <div class="">
+
+
+            </div>
+
+
+                <div class="swiper-navs hidden md:flex">
                     <div class="swiper-button-prev text-white"></div>
                     <div class="swiper-button-next text-white"></div>
                 </div>
-
-            </div>
 
         </section>
         <!-- testimonials -->
@@ -4905,12 +4995,12 @@
 
                             </div>
 
-                            <div class="flex flex-col gap-3 p-2 text-right">
+                            <div class="flex flex-col gap-3 p-3 text-right">
                                 <label for="decs" class="text-gray-500 text-lg">
                                     سوال یا نظر خود را بنویسید
                                 </label>
                                 <textarea id="decs" placeholder="پرسش یا اگر سوالی دارید اینجا بنویسید..."
-                                    class="bg-gray-50 h-52 p-2 rounded"></textarea>
+                                    class="bg-gray-50 h-52 p-2 rounded-md"></textarea>
                             </div>
 
 
@@ -4986,7 +5076,7 @@
 
                         </div>
                     </div>
-                    <button class="bg-[#6ABCFF] rounded-lg h-12 text-center w-full cursor-pointer">
+                    <button class="bg-[#6ABCFF] rounded-lg h-12 text-center w-full cursor-pointer my-2">
                         ارسال پرسش، نظر
                     </button>
                 </form>
@@ -5571,17 +5661,17 @@
 
 
 
-    <footer>
+    <footer class="relative">
 
 
         <section class="container flex lg:flex-row flex-col items-end">
-            <div class="lg:w-[30%] w-full flex flex-col gap-5 p-5 rounded-2xl md:bg-sky-100">
+            <div class="lg:w-[30%] w-full flex flex-col gap-5 md:p-5 rounded-2xl md:bg-sky-100">
 
 
-                <figure class="p-5 rounded bg-sky-100">
-                    <img src="./assets/images/SleepSHiman.png" class="w-64 m-auto" alt="">
+                <figure class="p-5 rounded-md bg-sky-100">
+                    <img src="./assets/images/SleepSHiman.png" class="w-64 md:mb-4 m-auto py-5" alt="">
 
-                    <figcaption class="text-sm text-right">
+                    <figcaption class="text-sm text-justify">
 
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
                         چاپگرها و متون
@@ -5598,10 +5688,10 @@
                 </figure>
 
 
-                <figure class="flex gap-4 md:hidden p-4 rounded bg-gray-50">
+                <figure class="flex items-center gap-2 md:hidden p-3 rounded bg-gray-50">
                     <img src="./src/img/image 69.png" class="w-14 h-14 rounded" alt="">
 
-                    <figcaption>
+                    <figcaption class="text-sm">
                         بیش از 25 سال سابقه در صنعت کالای خواب
                     </figcaption>
                 </figure>
@@ -5614,7 +5704,7 @@
                         <svg class="w-9 h-6 text-sky-500">
                             <use xlink:href="#location"></use>
                         </svg>
-                        <span class="text-[15px] font-medium text-black text-right">
+                        <span class="text-[14px] font-medium text-black text-right">
                             شعبه 1: استان فارسف شیراز، پاسداران، خیابان سوم شرقی، بعد از اولین تقاطع، کالای خواب
                             اسلیپیران
                         </span>
@@ -5627,15 +5717,24 @@
                         <svg class="w-6 h-6 text-sky-500">
                             <use xlink:href="#phone"></use>
                         </svg>
-                        <span class="text-[15px] font-medium text-black text-right">
+                        <span class="text-[14px] font-medium text-black text-right">
                             شماره فروشگاه: 09359905359 - 09169911451
                         </span>
 
                     </span>
 
                     <span class="flex gap-3 items-center justify-end">
-                        <a href=""><img src="./src/img/Frame 1984078224.png" alt=""></a>
-                        <a href=""><img src="./src/img/Frame 1984078225.png" alt=""></a>
+                        <a href="">
+                            <figure>
+                              <img src="./src/img/Frame 1984078224.png" alt="">  
+                            </figure>
+                            
+                        </a>
+                        <a href="">
+                            <figure>
+                                <img src="./src/img/Frame 1984078225.png" alt="">
+                            </figure>
+                        </a>
                     </span>
                 </div>
 
@@ -5666,14 +5765,23 @@
                     </span>
 
                     <span class="flex gap-3 items-center justify-end">
-                        <a href=""><img src="./src/img/Frame 1984078224.png" alt=""></a>
-                        <a href=""><img src="./src/img/Frame 1984078225.png" alt=""></a>
+                        <a href="">
+                            <figure>
+                              <img src="./src/img/Frame 1984078224.png" alt="">  
+                            </figure>
+                            
+                        </a>
+                        <a href="">
+                            <figure>
+                               <img src="./src/img/Frame 1984078225.png" alt=""> 
+                            </figure>
+                        </a>
                     </span>
                 </div>
 
             </div>
 
-            <div class="lg:w-[50%] w-full p-5 md:p-0">
+            <div class="lg:w-[50%] w-full p-5 md:p-0 md:my-[95px]">
 
 
                 <div class="flex md:flex-row gap-4 md:gap-0 flex-col items-center justify-evenly" id="accordion">
@@ -5681,14 +5789,14 @@
 
 
                     <div
-                        class="accordion-item px-2 md:px-0 md:border-0 border border-gray-100 md:w-fit w-full text-right">
-                        <h4 class="accordion-btn flex justify-between gap-2 font-bold py-6! px-0!">
+                        class="accordion-item ">
+                        <h4 class="accordion-btn flex justify-between gap-2 text-base font-bold py-6! px-0!">
                             برند های کالای خواب
                             <svg class="w-6 h-6 text-sky-500">
                                 <use xlink:href="#chevron-down"></use>
                             </svg>
                         </h4>
-                        <ul class="accordion-content px-0! md:flex hidden flex-col gap-4">
+                        <ul class="accordion-content py-2 px-0! md:flex hidden flex-col gap-4">
                             <li>
                                 <a href="#">
                                     تشک خوشخواب
@@ -5696,12 +5804,12 @@
                             </li>
                             <li>
                                 <a href="#">
-                                   تشک رویال
+                                    تشک رویال
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                   تشک رویال
+                                    تشک رویال
                                 </a>
                             </li>
                             <li>
@@ -5722,7 +5830,7 @@
 
                             <li>
                                 <a href="#">
-                                    نساجی بروجرد 
+                                    نساجی بروجرد
                                 </a>
                             </li>
                             <li>
@@ -5735,14 +5843,14 @@
                     </div>
 
                     <div
-                        class="accordion-item px-2 md:px-0 md:border-0 border border-gray-100 md:w-fit w-full text-right">
-                        <h4 class="accordion-btn flex justify-between gap-2 font-bold py-6! px-0!">
+                        class="accordion-item ">
+                        <h4 class="accordion-btn text-base flex justify-between gap-2 font-bold py-6! px-0!">
                             خدمات مشتریان
                             <svg class="w-6 h-6 text-sky-500">
                                 <use xlink:href="#chevron-down"></use>
                             </svg>
                         </h4>
-                        <ul class="accordion-content px-0! md:flex hidden flex-col gap-4">
+                        <ul class="accordion-content py-2 px-0! md:flex hidden flex-col gap-4">
                             <li>
                                 <a href="#">
                                     تشک خوشخواب
@@ -5750,12 +5858,12 @@
                             </li>
                             <li>
                                 <a href="#">
-                                   تشک رویال
+                                    تشک رویال
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                   تشک رویال
+                                    تشک رویال
                                 </a>
                             </li>
                             <li>
@@ -5776,7 +5884,7 @@
 
                             <li>
                                 <a href="#">
-                                    نساجی بروجرد 
+                                    نساجی بروجرد
                                 </a>
                             </li>
                             <li>
@@ -5788,14 +5896,14 @@
                         </ul>
                     </div>
                     <div
-                        class="accordion-item px-2 md:px-0 md:border-0 border border-gray-100 md:w-fit w-full text-right">
-                        <h4 class="accordion-btn flex justify-between gap-2 font-bold py-6! px-0!">
+                        class="accordion-item">
+                        <h4 class="accordion-btn text-base flex justify-between gap-2 font-bold py-6! px-0!">
                             خدمات مشتریان
                             <svg class="w-6 h-6 text-sky-500">
                                 <use xlink:href="#chevron-down"></use>
                             </svg>
                         </h4>
-                        <ul class="accordion-content px-0! md:flex hidden flex-col gap-4">
+                        <ul class="accordion-content py-2 px-0! md:flex hidden flex-col gap-4">
                             <li>
                                 <a href="#">
                                     تشک خوشخواب
@@ -5803,12 +5911,12 @@
                             </li>
                             <li>
                                 <a href="#">
-                                   تشک رویال
+                                    تشک رویال
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                   تشک رویال
+                                    تشک رویال
                                 </a>
                             </li>
                             <li>
@@ -5829,7 +5937,7 @@
 
                             <li>
                                 <a href="#">
-                                    نساجی بروجرد 
+                                    نساجی بروجرد
                                 </a>
                             </li>
                             <li>
@@ -5855,6 +5963,7 @@
 
                 <div class="e-namad">
                     <a>
+                        
                         <img src="./src/img/Frame 48095819.png" alt="">
                     </a>
                 </div>
@@ -5877,63 +5986,58 @@
         </section>
 
 
+        <div id="mobole-footer" class="md:hidden fixed bottom-2 w-full z-20">
+
+            <nav class="flex items-center justify-between">
+                <ul>
+                    <li class="open-modal" data-target="SmartSearch">
+                        <svg class="w-6 h-6">
+                            <use xlink:href="#smart-search"></use>
+                        </svg>
+
+                        <span class="text-[8px]">جستوجوی هوشمند</span>
+                    </li>
+
+                    <li id="btnSearch">
+                        <svg class="w-6 h-6 ">
+                            <use xlink:href="#footer-search"></use>
+                        </svg>
+
+                        <span class="text-[10px]">جستوجو</span>
+                    </li>
+
+                    <li class="open-modal" data-target="mainCategory">
+                        <svg class="w-6 h-6">
+                            <use xlink:href="#category"></use>
+                        </svg>
+
+                        <span class="text-[10px]">دسته بندی</span>
+                    </li>
+
+                    <li>
+                        <svg class="w-6 h-6">
+                            <use xlink:href="#discount"></use>
+                        </svg>
+
+                        <span class="text-[10px]">تخفیف دارها</span>
+                    </li>
 
 
+                    <li id="btnCart">
+                        <svg class="w-6 h-6">
+                            <use xlink:href="#footer-cart"></use>
+                        </svg>
+                        <span class="text-[10px]">انتخاب شده ها </span>
+                    </li>
 
-
-
-        <div id="mobole-footer" class="md:hidden flex fixed bottom-2 w-full z-20">
-            <ul>
-                <li>
-                    <svg class="w-6 h-6">
-                        <use xlink:href="#smart-search"></use>
-                    </svg>
-
-                    <span class="text-[8px]">جستوجوی هوشمند</span>
-                </li>
-
-                <li>
-                    <svg class="w-6 h-6 ">
-                        <use xlink:href="#footer-search"></use>
-                    </svg>
-
-                    <span class="text-[10px]">جستوجو</span>
-                </li>
-
-                <li id="btnCat">
-                    <svg class="w-6 h-6">
-                        <use xlink:href="#category"></use>
-                    </svg>
-
-                    <span class="text-[10px]">دسته بندی</span>
-                </li>
-
-                <li>
-                    <svg class="w-6 h-6">
-                        <use xlink:href="#discount"></use>
-                    </svg>
-
-                    <span class="text-[10px]">تخفیف دارها</span>
-                </li>
-
-
-                <li id="btnCart">
-                    <svg class="w-6 h-6">
-                        <use xlink:href="#footer-cart"></use>
-                    </svg>
-
-
-                    <span class="text-[10px]">انتخاب شده ها </span>
-                </li>
-
-            </ul>
+                </ul>
+            </nav>
         </div>
 
     </footer>
 
 
     <!-- product-gallery modal-->
-
 
     <div id="product-gallery" class="modal z-30 fixed inset-0 bg-white!  hidden items-center justify-center">
         <div class="bg-white relative rounded-xl max-w-[85lvh]">
@@ -5946,23 +6050,41 @@
 
                     <div class="swiper-wrapper">
                         <div class="swiper-slide border border-gray-300 rounded-xl">
-                            <img src="./src/img/image 42.png" class="rounded-xl w-full" />
+                            <figure>
+                                <img src="./src/img/image 42.png" class="rounded-xl w-full" />
+                            </figure>
+                            
                         </div>
                         <div class="swiper-slide border border-gray-300 rounded-xl">
-                            <img src="./src/img/image 43.png" class="rounded-xl w-full" />
+                            <figure>
+                                <img src="./src/img/image 43.png" class="rounded-xl w-full" />
+                            </figure>
+                            
                         </div>
                         <div class="swiper-slide border border-gray-300  rounded-xl">
-                            <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            <figure>
+                               <img src="./src/img/image 44.png" class="rounded-xl w-full" /> 
+                            </figure>
+                            
                         </div>
                         <div class="swiper-slide border border-gray-300 rounded-xl">
-                            <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            <figure>
+                                <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            </figure>
+                            
                         </div>
 
                         <div class="swiper-slide border border-gray-300 rounded-xl">
-                            <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            <figure>
+                                <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            </figure>
+                            
                         </div>
                         <div class="swiper-slide border border-gray-300 rounded-xl">
-                            <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            <figure>
+                               <img src="./src/img/image 44.png" class="rounded-xl w-full" /> 
+                            </figure>
+                            
                         </div>
                     </div>
                     <div class="swiper-button-next text-white"></div>
@@ -5971,22 +6093,40 @@
                 <div thumbsSlider="" class="swiper thumbs_image_gallery2 md:p-4!  relative w-full">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide rounded-xl border border-gray-300">
-                            <img src="./src/img/image 43.png" class="rounded-xl w-full" />
+                            <figure>
+                               <img src="./src/img/image 43.png" class="rounded-xl w-full" /> 
+                            </figure>
+                            
                         </div>
                         <div class="swiper-slide rounded-xl border border-gray-300">
-                            <img src="./src/img/image 43.png" class="rounded-xl w-full" />
+                            <figure>
+                                <img src="./src/img/image 43.png" class="rounded-xl w-full" />
+                            </figure>
+                            
                         </div>
                         <div class="swiper-slide rounded-xl border border-gray-300">
-                            <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            <figure>
+                                <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            </figure>
+                            
                         </div>
                         <div class="swiper-slide rounded-xl border border-gray-300">
-                            <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            <figure>
+                                <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            </figure>
+                            
                         </div>
                         <div class="swiper-slide rounded-xl border border-gray-300">
-                            <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            <figure>
+                                <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            </figure>
+                            
                         </div>
                         <div class="swiper-slide rounded-xl border border-gray-300">
-                            <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            <figure>
+                                <img src="./src/img/image 44.png" class="rounded-xl w-full" />
+                            </figure>
+                            
                         </div>
 
                     </div>
@@ -6072,10 +6212,44 @@
 
 
 
+
+    <!-- category modal -->
+
+    <div id="mainCategory" class="modal z-30 fixed inset-0  hidden items-center justify-center">
+        <div class="bg-white px-6 shadow-lg absolute bottom-[86px] rounded-full overflow-visible ">
+
+
+            <div class="relative">
+                <ul class="flex items-center text-sm  gap-4 h-[54px]">
+
+                    <li>
+                        <a class="">تشک</a>
+                    </li>
+                    <li>
+                        <a class="">روتختی</a>
+                    </li>
+                    <li>
+                        <a class="">تخت خواب</a>
+                    </li>
+
+                    <li>
+                        <a class="">سایر محصولات </a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- category modal -->
+
+
+
     <!-- loginRegister modal -->
+
     <div id="loginRegister" class="modal z-30 fixed inset-0  hidden items-center justify-center">
         <div class="bg-white p-6 shadow-lg relative rounded-xl overflow-visible ">
-
 
             <button id="closeBtn"
                 class="close-modal w-12 h-12 justify-center rounded-full bg-white absolute -top-[22px] right-0 left-0 flex items-center m-auto">
@@ -6103,18 +6277,59 @@
                         <label for="offers" class="text-[8px] text-gray-400">
                             منو از تخفیفات مطلع کن
                         </label>
-
                     </div>
 
-
-                    <button
-                        class="text-xs bg-sky-500 flex gap-3 items-center rounded-full h-8 px-4 text-center text-white">
+                    <a href="#" data-target="verifyAccount"
+                        class="open-modal text-xs bg-sky-500 flex gap-3 items-center rounded-full h-8 px-4 text-center text-white">
                         ارسال کد
                         <svg class="w-5 h-5 text-white fill-white">
                             <use xlink:href="#arrow-left"></use>
                         </svg>
-                    </button>
+                    </a>
                 </div>
+
+            </form>
+
+
+            </button>
+        </div>
+    </div>
+
+
+    <div id="verifyAccount" class="modal z-30 fixed inset-0  hidden items-center justify-center">
+        <div class="bg-white p-6 shadow-lg relative rounded-xl overflow-visible ">
+
+
+            <button id="closeBtn"
+                class="close-modal w-12 h-12 justify-center rounded-full bg-white absolute -top-[22px] right-0 left-0 flex items-center m-auto">
+                <span class="absolute top-2.5">
+                    <svg class="w-5 h-5 text-sky-500">
+                        <use xlink:href="#close-rounded"></use>
+                    </svg>
+                </span>
+            </button>
+
+            <h3 class="text-xl p-4 font-bold">
+                کد را وارد کنید
+            </h3>
+
+            <form class="flex flex-col gap-2 font-medium">
+
+                <div class="flex gap-4 p-2 text-right">
+                    <input type="text" class="rounded-lg px-2 text-left bg-gray-50 h-11 w-11" id="code1">
+                    <input type="text" class="rounded-lg px-2 text-left bg-gray-50 h-11 w-11" id="code2">
+                    <input type="text" class="rounded-lg px-2 text-left bg-gray-50 h-11 w-11" id="code3">
+                    <input type="text" class="rounded-lg px-2 text-left bg-gray-50 h-11 w-11" id="code4">
+                </div>
+
+
+                <button
+                    class="text-xs m-auto bg-sky-500 flex gap-3 items-center rounded-full h-8 px-4 text-center text-white">
+                    ارسال
+                    <svg class="w-5 h-5 text-white fill-white">
+                        <use xlink:href="#arrow-left"></use>
+                    </svg>
+                </button>
 
 
 
@@ -6124,13 +6339,92 @@
             </button>
         </div>
     </div>
-    <!-- reserve counseling modal -->
+
+    <!-- loginRegister modal -->
 
 
 
+    <!-- SmartSearch -->
+
+    <div id="SmartSearch" class="modal z-30 fixed inset-0  hidden items-center justify-center">
+        <div class="bg-white p-6 shadow-lg relative rounded-xl overflow-visible h-[80vh]">
+
+
+
+            <h3 class="text-xl pb-6 font-bold">
+                دنبال چه محصولی هستی؟
+            </h3>
+
+            <div class="grid grid-cols-3 my-2 gap-4">
+
+                <a href="#" data-target="SmartSearch2"
+                    class="open-modal w-24 h-24 flex items-center justify-center bg-[#F9F9F9] rounded">
+                    تشک
+                </a>
+                <a href="#" data-target="SmartSearch2"
+                    class="open-modal w-24 h-24 flex items-center justify-center bg-[#F9F9F9] rounded">
+                    تخت خواب
+                </a>
+                <a href="#" data-target="SmartSearch2"
+                    class="open-modal w-24 h-24 flex items-center justify-center bg-[#F9F9F9] rounded">
+                    روتختی
+                </a>
+                <a href="#" data-target="SmartSearch2"
+                    class="open-modal w-24 h-24 flex items-center justify-center bg-[#F9F9F9] rounded">
+                    بالشت
+                </a>
+                <a href="" data-target="SmartSearch2"
+                    class="open-modal w-24 h-24 flex items-center justify-center bg-[#F9F9F9] rounded">
+                    محافظ تشک
+                </a>
+                <a href="#" data-target="SmartSearch2"
+                    class="open-modal w-24 h-24 flex items-center justify-center bg-[#F9F9F9] rounded">
+                    تن پوش
+                </a>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <div id="SmartSearch2" class="modal z-30 fixed inset-0  hidden items-center justify-center">
+        <div class="bg-white p-6 shadow-lg relative rounded-xl overflow-visible h-[80vh]">
+
+            <h3 class="text-xl pb-6 font-bold">
+                تشک رو برای چه کسی میخواید؟
+            </h3>
+
+            <div class="grid grid-cols-3 my-2 gap-4">
+
+                <a href="" class="w-24 h-24 flex items-center justify-center bg-[#F9F9F9] rounded">
+                    برای خودم
+                </a>
+                <a href="" class="w-24 h-24 flex items-center justify-center bg-[#F9F9F9] rounded">
+                    زوج هستیم
+                </a>
+                <a href="" class="w-24 h-24 flex items-center justify-center bg-[#F9F9F9] rounded">
+                    برای پدر و مادر
+                </a>
+                <a href="" class="col-span-3 h-24 flex items-center justify-center bg-[#F9F9F9] rounded">
+                    برای فرزندم
+                </a>
+
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
 
     <!--  -->
 
+    <!--product btm box modal -->
 
     <div id="bottomBox" class="fixed bottom-0 left-0 right-0 z-20 bg-white
             translate-y-full transition-transform rounded-xl duration-300 ease-out hidden">
@@ -6217,10 +6511,7 @@
 
     </div>
 
-
-
-
-    <!--  -->
+    <!-- product btm box modal -->
 
     <script src="./src/js/swiper-bundle.min.js"></script>
     <script src="./src/js/custom.js"></script>

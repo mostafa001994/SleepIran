@@ -286,7 +286,6 @@ tabs.forEach((tab, index) => {
 
 
 // 
-
 const accordionBtns = document.querySelectorAll(".accordion-btn");
 
 accordionBtns.forEach(btn => {
@@ -294,10 +293,15 @@ accordionBtns.forEach(btn => {
         const content = btn.nextElementSibling;
         const icon = btn.querySelector(".icon");
 
-        // اگر همین آیتم باز بود → ببند
         if (!content.classList.contains("hidden")) {
+            // بستن آیتم فعلی
             content.classList.add("hidden");
             icon.classList.remove("rotate-180");
+
+            // فقط اگر داخل specifications بود کلاس active حذف کن
+            if (btn.closest("#specifications")) {
+                btn.classList.remove("h-16!");
+            }
         } else {
             // اول همه رو ببند
             document.querySelectorAll(".accordion-content").forEach(c => c.classList.add("hidden"));
@@ -306,10 +310,16 @@ accordionBtns.forEach(btn => {
             // بعد آیتم کلیک‌شده رو باز کن
             content.classList.remove("hidden");
             icon.classList.add("rotate-180");
+
+            // فقط اگر داخل specifications بود کلاس active اضافه کن
+            if (btn.closest("#specifications")) {
+                // اول همه‌ی دکمه‌های داخل specifications رو از active خالی کن
+                document.querySelectorAll("#specifications .accordion-btn").forEach(b => b.classList.remove("active"));
+                btn.classList.add("h-16!");
+            }
         }
     });
 });
-
 
 
 // 
@@ -332,6 +342,17 @@ document.querySelectorAll(".close-modal").forEach(btn => {
         modal.classList.remove("flex");
     });
 });
+
+document.querySelectorAll(".modal").forEach(modal => {
+  modal.addEventListener("click", (e) => {
+    // اگر کلیک روی خود modal بود (یعنی بک‌دراپ)، نه داخل modal-content
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+  });
+});
+
 
 
 
@@ -506,6 +527,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // 
 
+
+
+//mobile cart 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btnSearch = document.getElementById("btnSearch");
+    const mobileSearch = document.getElementById("mobileSearch");
+    const closeSearch = document.getElementById("closeSearch");
+    const backdrop = document.getElementById("backdrop");
+
+
+    // باز کردن منو
+    btnSearch.addEventListener("click", () => {
+        mobileSearch.classList.remove("translate-x-full");
+        backdrop.classList.remove("hidden");
+    });
+
+    // بستن منو با دکمه بستن
+    closeSearch.addEventListener("click", () => {
+        mobileSearch.classList.add("translate-x-full");
+        backdrop.classList.add("hidden");;
+    });
+
+    // بستن منو با کلیک بیرون
+    document.addEventListener("click", (e) => {
+        const isClickInsideMenu = mobileSearch.contains(e.target) || btnSearch.contains(e.target);
+        if (!isClickInsideMenu && !mobileSearch.classList.contains("translate-x-full")) {
+            mobileSearch.classList.add("translate-x-full");
+            backdrop.classList.add("hidden");
+        }
+    });
+
+    // بستن منو با کلیک روی بک‌دراپ
+    backdrop.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-x-full");
+        backdrop.classList.add("hidden");
+    });
+
+});
+
+// 
 
 
 
