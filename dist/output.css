@@ -770,6 +770,9 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-2\! {
+    padding: calc(var(--spacing) * 2) !important;
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -1112,6 +1115,11 @@
       display: none;
     }
   }
+  .md\:hidden\! {
+    @media (width >= 48rem) {
+      display: none !important;
+    }
+  }
   .md\:h-4 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 4);
@@ -1278,6 +1286,15 @@
       gap: calc(var(--spacing) * 6);
     }
   }
+  .md\:space-y-4 {
+    @media (width >= 48rem) {
+      :where(& > :not(:last-child)) {
+        --tw-space-y-reverse: 0;
+        margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+        margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+      }
+    }
+  }
   .md\:gap-y-3 {
     @media (width >= 48rem) {
       row-gap: calc(var(--spacing) * 3);
@@ -1327,6 +1344,11 @@
   .md\:p-4 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:p-4\! {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 4) !important;
     }
   }
   .md\:px-0 {
@@ -1559,7 +1581,7 @@
   #bottomBox , #bottomBox button {
     box-shadow: 0px -7px 4px 0 #cecece;
   }
-  #specifications > h3:before {
+  .more-content > h3:before {
     content: '';
     width: 8px;
     height: 8px;
@@ -2194,7 +2216,7 @@
       overflow: hidden;
       top: -12px;
     }
-    #specifications > h3:before {
+    .more-content > h3:before {
       width: 6px;
       height: 6px;
       right: 8px;
@@ -2266,7 +2288,6 @@ ease;
       top: -16px;
       z-index: 1000;
       background: #f9fcfd;
-      width: 100%;
       justify-content: center;
     }
     #toggleBtn .icon , #toggleBtn2 .icon {

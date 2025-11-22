@@ -98,7 +98,7 @@
   box-shadow: 0px -7px 4px 0 #cecece;;
 }
 
-#specifications > h3:before {
+.more-content > h3:before {
     content: '';
     width: 8px;
     height: 8px;
@@ -474,7 +474,7 @@ footer .e-namad img{
     }
  
 
-    #specifications > h3:before {
+    .more-content > h3:before {
     width: 6px;
     height: 6px;
     right: 8px;
@@ -564,7 +564,6 @@ ease;
     top: -16px;
     z-index: 1000;
     background: #f9fcfd;
-    width: 100%;
     justify-content: center;
 }
 

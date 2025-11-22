@@ -440,6 +440,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+const levels = document.querySelectorAll(".menu-level");
+const items = document.querySelectorAll(".menu-level.level-1 li");
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+    const targetId = item.getAttribute("data-target");
+
+    // همه سطح‌ها رو مخفی کن
+    levels.forEach(l => l.classList.remove("active"));
+
+    // سطح دوم مربوطه رو نشون بده
+    document.getElementById(targetId).classList.add("active");
+  });
+});
+
+// دکمه بازگشت
+document.querySelectorAll(".back").forEach(backBtn => {
+  backBtn.addEventListener("click", () => {
+    levels.forEach(l => l.classList.remove("active"));
+    document.querySelector(".level-1").classList.add("active");
+  });
+});
+
+// نمایش سطح اول در حالت اولیه
+document.querySelector(".level-1").classList.add("active");
+
+
+
+
 //mobile cart 
 
 document.addEventListener("DOMContentLoaded", () => {
