@@ -21,6 +21,45 @@
   }
 
 
+  .my-checkbox {
+  appearance: none !important; /* حذف استایل پیش‌فرض */
+  width: 16px;
+  height: 16px;
+  border: unset;
+  border-radius: 4px;
+  background-color: #F9F9F9; /* بک‌گراند پیش‌فرض */
+  cursor: pointer;
+  position: relative;
+
+}
+
+.my-checkbox:checked {
+  background-color: #209AFF; /* وقتی چک میشه رنگ آبی */
+  border-color: #209AFF;
+}
+.my-checkbox:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+table td{
+  scrollbar-width: none; /* برای فایرفاکس */
+}
+
+table td::-webkit-scrollbar {
+  display: none; /* برای کروم و سافاری */
+}
+
+
+
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -131,9 +170,14 @@
 
 
 
-#bottomBox , #bottomBox button{
+#bottomBox2 , #bottomBox2 button{
   box-shadow: 0px -7px 4px 0 #cecece;;
 }
+#loginRegister > div , #verifyAccount > div{
+
+  box-shadow: 0 0 4px 0 #00000015 ;
+}
+
 
 .more-content > h3:before {
     content: '';
@@ -190,7 +234,20 @@
     border-radius: 50px;
 }
 
+ #btm-atc.fixed{
+    bottom: 64px;
+    width: 100%;
+    right: 0;
+    background: #fff;
+    padding: 5px 20px;
+  }
 
+   .specifications-value > *{
+    display: block;
+    width: max-content;
+    line-height: 20px;
+  }
+  
 
 
 }
@@ -204,6 +261,11 @@
 
 
   #mobileCart{
+    @apply fixed z-50 overflow-scroll w-9/12 h-full pb-6 bg-white shadow-lg transform transition-transform duration-300 ease-in-out
+  }
+
+
+    #mobileAddedToCart{
     @apply fixed z-50 overflow-scroll w-9/12 h-full pb-6 bg-white shadow-lg transform transition-transform duration-300 ease-in-out
   }
 
@@ -357,12 +419,12 @@
 
   .feature-item{
 
-    @apply flex items-center md:gap-2 gap-1 rounded-lg shadow h-14 bg-white md:p-2 p-1
+    @apply flex items-center md:gap-1.5 gap-1 rounded-lg shadow h-14 bg-white md:p-[5px] p-1
   }
 
 
 
-    .fixed-tabs  {
+  .fixed-tabs  {
     @apply z-20 bg-gray-50 p-4 top-36 rounded-xl transition-opacity left-0 right-0
   }
 
@@ -382,6 +444,7 @@
     @apply w-full py-2
   }
 
+ 
 
   .fixed-tabs a.active{
   
@@ -407,12 +470,12 @@
     @apply  px-4  text-gray-600 text-right
   }
 
-  .accordion-btn{
+  #specifications .accordion-btn{
     @apply  md:h-16 h-10 md:text-xl text-sm text-right md:font-medium font-semibold
   }
   
   .accordion-content{
-    @apply  p-4  text-gray-600 text-right flex flex-col
+    @apply  p-4  text-black text-right flex flex-col
   }
 
   .accordion-more-btn{
@@ -424,11 +487,14 @@
     @apply bg-white md:h-10 h-6 flex md:text-base text-xs items-center md:p-4 p-2 md:rounded-xl rounded text-right font-medium w-1/3 md:w-1/4
   }
 
-  
+ 
   .specifications-value{
-    @apply bg-white md:h-10 h-6 md:text-base gap-1 text-sm flex items-center md:p-4 p-2 md:rounded-xl rounded text-right font-medium w-2/3 md:w-3/4
+    @apply bg-white md:h-10 h-6 py-0.5 px-4 md:text-base gap-1 text-xs md:flex items-center md:p-4 p-2 md:rounded-xl rounded text-right font-medium w-full md:w-3/4 overflow-x-scroll overflow-y-hidden
   }
 
+  table tbody{
+    @apply flex flex-col md:gap-4 gap-2
+  }
 
   .counseling-btn{
     @apply text-sky-800 bg-sky-100 hover:bg-sky-200 text-center m-auto mt-4 h-[46px] p-4 rounded-lg text-xl flex items-center w-fit gap-3
@@ -479,6 +545,9 @@
 
 
 
+.otp{
+  @apply rounded-lg px-2 bg-[#F9F9F9] h-11 w-11 text-center
+}
 
 
 
@@ -553,7 +622,7 @@ footer .e-namad img{
   @media(max-width:640px) {
     .container {
       /* background-color: red; */
-      max-width: 90%;
+      max-width: 92%;
 
   
     }
@@ -598,10 +667,17 @@ footer .e-namad img{
     width: 110%;
     height: 90px;
     background: #ffffff;
-    right: -5%;
+    right: -6%;
     overflow: hidden;
-    top: -12px;
+    top: -13px;
     }
+
+
+      /* .swiper {
+    pointer-events: none;
+  } */
+
+
  
 
     .more-content > h3:before {

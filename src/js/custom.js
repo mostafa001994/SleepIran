@@ -265,6 +265,25 @@ window.addEventListener('scroll', function () {
 });
 
 
+
+window.addEventListener('scroll', function () {
+    const box = document.getElementById('btm-atc');
+    const bg= document.getElementById('bg');
+
+    
+    if (window.scrollY > 450) { // وقتی اسکرول بیشتر از 300px شد
+        box.classList.add('fixed!');
+        box.classList.add('fixed');
+        bg.classList.add('h-14!');
+    } else {
+        box.classList.remove('fixed!');
+        box.classList.remove('fixed');
+        bg.classList.remove('h-14!')
+    }
+});
+
+
+
 //
 
 
@@ -300,7 +319,7 @@ accordionBtns.forEach(btn => {
 
             // فقط اگر داخل specifications بود کلاس active حذف کن
             if (btn.closest("#specifications")) {
-                btn.classList.remove("h-16!");
+                // btn.classList.remove("h-16!");
             }
         } else {
             // اول همه رو ببند
@@ -315,7 +334,7 @@ accordionBtns.forEach(btn => {
             if (btn.closest("#specifications")) {
                 // اول همه‌ی دکمه‌های داخل specifications رو از active خالی کن
                 document.querySelectorAll("#specifications .accordion-btn").forEach(b => b.classList.remove("active"));
-                btn.classList.add("h-16!");
+                // btn.classList.add("h-16!");
             }
         }
     });
@@ -356,28 +375,27 @@ document.querySelectorAll(".modal").forEach(modal => {
 
 
 
-// 
+// bottomBox
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const openBtn = document.getElementById("openBtn");
-    const closeBtn = document.getElementById("closeBtn");
-    const box = document.getElementById("bottomBox");
+  const openBtn = document.getElementById("openBtn");
+  const closeBtn = document.getElementById("closeBtn2");
+  const bottomBox = document.getElementById("bottomBox2");
 
-    openBtn.addEventListener("click", () => {
-        box.classList.remove("hidden");
-        // حرکت به بالا
-        box.classList.remove("translate-y-full");
-    });
+  openBtn.addEventListener("click", () => {
+    bottomBox.classList.remove("hidden");
+    bottomBox.classList.remove("translate-y-full");
+  });
 
-    closeBtn.addEventListener("click", () => {
-        // حرکت به پایین
-        box.classList.add("translate-y-full");
-        // بعد از پایان انیمیشن دوباره hidden بشه
-        setTimeout(() => {
-            box.classList.add("hidden");
-        }, 300); // مدت زمان transition
-    });
+  closeBtn.addEventListener("click", () => {
+    bottomBox.classList.add("translate-y-full");
+    bottomBox.classList.add("hidden");
+  });
+
+  
+
+
 });
 
 
@@ -487,6 +505,72 @@ backBtn.addEventListener("click", () => {
 
 
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const addToCartBtns = document.querySelectorAll(".add-to-cart"); // همه دکمه‌ها با کلاس addtocart
+//   const mobileCart = document.getElementById("mobileAddedToCart");
+//   const backdrop = document.getElementById("backdrop");
+
+//   addToCartBtns.forEach(btn => {
+//     btn.addEventListener("click", (e) => {
+//       e.preventDefault(); // جلوگیری از رفتار پیش‌فرض <a>
+//       mobileCart.classList.remove("-translate-x-full"); // سبد خرید باز میشه
+//       backdrop.classList.remove("hidden"); // بک‌دراپ نمایش داده میشه
+//     });
+//   });
+// });
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cartButtons = document.querySelectorAll(".cart-btn"); // همه دکمه‌ها
+  const mobileCart = document.getElementById("mobileAddedToCart");
+  const closeCart = document.getElementById("closeAddedToCart");
+  const backdrop = document.getElementById("backdrop");
+
+  // اگر سبد یا بک‌دراپ پیدا نشد، از ادامه صرف‌نظر کن
+  if (!mobileCart || !backdrop) return;
+
+  // باز کردن با همه دکمه‌های cart-btn
+  cartButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      // اگر دکمه <a> است:
+      if (e.target.closest("a")) e.preventDefault();
+      mobileCart.classList.remove("-translate-x-full");
+      backdrop.classList.remove("hidden");
+      document.body.style.overflow = "hidden"; // ج
+    });
+  });
+
+  // بستن با دکمهٔ بستن
+  if (closeCart) {
+    closeCart.addEventListener("click", (e) => {
+      e.preventDefault();
+      mobileCart.classList.add("-translate-x-full");
+      backdrop.classList.add("hidden");
+    });
+  }
+
+  // بستن با کلیک بیرون از پنل
+  document.addEventListener("click", (e) => {
+    const clickedInsideCart = mobileCart.contains(e.target);
+    const clickedOnAnyCartBtn = Array.from(cartButtons).some(btn => btn.contains(e.target));
+
+    if (!clickedInsideCart && !clickedOnAnyCartBtn && !mobileCart.classList.contains("-translate-x-full")) {
+      mobileCart.classList.add("-translate-x-full");
+      backdrop.classList.add("hidden");
+    }
+  });
+
+  // بستن با کلیک روی بک‌دراپ
+  backdrop.addEventListener("click", () => {
+    mobileCart.classList.add("-translate-x-full");
+    backdrop.classList.add("hidden");
+  });
+});
+
+
 //mobile cart 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -495,24 +579,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeCart = document.getElementById("closeCart");
     const backdrop = document.getElementById("backdrop");
 
+    
+    
+
 
     // باز کردن منو
     btnCart.addEventListener("click", () => {
-        mobileCart.classList.remove("translate-x-full");
+        mobileCart.classList.remove("-translate-x-full");
         backdrop.classList.remove("hidden");
     });
 
+
+
+
     // بستن منو با دکمه بستن
     closeCart.addEventListener("click", () => {
-        mobileCart.classList.add("translate-x-full");
+        mobileCart.classList.add("-translate-x-full");
         backdrop.classList.add("hidden");;
     });
 
     // بستن منو با کلیک بیرون
     document.addEventListener("click", (e) => {
         const isClickInsideMenu = mobileCart.contains(e.target) || btnCart.contains(e.target);
-        if (!isClickInsideMenu && !mobileCart.classList.contains("translate-x-full")) {
-            mobileCart.classList.add("translate-x-full");
+        if (!isClickInsideMenu && !mobileCart.classList.contains("-translate-x-full")) {
+            mobileCart.classList.add("-translate-x-full");
             backdrop.classList.add("hidden");
         }
     });
@@ -742,3 +832,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+
+const inputs = document.querySelectorAll(".otp");
+
+  inputs.forEach((input, index) => {
+    input.addEventListener("input", () => {
+      // فقط عدد قبول کنه
+      input.value = input.value.replace(/[^0-9]/g, "");
+
+      // وقتی یک رقم وارد شد بره به بعدی
+      if (input.value.length === 1 && index < inputs.length - 1) {
+        inputs[index + 1].focus();
+      }
+    });
+
+    // اگر کاربر Backspace زد برگرده به قبلی
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && input.value === "" && index > 0) {
+        inputs[index - 1].focus();
+      }
+    });
+  });
