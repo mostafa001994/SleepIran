@@ -816,7 +816,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const textSpan = btn.querySelector(".btn-text");
   const icon = btn.querySelector(".icon");
 
-  if (content.scrollHeight > 500) {
+  if (content.scrollHeight > 400) {
     btn.style.display = "flex";
   }
 

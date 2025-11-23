@@ -707,14 +707,14 @@ footer .e-namad img{
 
  #specifications {
   position: relative;
-  max-height: 500px; /* حالت پیش‌فرض */
+  max-height: 400px; /* حالت پیش‌فرض */
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
  #myContent {
   position: relative;
-  max-height: 500px; /* حالت پیش‌فرض */
+  max-height: 550px; /* حالت پیش‌فرض */
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
