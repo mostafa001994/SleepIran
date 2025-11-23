@@ -521,6 +521,41 @@ backBtn.addEventListener("click", () => {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const inputs = document.querySelectorAll(".otp");
+
+  // حالت اولیه → اولین باکس فعال
+  inputs[0].classList.add("active");
+  inputs[0].focus();
+
+  inputs.forEach((input, index) => {
+    input.addEventListener("input", () => {
+      if (input.value.length === 1 && index < inputs.length - 1) {
+        // حذف حالت active از باکس فعلی
+        input.classList.remove("active");
+
+        // فوکوس و active روی باکس بعدی
+        inputs[index + 1].focus();
+        inputs[index + 1].classList.add("active");
+      }
+    });
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && !input.value && index > 0) {
+        // حذف active از باکس فعلی
+        input.classList.remove("active");
+
+        // برگشت به باکس قبلی
+        inputs[index - 1].focus();
+        inputs[index - 1].classList.add("active");
+      }
+    });
+  });
+});
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {

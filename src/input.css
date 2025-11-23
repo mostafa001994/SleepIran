@@ -307,7 +307,7 @@ table td::-webkit-scrollbar {
   }
 
   .account-btn {
-    @apply gap-2 h-11 flex items-center justify-center content-center border-sky-500 border rounded-lg p-4
+    @apply gap-2 h-11 flex items-center justify-center content-center border-sky-500 border rounded-lg p-4 hover:bg-sky-500 hover:text-white hover:fill-white
   }
 
   .shopping-cart {
@@ -575,9 +575,12 @@ table td::-webkit-scrollbar {
 
 
 .otp{
-  @apply rounded-lg px-2 bg-[#F9F9F9] h-11 w-11 text-center
+  @apply rounded-lg px-2 bg-[#F9F9F9] h-11 w-11 text-center focus:outline-none focus:ring-2 focus:ring-sky-500
 }
 
+.otp.active{
+  @apply border border-sky-500 
+}
 
 
 
