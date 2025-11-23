@@ -539,7 +539,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.target.closest("a")) e.preventDefault();
       mobileCart.classList.remove("-translate-x-full");
       backdrop.classList.remove("hidden");
-      document.body.style.overflow = "hidden"; // ج
     });
   });
 
