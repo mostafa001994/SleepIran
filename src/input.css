@@ -190,6 +190,18 @@ table td::-webkit-scrollbar {
     border-width: 0;
 }
 
+.rounded-top-left{
+  border-radius:  100px 12px 12px 12px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+
+
+
+
+
 
   @keyframes slideUp {
   from {
@@ -364,17 +376,37 @@ table td::-webkit-scrollbar {
   }
 
 
+  .blog  .swiper-navs{
+    @apply relative overflow-visible md:bottom-[115px] bottom-[100px] z-1
+  }
 
   #testimonials  .swiper-navs{
-    @apply relative overflow-visible bottom-[115px] z-1
+    @apply relative overflow-visible md:bottom-[115px] bottom-[200px] z-1
   }
-  #related-products .swiper-navs{
+  #related-products .swiper-navs ,  #Best-selling .swiper-navs {
     @apply relative overflow-visible bottom-[225px] z-0
   }
 
+  .offers .swiper-navs , .brands .swiper-navs {
+    @apply relative overflow-visible md:bottom-[168px] bottom-[95px] z-1
+  }
 
-  #related-products .swiper-slide{
+  #related-products .swiper-slide  ,  #Best-selling .swiper-slide {
     @apply relative flex! rounded-xl md:flex-col md:gap-5 gap-2 md:p-3 px-1.5 py-1 bg-white
+  }
+
+  .brands_slider article{
+    @apply h-[initial] flex flex-col justify-around items-center 
+  }
+
+  .blog article{
+    @apply h-[initial] flex flex-col justify-around items-center 
+  }
+
+
+
+  #countdown span{
+    @apply w-5 h-5 flex items-center justify-center text-white bg-[#e6f4ff7b] rounded text-xs
   }
 
 
@@ -384,22 +416,66 @@ table td::-webkit-scrollbar {
 
 }
 
+  .home #testimonials .swiper-navs .swiper-button-prev{
+    @apply md:-left-6! left-2.5! 
+  }
+
+  .home #testimonials .swiper-navs .swiper-button-next{
+    @apply md:-right-6! right-2.5! 
+  }
+
+
+   .home .blog .swiper-navs .swiper-button-prev{
+    @apply md:-left-6! left-2! 
+  }
+
+  .home .blog .swiper-navs .swiper-button-next{
+    @apply md:-right-6! right-2! 
+  }
+
+  .blog .swiper-navs * {
+    @apply md:w-[42px]! md:h-[42px]! w-6! h-6!
+  }
+
+  .home #testimonials .swiper-navs * {
+    @apply md:w-[42px]! md:h-[42px]! w-7! h-7!
+  }
+
+  .offers .swiper-navs .swiper-button-prev{
+    @apply md:-left-4! -left-2! 
+  }
+
+    .offers .swiper-navs .swiper-button-next{
+    @apply md:-right-4! -right-2!
+  }
+
+
+  .brands hr:first-child{
+    @apply relative after:content-['']
+  }
+  
+  .brands hr:first-child::after{
+    @apply absolute w-2 h-2 bg-amber-500 rotate-45
+  }
+
 
   .swiper-navs .swiper-button-prev{
     @apply -left-6!
   }
 
+    .swiper-navs .swiper-button-next{
+    @apply -right-6!
+  }
+
+
   .swiper-navs * {
-    @apply w-[42px]! h-[42px]!
+    @apply md:w-[42px]! md:h-[42px]! w-5! h-5!
   }
 
   .swiper-navs .swiper-button-prev:after, .swiper-navs .swiper-button-next:after {
-    @apply bg-white! text-black font-bold text-xs w-[42px] h-[42px]
+    @apply bg-white! text-black font-bold text-xs md:w-[42px]! md:h-[42px]! w-5! h-5!
   }
   
-  .swiper-navs .swiper-button-next{
-    @apply -right-6!
-  }
 
   .swiper-button-prev:after, .swiper-button-next:after {
     @apply text-white flex items-center justify-center !text-sm bg-gray-300 rounded-full w-8 h-7
@@ -413,6 +489,18 @@ table td::-webkit-scrollbar {
   .swiper-pagination-bullet{
     @apply w-4! h-4!
   }
+
+
+
+.main_slider .swiper-pagination .swiper-pagination-bullet {
+  @apply md:w-3! md:h-3! w-2! h-2! md:bg-white! md:opacity-100!
+}
+
+.main_slider .swiper-pagination .swiper-pagination-bullet-active {
+  @apply bg-amber-500!
+}
+
+
 
 
   article .swiper-slide {
@@ -452,6 +540,22 @@ table td::-webkit-scrollbar {
 
 
 
+  .home .features{
+    @apply grid grid-cols-3 md:grid-cols-6 md:justify-end justify-between md:gap-3 gap-2 gap-y-3 py-7
+  }
+
+
+  .home #categories > div{
+    @apply grid md:grid-cols-6 grid-cols-3 gap-4 
+  }
+
+  .home #categories img{
+    @apply md:h-[306px] h-[150px] w-full
+  }
+
+  .home .benners{
+
+  }
 
   .features{
     @apply grid grid-cols-2 md:grid-cols-4 md:justify-end justify-between md:gap-3 gap-2 gap-y-3 py-7
@@ -462,6 +566,10 @@ table td::-webkit-scrollbar {
     @apply flex items-center md:gap-1.5 gap-1 rounded-lg shadow h-14 bg-white md:p-[5px] p-1
   }
 
+
+  .offers_slider .badge{
+    @apply bg-[#FF4D4D] rounded-full px-3 md:h-7 h-5 md:text-base text-[8px] absolute md:top-[3%] top-[5%] md:left-[5%] left-[7%] text-white flex items-center justify-center
+  }
 
 
   .fixed-tabs  {

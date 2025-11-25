@@ -1,3 +1,43 @@
+
+
+var main_slider = new Swiper(".main_slider", {
+  spaceBetween: 0,
+  slidesPerView: 1,
+
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+});
+
+
+
+
+var blog_slider = new Swiper(".blog_slider", {
+  spaceBetween: 20,
+  slidesPerView: 2,
+
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+});
+
+
+
+
 var thumbs_image_gallery = new Swiper(".thumbs_image_gallery", {
   spaceBetween: 10,
   slidesPerView: 4,
@@ -39,67 +79,66 @@ var thumbs_image_gallery = new Swiper(".thumbs_image_gallery", {
 
 
 var slider_image_gallery = new Swiper(".slider_image_gallery", {
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    thumbs: {
-        swiper: thumbs_image_gallery,
-    },
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  thumbs: {
+    swiper: thumbs_image_gallery,
+  },
 
-   
+
 });
 
 
 
 
-
 var thumbs_image_gallery2 = new Swiper(
-    ".thumbs_image_gallery2", {
-    spaceBetween: 10,
-    slidesPerView: 6,
-    // freeMode: true,
-    // watchSlidesProgress: true,
+  ".thumbs_image_gallery2", {
+  spaceBetween: 10,
+  slidesPerView: 6,
+  // freeMode: true,
+  // watchSlidesProgress: true,
 
-    breakpoints: {
-
-
-        320: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-        },
-
-        480: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-        },
-
-        640: {
-            slidesPerView: 4,
-
-        },
-
-        768: {
-            slidesPerView: 6,
-            direction: "horizontal"
-        },
-        1024: {
-            slidesPerView: 6,
-            direction: "horizontal"
+  breakpoints: {
 
 
-        },
-        1265: {
-            slidesPerView: 6,
-            direction: "horizontal"
-        }
+    320: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+
+    480: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+
+    640: {
+      slidesPerView: 4,
 
     },
+
+    768: {
+      slidesPerView: 6,
+      direction: "horizontal"
+    },
+    1024: {
+      slidesPerView: 6,
+      direction: "horizontal"
+
+
+    },
+    1265: {
+      slidesPerView: 6,
+      direction: "horizontal"
+    }
+
+  },
 
 
 });
@@ -109,20 +148,20 @@ var thumbs_image_gallery2 = new Swiper(
 
 var slider_image_gallery2 = new Swiper(
 
-    ".slider_image_gallery2", {
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-        swiper: thumbs_image_gallery2,
-    },
+  ".slider_image_gallery2", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: thumbs_image_gallery2,
+  },
 
-    // pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true,
-    // },
+  // pagination: {
+  //     el: ".swiper-pagination",
+  //     clickable: true,
+  // },
 
 });
 
@@ -134,103 +173,230 @@ var slider_image_gallery2 = new Swiper(
 
 
 const products = new Swiper(
-    ".products", {
-    spaceBetween: 15
-    ,
+  ".products", {
+  spaceBetween: 15
+  ,
 
-    loop: true,
+  loop: true,
 
-    // centeredSlides:true,
-    slidesPerView: 4,
+  // centeredSlides:true,
+  slidesPerView: 4,
 
-    // autoplay: true,
-    // using "ratio" endpoints
+  // autoplay: true,
+  // using "ratio" endpoints
 
-    breakpoints: {
-        // when window width is >= 320px
+  breakpoints: {
+    // when window width is >= 320px
 
-        300: {
-            slidesPerView: 1,
-
-        },
-
-        320: {
-            slidesPerView: 1,
-        },
-
-        480: {
-            slidesPerView: 1,
-
-        },
-
-        640: {
-            slidesPerView: 2,
-            // spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 2,
-        },
-        1024: {
-            slidesPerView: 3,
-
-        },
-        1265: {
-            slidesPerView: 4,
-        }
-
+    300: {
+      slidesPerView: 1,
 
     },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+    320: {
+      slidesPerView: 1,
     },
+
+    480: {
+      slidesPerView: 1,
+
+    },
+
+    640: {
+      slidesPerView: 2,
+      // spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+
+    },
+    1265: {
+      slidesPerView: 4,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
 }
 )
 
 
 
+
+const offers_slider = new Swiper(
+  ".offers_slider", {
+  spaceBetween: 15
+  ,
+
+  loop: true,
+
+  // centeredSlides:true,
+  slidesPerView: 6,
+
+  // autoplay: true,
+  // using "ratio" endpoints
+
+  breakpoints: {
+    // when window width is >= 320px
+
+    300: {
+      slidesPerView: 2,
+      spaceBetween: 10
+
+
+    },
+
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 10
+
+    },
+
+    480: {
+      slidesPerView: 3,
+
+      spaceBetween: 10
+
+    },
+
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+
+    },
+    1265: {
+      slidesPerView: 6,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+}
+)
+
+
+
+const brands_slider = new Swiper(
+  ".brands_slider", {
+  spaceBetween: 15
+  ,
+
+  loop: true,
+
+  // centeredSlides:true,
+  slidesPerView: 9,
+
+  // autoplay: true,
+  // using "ratio" endpoints
+
+  breakpoints: {
+    // when window width is >= 320px
+
+    300: {
+      slidesPerView: 2,
+
+    },
+
+    320: {
+      slidesPerView: 3,
+    },
+
+    480: {
+      slidesPerView: 3,
+
+    },
+
+    640: {
+      slidesPerView: 3,
+      // spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 7,
+    },
+    1024: {
+      slidesPerView: 7,
+
+    },
+    1265: {
+      slidesPerView: 9,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+}
+)
+
+
+
+
+
 const testimonials = new Swiper(
-    ".testimonials", {
-    spaceBetween: 15
-    ,
+  ".testimonials", {
+  spaceBetween: 15
+  ,
 
-    loop: true,
+  loop: true,
 
-    // centeredSlides:true,
+  // centeredSlides:true,
 
-    // autoplay: true,
-    // using "ratio" endpoints
+  // autoplay: true,
+  // using "ratio" endpoints
 
-    breakpoints: {
-        // when window width is >= 320px
+  breakpoints: {
+    // when window width is >= 320px
 
 
-        640: {
-            slidesPerView: 1,
-            // spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 1,
-        },
-        1024: {
-            slidesPerView: 1,
-
-        },
-        1265: {
-            slidesPerView: 2,
-        }
-
+    640: {
+      slidesPerView: 1,
+      // spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 1,
+    },
+    1024: {
+      slidesPerView: 1,
 
     },
+    1265: {
+      slidesPerView: 2,
+    }
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
 }
 )
@@ -241,45 +407,59 @@ const testimonials = new Swiper(
 
 // 
 function increaseValue() {
-    let input = document.getElementById('quantity');
-    input.value = parseInt(input.value) + 1;
+  let input = document.getElementById('quantity');
+  input.value = parseInt(input.value) + 1;
 }
 
 function decreaseValue() {
-    let input = document.getElementById('quantity');
-    let current = parseInt(input.value);
-    if (current > 1) {
-        input.value = current - 1;
-    }
+  let input = document.getElementById('quantity');
+  let current = parseInt(input.value);
+  if (current > 1) {
+    input.value = current - 1;
+  }
 }
 
 //   
 
 window.addEventListener('scroll', function () {
-    const box = document.getElementById('myBox');
-    if (window.scrollY > 600) { // وقتی اسکرول بیشتر از 300px شد
-        box.classList.add('fixed');
-    } else {
-        box.classList.remove('fixed');
-    }
+  const box = document.getElementById('myBox');
+ 
+ if (box) {
+  if (window.scrollY > 600) { // وقتی اسکرول بیشتر از 300px شد
+    box.classList.add('fixed');
+  } else {
+
+    
+
+
+      box.classList.remove('fixed');
+    
+  }}
 });
 
 
 
 window.addEventListener('scroll', function () {
-    const box = document.getElementById('btm-atc');
-    const bg= document.getElementById('bg');
+  const box = document.getElementById('btm-atc');
+  const bg = document.getElementById('bg');
 
-    
+
+  if (box && bg) {
+
+
     if (window.scrollY > 450) { // وقتی اسکرول بیشتر از 300px شد
-        box.classList.add('fixed!');
-        box.classList.add('fixed');
-        bg.classList.add('h-14!');
+      box.classList.add('fixed!');
+      box.classList.add('fixed');
+      bg.classList.add('h-14!');
     } else {
-        box.classList.remove('fixed!');
-        box.classList.remove('fixed');
-        bg.classList.remove('h-14!')
+      box.classList.remove('fixed!');
+      box.classList.remove('fixed');
+      bg.classList.remove('h-14!')
+
     }
+
+  }
+
 });
 
 
@@ -291,13 +471,13 @@ const tabs = document.querySelectorAll('.tab-btn');
 const contents = document.querySelectorAll('.tab-content');
 
 tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        contents.forEach(c => c.classList.add('hidden'));
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    contents.forEach(c => c.classList.add('hidden'));
 
-        tab.classList.add('active');
-        contents[index].classList.remove('hidden');
-    });
+    tab.classList.add('active');
+    contents[index].classList.remove('hidden');
+  });
 });
 
 // 
@@ -308,36 +488,36 @@ tabs.forEach((tab, index) => {
 const accordionBtns = document.querySelectorAll(".accordion-btn");
 
 accordionBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        const content = btn.nextElementSibling;
-        const icon = btn.querySelector(".icon");
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling;
+    const icon = btn.querySelector(".icon");
 
-        if (!content.classList.contains("hidden")) {
-            // بستن آیتم فعلی
-            content.classList.add("hidden");
-            icon.classList.remove("rotate-180");
+    if (!content.classList.contains("hidden")) {
+      // بستن آیتم فعلی
+      content.classList.add("hidden");
+      icon.classList.remove("rotate-180");
 
-            // فقط اگر داخل specifications بود کلاس active حذف کن
-            if (btn.closest("#specifications")) {
-                // btn.classList.remove("h-16!");
-            }
-        } else {
-            // اول همه رو ببند
-            document.querySelectorAll(".accordion-content").forEach(c => c.classList.add("hidden"));
-            document.querySelectorAll(".accordion-btn .icon").forEach(i => i.classList.remove("rotate-180"));
+      // فقط اگر داخل specifications بود کلاس active حذف کن
+      if (btn.closest("#specifications")) {
+        // btn.classList.remove("h-16!");
+      }
+    } else {
+      // اول همه رو ببند
+      document.querySelectorAll(".accordion-content").forEach(c => c.classList.add("hidden"));
+      document.querySelectorAll(".accordion-btn .icon").forEach(i => i.classList.remove("rotate-180"));
 
-            // بعد آیتم کلیک‌شده رو باز کن
-            content.classList.remove("hidden");
-            icon.classList.add("rotate-180");
+      // بعد آیتم کلیک‌شده رو باز کن
+      content.classList.remove("hidden");
+      icon.classList.add("rotate-180");
 
-            // فقط اگر داخل specifications بود کلاس active اضافه کن
-            if (btn.closest("#specifications")) {
-                // اول همه‌ی دکمه‌های داخل specifications رو از active خالی کن
-                document.querySelectorAll("#specifications .accordion-btn").forEach(b => b.classList.remove("active"));
-                // btn.classList.add("h-16!");
-            }
-        }
-    });
+      // فقط اگر داخل specifications بود کلاس active اضافه کن
+      if (btn.closest("#specifications")) {
+        // اول همه‌ی دکمه‌های داخل specifications رو از active خالی کن
+        document.querySelectorAll("#specifications .accordion-btn").forEach(b => b.classList.remove("active"));
+        // btn.classList.add("h-16!");
+      }
+    }
+  });
 });
 
 
@@ -345,21 +525,21 @@ accordionBtns.forEach(btn => {
 
 // باز کردن مودال
 document.querySelectorAll(".open-modal").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const targetId = btn.getAttribute("data-target");
-        const modal = document.getElementById(targetId);
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
-    });
+  btn.addEventListener("click", () => {
+    const targetId = btn.getAttribute("data-target");
+    const modal = document.getElementById(targetId);
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  });
 });
 
 // بستن مودال
 document.querySelectorAll(".close-modal").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const modal = btn.closest(".modal");
-        modal.classList.add("hidden");
-        modal.classList.remove("flex");
-    });
+  btn.addEventListener("click", () => {
+    const modal = btn.closest(".modal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  });
 });
 
 document.querySelectorAll(".modal").forEach(modal => {
@@ -383,17 +563,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.getElementById("closeBtn2");
   const bottomBox = document.getElementById("bottomBox2");
 
-  openBtn.addEventListener("click", () => {
-    bottomBox.classList.remove("hidden");
-    bottomBox.classList.remove("translate-y-full");
-  });
+  if (openBtn && bottomBox) {
+
+
+    openBtn.addEventListener("click", () => {
+      bottomBox.classList.remove("hidden");
+      bottomBox.classList.remove("translate-y-full");
+    });
+
+  }
 
   closeBtn.addEventListener("click", () => {
     bottomBox.classList.add("translate-y-full");
     bottomBox.classList.add("hidden");
   });
 
-  
+
 
 
 });
@@ -406,20 +591,20 @@ document.addEventListener("DOMContentLoaded", () => {
 //
 
 window.addEventListener("scroll", () => {
-    let current = "";
-    document.querySelectorAll("section").forEach(sec => {
-        const rect = sec.getBoundingClientRect();
-        if (rect.top <= 100 && rect.bottom >= 100) {
-            current = sec.id;
-        }
-    });
+  let current = "";
+  document.querySelectorAll("section").forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top <= 100 && rect.bottom >= 100) {
+      current = sec.id;
+    }
+  });
 
-    document.querySelectorAll(".fixed-tabs a").forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
+  document.querySelectorAll(".fixed-tabs a").forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
 });
 
 
@@ -434,41 +619,41 @@ window.addEventListener("scroll", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const closeMenu = document.getElementById("closeMenu");
-    const backdrop = document.getElementById("backdrop");
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+  const backdrop = document.getElementById("backdrop");
 
 
-    // باز کردن منو
-    menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.remove("translate-x-full");
-        backdrop.classList.remove("hidden");
+  // باز کردن منو
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("translate-x-full");
+    backdrop.classList.remove("hidden");
 
-    });
+  });
 
-    // بستن منو با دکمه بستن
-    closeMenu.addEventListener("click", () => {
-        mobileMenu.classList.add("translate-x-full");
-        backdrop.classList.add("hidden");
+  // بستن منو با دکمه بستن
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
 
-    });
+  });
 
-    // بستن منو با کلیک بیرون
-    document.addEventListener("click", (e) => {
-        const isClickInsideMenu = mobileMenu.contains(e.target) || menuBtn.contains(e.target);
-        if (!isClickInsideMenu && !mobileMenu.classList.contains("translate-x-full")) {
-            mobileMenu.classList.add("translate-x-full");
-            backdrop.classList.add("hidden");
-        }
-    });
+  // بستن منو با کلیک بیرون
+  document.addEventListener("click", (e) => {
+    const isClickInsideMenu = mobileMenu.contains(e.target) || menuBtn.contains(e.target);
+    if (!isClickInsideMenu && !mobileMenu.classList.contains("translate-x-full")) {
+      mobileMenu.classList.add("translate-x-full");
+      backdrop.classList.add("hidden");
+    }
+  });
 
 
-    // بستن منو با کلیک روی بک‌دراپ
-    backdrop.addEventListener("click", () => {
-        mobileMenu.classList.add("translate-x-full");
-        backdrop.classList.add("hidden");
-    });
+  // بستن منو با کلیک روی بک‌دراپ
+  backdrop.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
+  });
 
 
 
@@ -608,44 +793,44 @@ document.addEventListener("DOMContentLoaded", () => {
 //mobile cart 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const btnCart = document.getElementById("btnCart");
-    const mobileCart = document.getElementById("mobileCart");
-    const closeCart = document.getElementById("closeCart");
-    const backdrop = document.getElementById("backdrop");
-
-    
-    
-
-
-    // باز کردن منو
-    btnCart.addEventListener("click", () => {
-        mobileCart.classList.remove("-translate-x-full");
-        backdrop.classList.remove("hidden");
-    });
+  const btnCart = document.getElementById("btnCart");
+  const mobileCart = document.getElementById("mobileCart");
+  const closeCart = document.getElementById("closeCart");
+  const backdrop = document.getElementById("backdrop");
 
 
 
 
-    // بستن منو با دکمه بستن
-    closeCart.addEventListener("click", () => {
-        mobileCart.classList.add("-translate-x-full");
-        backdrop.classList.add("hidden");;
-    });
 
-    // بستن منو با کلیک بیرون
-    document.addEventListener("click", (e) => {
-        const isClickInsideMenu = mobileCart.contains(e.target) || btnCart.contains(e.target);
-        if (!isClickInsideMenu && !mobileCart.classList.contains("-translate-x-full")) {
-            mobileCart.classList.add("-translate-x-full");
-            backdrop.classList.add("hidden");
-        }
-    });
+  // باز کردن منو
+  btnCart.addEventListener("click", () => {
+    mobileCart.classList.remove("-translate-x-full");
+    backdrop.classList.remove("hidden");
+  });
 
-    // بستن منو با کلیک روی بک‌دراپ
-    backdrop.addEventListener("click", () => {
-        mobileMenu.classList.add("translate-x-full");
-        backdrop.classList.add("hidden");
-    });
+
+
+
+  // بستن منو با دکمه بستن
+  closeCart.addEventListener("click", () => {
+    mobileCart.classList.add("-translate-x-full");
+    backdrop.classList.add("hidden");;
+  });
+
+  // بستن منو با کلیک بیرون
+  document.addEventListener("click", (e) => {
+    const isClickInsideMenu = mobileCart.contains(e.target) || btnCart.contains(e.target);
+    if (!isClickInsideMenu && !mobileCart.classList.contains("-translate-x-full")) {
+      mobileCart.classList.add("-translate-x-full");
+      backdrop.classList.add("hidden");
+    }
+  });
+
+  // بستن منو با کلیک روی بک‌دراپ
+  backdrop.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
+  });
 
 });
 
@@ -656,38 +841,38 @@ document.addEventListener("DOMContentLoaded", () => {
 //mobile cart 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const btnSearch = document.getElementById("btnSearch");
-    const mobileSearch = document.getElementById("mobileSearch");
-    const closeSearch = document.getElementById("closeSearch");
-    const backdrop = document.getElementById("backdrop");
+  const btnSearch = document.getElementById("btnSearch");
+  const mobileSearch = document.getElementById("mobileSearch");
+  const closeSearch = document.getElementById("closeSearch");
+  const backdrop = document.getElementById("backdrop");
 
 
-    // باز کردن منو
-    btnSearch.addEventListener("click", () => {
-        mobileSearch.classList.remove("translate-x-full");
-        backdrop.classList.remove("hidden");
-    });
+  // باز کردن منو
+  btnSearch.addEventListener("click", () => {
+    mobileSearch.classList.remove("translate-x-full");
+    backdrop.classList.remove("hidden");
+  });
 
-    // بستن منو با دکمه بستن
-    closeSearch.addEventListener("click", () => {
-        mobileSearch.classList.add("translate-x-full");
-        backdrop.classList.add("hidden");;
-    });
+  // بستن منو با دکمه بستن
+  closeSearch.addEventListener("click", () => {
+    mobileSearch.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");;
+  });
 
-    // بستن منو با کلیک بیرون
-    document.addEventListener("click", (e) => {
-        const isClickInsideMenu = mobileSearch.contains(e.target) || btnSearch.contains(e.target);
-        if (!isClickInsideMenu && !mobileSearch.classList.contains("translate-x-full")) {
-            mobileSearch.classList.add("translate-x-full");
-            backdrop.classList.add("hidden");
-        }
-    });
+  // بستن منو با کلیک بیرون
+  document.addEventListener("click", (e) => {
+    const isClickInsideMenu = mobileSearch.contains(e.target) || btnSearch.contains(e.target);
+    if (!isClickInsideMenu && !mobileSearch.classList.contains("translate-x-full")) {
+      mobileSearch.classList.add("translate-x-full");
+      backdrop.classList.add("hidden");
+    }
+  });
 
-    // بستن منو با کلیک روی بک‌دراپ
-    backdrop.addEventListener("click", () => {
-        mobileMenu.classList.add("translate-x-full");
-        backdrop.classList.add("hidden");
-    });
+  // بستن منو با کلیک روی بک‌دراپ
+  backdrop.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
+  });
 
 });
 
@@ -777,12 +962,12 @@ document.addEventListener("click", (e) => {
 
 
 document.querySelectorAll(".brand-mobile").forEach(el => {
-    el.addEventListener("click", e => {
-        e.preventDefault(); // جلوگیری از رفتن به لینک
+  el.addEventListener("click", e => {
+    e.preventDefault(); // جلوگیری از رفتن به لینک
 
-        const targetSpan = el.querySelector(".brand-mobile span");
-        targetSpan.classList.toggle("block!"); // اضافه/حذف کلاس فقط روی span پایینی
-    });
+    const targetSpan = el.querySelector(".brand-mobile span");
+    targetSpan.classList.toggle("block!"); // اضافه/حذف کلاس فقط روی span پایینی
+  });
 });
 
 
@@ -790,22 +975,22 @@ document.querySelectorAll(".brand-mobile").forEach(el => {
 
 
 document.querySelectorAll(".brand-mobile").forEach(el => {
-    const targetSpan = el.querySelector("span");
+  const targetSpan = el.querySelector("span");
 
-    // کلیک
-    el.addEventListener("click", e => {
-        e.preventDefault();
-        targetSpan.classList.toggle("block!"); // اضافه/حذف کلاس روی span
-    });
+  // کلیک
+  el.addEventListener("click", e => {
+    e.preventDefault();
+    targetSpan.classList.toggle("block!"); // اضافه/حذف کلاس روی span
+  });
 
-    // هاور (mouseenter و mouseleave)
-    el.addEventListener("mouseenter", () => {
-        targetSpan.classList.add("block!");
-    });
+  // هاور (mouseenter و mouseleave)
+  el.addEventListener("mouseenter", () => {
+    targetSpan.classList.add("block!");
+  });
 
-    el.addEventListener("mouseleave", () => {
-        targetSpan.classList.remove("block!");
-    });
+  el.addEventListener("mouseleave", () => {
+    targetSpan.classList.remove("block!");
+  });
 });
 
 
@@ -850,6 +1035,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const textSpan = btn.querySelector(".btn-text");
   const icon = btn.querySelector(".icon");
 
+
   if (content.scrollHeight > 400) {
     btn.style.display = "flex";
   }
@@ -872,21 +1058,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const inputs = document.querySelectorAll(".otp");
 
-  inputs.forEach((input, index) => {
-    input.addEventListener("input", () => {
-      // فقط عدد قبول کنه
-      input.value = input.value.replace(/[^0-9]/g, "");
+inputs.forEach((input, index) => {
+  input.addEventListener("input", () => {
+    // فقط عدد قبول کنه
+    input.value = input.value.replace(/[^0-9]/g, "");
 
-      // وقتی یک رقم وارد شد بره به بعدی
-      if (input.value.length === 1 && index < inputs.length - 1) {
-        inputs[index + 1].focus();
-      }
-    });
-
-    // اگر کاربر Backspace زد برگرده به قبلی
-    input.addEventListener("keydown", (e) => {
-      if (e.key === "Backspace" && input.value === "" && index > 0) {
-        inputs[index - 1].focus();
-      }
-    });
+    // وقتی یک رقم وارد شد بره به بعدی
+    if (input.value.length === 1 && index < inputs.length - 1) {
+      inputs[index + 1].focus();
+    }
   });
+
+  // اگر کاربر Backspace زد برگرده به قبلی
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Backspace" && input.value === "" && index > 0) {
+      inputs[index - 1].focus();
+    }
+  });
+});
+
+
+
+
+
+
+const countdownEl = document.getElementById("countdown");
+
+  const startTime = new Date(countdownEl.dataset.start).getTime();
+  const endTime = new Date(countdownEl.dataset.end).getTime();
+
+  const timer = setInterval(() => {
+    const now = new Date().getTime();
+
+    if (now < startTime) {
+      countdownEl.innerHTML = "<span>--</span>:<span>--</span>:<span>--</span>";
+      return;
+    }
+
+    const distance = endTime - now;
+
+    if (distance <= 0) {
+      clearInterval(timer);
+      countdownEl.innerHTML = "<span>00</span>:<span>00</span>:<span>00</span>";
+      return;
+    }
+
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    const h = String(hours).padStart(2, "0");
+    const m = String(minutes).padStart(2, "0");
+    const s = String(seconds).padStart(2, "0");
+
+    countdownEl.innerHTML = `<span>${h}</span>:<span>${m}</span>:<span>${s}</span>`;
+  }, 1000);
+
+

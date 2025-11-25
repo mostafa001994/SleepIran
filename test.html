@@ -1,0 +1,503 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>تم</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />		
+		<base href="{{CDN}}template/89/" >
+        <link rel="shortcut icon" href="{{favicon}}">
+                {{metaData |raw}}				
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+				
+		<link rel="stylesheet" type="text/css" href="css/site.css">
+		<link rel="stylesheet" type="text/css" href="{{PACKAGE}}style.css?cache=[random]">
+				{{cssData | raw}}				
+		<link rel="stylesheet" type="text/css" href="{{CDN}}lib/icon/style.css">
+					
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>		
+		
+		<script src="js/waypoints.min.js"></script>
+		<script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+		<script type="text/javascript" src="js/jquery.accordionSlider.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="{{CDN}}lib/public.js"></script>
+				{{jsData |raw}} 
+</head>
+<body>	
+
+<div  class="[setting-type]">
+    <div id="pattern" class="[setting-pattern]">	
+	 
+	<header>
+		<nav class="navbar">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header navbar-right" data-cms-component="logo" data-cms-title="لوگو" data-cms-maxnum="1" data-cms-parts="logo" data-cms-type="manual">
+					<div data-cms-part="logo" data-cms-items="title:text:عنوان,link:url:لينک,img:img:تصویر">
+						<a class="navbar-brand logo" href="[link]">
+							<img src="[img]" height="50" width="200" alt="[title]">
+						</a>						
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<i class="fa fa-bars fa-2x"></i>
+						</button>
+					</div>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				
+					<ul class="nav navbar-nav"  data-cms-component="links" data-cms-title="منو سایت" data-cms-maxnum="20" data-cms-parts="menu">											
+						<li data-cms-part="menu"  data-cms-items="link:url:لینک,title:text:عنوان" ><a href="[link]">[title]</a>
+							<ul  data-cms-child="true">
+								<li data-cms-child-item="true"><a href="[link]">[title]</a>
+								   [children]
+								</li>							
+							</ul>
+						</li>
+						<li><a href="news.html">اخبار</a></li>
+				        <li><a href="portfolio.html">نمونه کار ها</a></li>
+						<li><a href="contact.html">تماس ما</a></li>
+						<li><a href="team.html">امکانات سایت</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+				
+	
+      <article class="slider">
+			<article class="slider-inner carousel-inner" style="overflow: inherit;">
+				<article id="carousel-generic" class="carousel slide carousel-fade" data-ride="carousel">
+					<aside class="carousel-inner" style="overflow: inherit;"  data-cms-component="sliders" data-cms-title="اسلایدر سایت" data-cms-maxnum="20"  data-cms-parts="slider" >
+						<aside class="item" data-cms-part="slider" data-cms-items="img:img:تصویر">
+						<img src="[img]" />
+						</aside>
+						<aside class="item"><img src="images/slider/slide2.jpg" /></aside>
+					</aside>	
+				</article>
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
+			    <span class="fa fa-arrow-left fa-2x" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
+			    <span class="fa fa-arrow-right fa-2x" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</article>
+			<div class="triangle"></div>
+		</article>
+		
+	</header>	
+	
+	<section class="accordion-sec">
+		<section class="container-fluid">
+			<section class="row">
+				<article class="col-md-12 killpad">
+				
+					<article class="col-md-4 col-xs-12 accordion-tab pull-right">
+						<aside class="col-md-12" >
+							<div class="nav killpad tablist" id="tablist">
+								<div class="line"></div>	
+									<div  data-cms-component="links1" data-cms-title="عنوان تب اول" data-cms-maxnum="1" data-cms-type="manual" data-cms-parts="links1">
+										<div class="tabitem" data-cms-part="links1" data-cms-items="title:text:عنوان,img:img:تصویر">										
+											<a href="#slide1" role="tab" data-toggle="tab">
+												<div class="tabicon">
+												<img class="fa fa-rocket fa-3x" src="[img]"/></div>
+												<div class="tabtitle">[title]</div>
+											</a>
+										</div>
+									</div>
+									
+									<div  data-cms-component="links2" data-cms-title="عنوان تب دوم" data-cms-maxnum="1" data-cms-type="manual" data-cms-parts="links2">
+										<div class="tabitem" data-cms-part="links2" data-cms-items="title:text:عنوان,img:img:تصویر">										
+											<a href="#slide2" role="tab" data-toggle="tab">
+												<div class="tabicon">
+												<img class="fa fa-rocket fa-3x" src="[img]"/></div>
+												<div class="tabtitle">[title]</div>
+											</a>
+										</div>
+									</div>
+									
+									<div  data-cms-component="links3" data-cms-title="عنوان تب سوم" data-cms-maxnum="1" data-cms-type="manual" data-cms-parts="links3">
+										<div class="tabitem" data-cms-part="links3" data-cms-items="title:text:عنوان,img:img:تصویر">										
+											<a href="#slide3" role="tab" data-toggle="tab">
+												<div class="tabicon">
+												<img class="fa fa-rocket fa-3x" src="[img]"/></div>
+												<div class="tabtitle">[title]</div>
+											</a>
+										</div>
+									</div>
+							</div>
+						</aside>
+					</article>
+					
+					
+					<article class="col-md-8 col-xs-12 accordion-slide">
+						<aside class="tab-content">
+							<!-- slide 1 -->							
+
+							<aside class="tab-pane fade col-md-12 active" id="slide1">
+									
+								<div data-cms-component="tab1-title" data-cms-title="عنوان محتویات تب اول" data-cms-maxnum="1" data-cms-parts="tab1-title" data-cms-type="manual">									
+									<h2 data-cms-part="tab1-title" data-cms-items="title:text:عنوان">[title]</h2>									
+								</div>
+								
+								<div class="slide-txt"  data-cms-component="tab1-desc" data-cms-title="محتویات تب اول" data-cms-maxnum="1" data-cms-parts="tab1-desc" data-cms-type="manual">
+									<div data-cms-part="tab1-desc" data-cms-items="title:text:عنوان,desc:textarea:توضیحات,img:img:تصویر">
+										<p>[desc]</p>
+										<img class="img-responsive" src="[img]" alt="[title]">
+									</div>
+								</div>
+								
+								<div class="col-md-6 col-sm-6 col-xs-12"  data-cms-component="tab-box1" data-cms-title="باکس اول تب اول"  data-cms-maxnum="1" data-cms-parts="tab-box1" data-cms-type="manual">
+									<div class="accordion-btn" data-cms-part="tab-box1" data-cms-items="title:text:عنوان,link:url:لینک,img:img:تصویر">
+									<a href="[link]">
+									<img src="[img]" class="fa fa-paypal fa-lg"/>[title]</a>
+									</div>
+								</div>
+								
+								<div class="col-md-6 col-sm-6 col-xs-12"  data-cms-component="tab-box2" data-cms-title="باکس دوم تب اول" data-cms-maxnum="1" data-cms-parts="tab-box2" data-cms-type="manual">
+									<div class="accordion-btn" data-cms-part="tab-box2" data-cms-items="title:text:عنوان,link:url:لینک,img:img:تصویر">
+									<a href="[link]">
+									<img src="[img]" class="fa fa-paypal fa-lg"/>[title]</a>
+									</div>
+								</div>
+							</aside>
+							
+							<!-- slide 2 -->							
+
+							<aside class="tab-pane fade col-md-12 active" id="slide2">
+									
+								<div data-cms-component="tab2-title" data-cms-title="عنوان محتویات تب دوم" data-cms-maxnum="1" data-cms-parts="tab2-title" data-cms-type="manual">									
+									<h2 data-cms-part="tab2-title" data-cms-items="title:text:عنوان">[title]</h2>									
+								</div>
+								
+								<div class="slide-txt"  data-cms-component="tab2-desc" data-cms-title="محتویات تب دوم" data-cms-maxnum="1" data-cms-parts="tab2-desc" data-cms-type="manual">
+									<div data-cms-part="tab2-desc" data-cms-items="title:text:عنوان,desc:textarea:توضیحات,img:img:تصویر">
+										<p>[desc]</p>
+										<img class="img-responsive" src="[img]" alt="[title]">
+									</div>
+								</div>
+								
+								<div class="col-md-6 col-sm-6 col-xs-12" data-cms-component="tab2-box1" data-cms-title="باکس اول تب دوم"  data-cms-maxnum="1" data-cms-parts="tab2-box1" data-cms-type="manual">
+									<div class="accordion-btn" data-cms-part="tab2-box1" data-cms-items="title:text:عنوان,link:url:لینک,img:img:تصویر">
+									<a href="[link]">
+									<img src="[img]" class="fa fa-paypal fa-lg"/>[title]</a>
+									</div>
+								</div>
+								
+								<div class="col-md-6 col-sm-6 col-xs-12" data-cms-component="tab2-box2" data-cms-title="باکس دوم تب دوم" data-cms-maxnum="1" data-cms-parts="tab2-box2" data-cms-type="manual">
+									<div class="accordion-btn" data-cms-part="tab2-box2" data-cms-items="title:text:عنوان,link:url:لینک,img:img:تصویر">
+									<a href="[link]">
+									<img src="[img]" class="fa fa-paypal fa-lg"/>[title]</a>
+									</div>
+								</div>
+							</aside>
+							
+							<!-- slide 3 -->							
+
+							<aside class="tab-pane fade col-md-12 active" id="slide3">
+									
+								<div data-cms-component="tab-title" data-cms-title="عنوان محتویات تب سوم" data-cms-maxnum="1" data-cms-parts="tab-title" data-cms-type="manual">									
+									<h2 data-cms-part="tab-title" data-cms-items="title:text:عنوان">[title]</h2>									
+								</div>
+								
+								<div class="slide-txt"  data-cms-component="tab-desc" data-cms-title="محتویات تب سوم" data-cms-maxnum="1" data-cms-parts="tab-desc" data-cms-type="manual">
+									<div data-cms-part="tab-desc" data-cms-items="title:text:عنوان,desc:textarea:توضیحات,img:img:تصویر">
+										<p>[desc]</p>
+										<img class="img-responsive" src="[img]" alt="[title]">
+									</div>
+								</div>
+								
+								<div class="col-md-6 col-sm-6 col-xs-12"  data-cms-component="tab-box" data-cms-title="باکس اول تب سوم"  data-cms-maxnum="1" data-cms-parts="tab-box" data-cms-type="manual">
+									<div class="accordion-btn" data-cms-part="tab-box" data-cms-items="title:text:عنوان,link:url:لینک,img:img:تصویر">
+									<a href="[link]">
+									<img src="[img]" class="fa fa-paypal fa-lg"/>[title]</a>
+									</div>
+								</div>
+								
+								<div class="col-md-6 col-sm-6 col-xs-12"  data-cms-component="tab-box3" data-cms-title="باکس دوم تب سوم" data-cms-maxnum="1" data-cms-parts="tab-box3" data-cms-type="manual">
+									<div class="accordion-btn" data-cms-part="tab-box3" data-cms-items="title:text:عنوان,link:url:لینک,img:img:تصویر">
+									<a href="[link]">
+									<img src="[img]" class="fa fa-paypal fa-lg"/>[title]</a>
+									</div>
+								</div>
+							</aside>
+						</aside>
+					</article> <!-- Accordion slide -->	
+
+					
+				</article>
+			</section>
+		</section>
+	</section>
+
+	<section class="gallery-sec">
+		<section class="container-fluid">
+			<section class="row">
+				<article class=" gallery col-md-12">
+				
+					<article class="col-md-3 col-sm-3 col-xs-12 gallery-item" data-cms-component="gallery" data-cms-title="توضیحات گالری تصاویر" data-cms-maxnum="1" data-cms-parts="gallery" data-cms-type="manual">
+						<aside class="desc" data-cms-part="gallery" data-cms-items="title:text:عنوان,link:url:لینک,desc:textarea:توضیحات,title2:text:عنوان لینک">
+							<h2>[title]</h2>
+							<p>[desc]</p>
+							<div class="btn-more"><a href="[link]">[title2]</a></div>
+						</aside>
+					</article>					
+					
+					<article class="col-md-9 col-sm-9 col-xs-12 killpad">
+						<article id="gallery" class="accordion-slider">
+							<article class="as-panels" data-cms-component="gallery-image" data-cms-title="تصاویر گالری" data-cms-maxnum="40" data-cms-parts="gallery-image" >
+								<!-- Panel 1 -->
+								<div class="as-panel"  data-cms-part="gallery-image" data-cms-items="title:text:عنوان,link:url:لینک,img:img:تصویر">
+									<a href="[link]">
+										<img class="as-background" data-src="[img]" alt="[title]"/>
+									</a>
+								</div>
+						        <!-- Panel 2 -->
+						        <div class="as-panel">
+									<a href="portfolio.html">
+										<img class="as-background" data-src="images/gallery/image2.jpg"/>
+									</a>
+								</div>
+						        <!-- Panel 3 -->
+						        <div class="as-panel">
+									<a href="portfolio.html">
+										<img class="as-background" data-src="images/gallery/image3.jpg"/>
+									</a>
+								</div>						      
+							</article>
+					    </article>
+					</article>
+				</article>
+			</section>
+		</section>
+	</section>
+	<section class="customer-sec">
+		<section class="container-fluid">
+			<section class="row">
+			
+				<article class="head-title col-md-6" data-cms-component="gallery-desc" data-cms-title="متن زیر گالری" data-cms-maxnum="1" data-cms-parts="gallery" data-cms-type="manual">
+					<article class="row" data-cms-part="gallery" data-cms-items="title:text:عنوان,link:url:لینک,desc:textarea:توضیحات">
+						<a href="[link]"><h2>[title]</h2></a>
+						<p>[desc]</p>							
+					</article>
+				</article> 
+				
+				<!-- head-title -->
+				
+				<article class="comment-sec row">
+					<article class="col-md-12">
+						<article class="row">
+						
+							<aside class="cmbox col-md-6 col-sm-6 col-xs-12" data-cms-component="user-panel" data-cms-title="باکس مشتری اول" data-cms-maxnum="1" data-cms-parts="user-panel" data-cms-type="manual">
+								<div class="panel panel-default" data-cms-part="user-panel" data-cms-items="title:text:نام,title2:text:سمت,title3:text:امضا,link:url:لینک,desc:textarea:توضیحات,img:img:تصویر">
+									<div class="panel-heading">
+										<span><a href="[link]">[title]</a></span> - [title2] <i class="fa fa-quote-left fa-lg"></i>
+									</div>
+									<div class="panel-body">
+										<div class="panel-body-txt">[desc]</div>
+										<p>"[title3]"</p>
+										<div class="avatar"><a href="[link]"><img src="[img]" alt="" class="avatar-img"></a></div>
+									</div>
+								</div>
+							</aside>
+							
+							<aside class="cmbox col-md-6 col-sm-6 col-xs-12" data-cms-component="user-panel-2" data-cms-title="باکس مشتری دوم" data-cms-maxnum="1" data-cms-parts="user-panel-2" data-cms-type="manual">
+								<div class="panel panel-default" data-cms-part="user-panel-2" data-cms-items="title:text:نام,title2:text:سمت,title3:text:امضا,link:url:لینک,desc:textarea:توضیحات,img:img:تصویر">
+									<div class="panel-heading">
+										<div class="avatar"><a href="[link]"><img src="[img]" alt=""></a></div>
+										<span><a href="[link]">[title]</a></span> - [title2] <i class="fa fa-quote-left fa-lg"></i>
+									</div>
+									<div class="panel-body">
+										<div class="panel-body-txt">[desc]</div>	
+										<p>"[title3]"</p>
+									</div>
+								</div>
+							</aside>
+							
+						</article>
+					</article>
+				</article>
+			</section>
+		</section>
+	</section>
+	
+	<!-- cusomer-sec -->
+	
+	<section class="box-bg ">
+	  <div  data-cms-component="information-bg" data-cms-title="تصویر زمینه اطلاعات" data-cms-maxnum="1"  data-cms-parts="information-bg" data-cms-type="manual">
+		<img  data-cms-part="information-bg" data-cms-items="img:img:تصویر" src="[img]"/>
+	  </div>
+	     
+		<section class="container-fluid" >
+			<section class="row">
+				<article class="box-count col-md-11 col-sm-12 col-xs-12 killfloat" >
+					<article class="row ">
+					
+						<aside class="box col-md-4 col-sm-6 col-xs-12 pull-right " data-cms-component="information1" data-cms-title="اطلاعات اول" data-cms-maxnum="1"  data-cms-parts="information1" data-cms-type="manual">
+							<div  data-cms-part="information1" data-cms-items="title2:text:عنوان,title:text:عدد,img:img:تصویر">
+								<img class=" box-count-img fa fa-child fa-3x" src="[img]" />
+								<div>[title2]</div>
+								<div class="counter">[title]</div>
+							</div>
+						</aside>
+						
+						<aside class="box col-md-4 col-sm-6 col-xs-12 pull-left" data-cms-component="information2" data-cms-title="اطلاعات دوم" data-cms-maxnum="1"  data-cms-parts="information2" data-cms-type="manual">
+							<div  data-cms-part="information2" data-cms-items="title2:text:عنوان,title:text:عدد,img:img:تصویر">
+								<img class="box-count-img fa fa-cubes fa-3x" src="[img]" />
+								<div>[title2]</div>
+								<div class="counter">[title]</div>
+							</div>	
+						</aside>
+						
+					</article>
+				</article>
+			</section>
+		</section>
+	</section>	
+	
+	<section class="blog">
+		<section class="container-fluid">
+			<section class="row">
+				<section class="blog-post col-md-12"  data-cms-component="box-3" data-cms-title="سه باکس عکس دار" data-cms-maxnum="3"  data-cms-parts="box-3">
+					<article class="post-item col-md-4 col-sm-4 col-xs-12"  data-cms-part="box-3" data-cms-items="title:text:عنوان,img:img:تصویر,desc:textarea:توضیحات,link:url:لینک">
+						<article class="item">
+							<aside class="post-photo col-md-12">
+								<a href="[link]"><img src="[img]" alt="">
+									<div class="mask"></div></a>
+								</aside>
+								<aside class="post-info-text">
+									<h3><a href="[link]">[title]</a></h3>
+									<p>[desc]</p>
+								</aside>
+								<aside class="more-post-btn col-md-5 col-sm-12 col-xs-12"><a href="[link]">ادامه مطلب</a></aside>
+							</article>
+					</article> 
+					<!-- END post-item -->					
+					
+					<article class="post-item col-md-4 col-sm-4 col-xs-12">
+							<article class="item">
+								<aside class="post-photo col-md-12">
+									<a href="single.html"><img src="images/news/post2.jpg" alt="">
+										<div class="mask"></div></a>
+									</aside>
+									<aside class="post-info-text">
+										<h3><a href="single.html">اتحادیه های مشاورین املاک، تایپ و تکثیر و خدمات کامپیوتری</a></h3>
+										<p>در راستای گسترش ارایه خدمات نیابتی دستگاهها و سازمانها توسط شبکه پستی، تفاهم نامه هم افزایی و استفاده از قابلیت ها و ظرفیت های پست در ارایه خدمات کیفی تر به اتاق اصنی</p>
+									</aside>
+									<aside class="more-post-btn col-md-5 col-sm-12 col-xs-12"><a href="single.html">ادامه مطلب</a></aside>
+								</article>
+					</article> 
+					<!-- END post-item -->
+
+					<article class="post-item col-md-4 col-sm-4 col-xs-12">
+								<article class="item">
+									<aside class="post-photo col-md-12">
+										<a href="single.html"><img src="images/news/post3.jpg" alt="">
+											<div class="mask"></div></a>
+									</aside>
+									<aside class="post-info-text">
+											<h3><a href="single.html">قرارداد گسترش همکاری پست با اتحادیه های مشاورین املاک، تایپ و تکثیر و خدمات کامپیوتری</a></h3>
+											<p>در راستای گسترش ارایه خدمات نیابتی دستگاهها و سازمانها توسط شبکه پستی، تفاهم نامه هم افزایی و استفاده از قابلیت ها و ظرفیت های پست در ارایه خدمات کیفی تر به اتاق اصناف مشهد؛ قرارداد همکاری بین پست و سه اتحادیه مشاورین معاملات املاک، تایپ و تکثیر و خدمات کامپیوتری</p>
+									</aside>
+									<aside class="more-post-btn col-md-5 col-sm-12 col-xs-12"><a href="single.html">ادامه مطلب</a></aside>
+								</article>
+					</article> <!-- END post-item -->
+				</section>
+			</section>
+		</section>
+	</section>
+	<footer>
+		<section class="conatiner-fluid">
+			<section class="row">
+					<article class="social-network col-md-12">
+						<div>شما می‌توانید ما را در 
+							<div class="social-item fb">
+							<a href="[social-facebook]" target="_blank"><i class="fa fa-facebook fa-lg"></i><span class="stxt">فیسبوک</span></a></div>
+							، 
+							<span class="social-item tw"><a href="[social-twitter]" target="_blank"><i class="fa fa-twitter fa-lg"></i><span class="stxt">توئیتر</span></a></span>
+							و <span class="social-item gplus"><a href="[social-plus]" target="_blank"><i class="fa fa-google-plus fa-lg"></i><span class="stxt">گوگل پلاس</span></a></span>
+							دنبال کنید.
+						</div>
+					</article>
+					<article class="foo-menu-sec col-md-12">
+
+					
+						<article class="foo-menu-part col-md-4 col-sm-6 col-xs-12" data-cms-component="footer-title"  data-cms-title="لوگو فوتر" data-cms-maxnum="1" data-cms-parts="footer-title" data-cms-type="manual">							
+							<aside class="foo-menu"  data-cms-part="footer-title" data-cms-items="title:text:عنوان,desc:textarea:توضیحات,link:url:لینک,img:img:تصویر">
+								<a href="[link]"><h5><img src="[img]" height="50" width="250" alt=""></h5></a>
+								<address>
+									<p class="address-desc">[desc]</p>
+								</address>
+							</aside>
+						</article>
+						
+						
+						<article class="foo-menu-part col-md-4 col-sm-6 col-xs-12">
+							<aside class="foo-menu">
+							
+								<div data-cms-component="footer-p-title" data-cms-title="عنوان تصاویر فوتر" data-cms-maxnum="1" data-cms-parts="footer-p-title" data-cms-type="manual">							
+									<h5 data-cms-part="footer-p-title" data-cms-items="title:text:عنوان"> [title] </h5>
+								</div>
+								
+								<div class="insta-photo col-md-12 col-sm-12" data-cms-component="footer-pics" data-cms-title="تصاویر فوتر" data-cms-maxnum="8" data-cms-parts="box-3">
+
+									<div class="photo col-md-3 col-sm-6 col-xs-12 col-xs-3" data-cms-part="box-3" data-cms-items="title:text:عنوان,img:img:تصویر,link:url:لینک">
+										<a href="[link]"><img src="[img]" alt="[title]"></a>
+									</div>
+									<div class="photo col-md-3 col-sm-6 col-xs-12 col-xs-3">
+										<a href="#"><img src="images/portfolio/2.jpg" alt=""></a>
+									</div>
+									<div class="photo col-md-3 col-sm-6 col-xs-12 col-xs-3">
+										<a href="#"><img src="images/portfolio/3.jpg" alt=""></a>
+									</div>
+									<div class="photo col-md-3 col-sm-6 col-xs-12 col-xs-3">
+										<a href="#"><img src="images/portfolio/4.jpg" alt=""></a>
+									</div>
+									<div class="photo col-md-3 col-sm-6 col-xs-12 col-xs-3">
+										<a href="#"><img src="images/portfolio/5.jpg" alt=""></a>
+									</div>
+									<div class="photo col-md-3 col-sm-6 col-xs-12 col-xs-3">
+										<a href="#"><img src="images/portfolio/6.jpg" alt=""></a>
+									</div>
+									<div class="photo col-md-3 col-sm-6 col-xs-12 col-xs-3">
+										<a href="#"><img src="images/portfolio/7.jpg" alt=""></a>
+									</div>
+									<div class="photo col-md-3 col-sm-6 col-xs-12 col-xs-3">
+										<a href="#"><img src="images/portfolio/8.jpg" alt=""></a>
+									</div>
+								</div>
+							</aside>
+						</article>
+						
+						<article class="foo-menu-part col-md-4 col-sm-12 col-xs-12"  data-cms-component="footer-desc" data-cms-title="ویجت نمایش متن" data-cms-maxnum="1"  data-cms-parts="footer-desc" data-cms-type="manual">
+							<aside class="foo-menu"  data-cms-part="footer-desc" data-cms-items="title:text:عنوان,desc:textarea:توضیحات">
+								<h5>[title]</h5>
+								<div class="desc">[desc]</div>
+							</aside>
+						</article>						
+					</article>
+					<article style="text-align: center;">
+						<div class="copy-r"  data-cms-component="copyright" data-cms-title="متن کپی رایت" data-cms-maxnum="1" data-cms-parts="copyright" data-cms-type="manual">  
+							<p data-cms-part="copyright" data-cms-items="decs:text:توضیح" id="copyright" class="span12">[decs]</p>
+						</div>
+							<p id="design" class="cms-copyright" style="text-align:cente;padding:15px">[cms-copyright-text]</p>						  
+					</article>
+			</section>
+		</section>
+	</footer>
+</div>
+</div>
+	
+ 
+			$(document).ready(function() {
+			$('.carousel-inner .item').first().addClass('active');
+			$('#tablist .tabitem').first().addClass('active');
+			$(".nav> li:gt(6)").css("display", "none");
+			});
+</script>
+	
+</body>
+</html> 
