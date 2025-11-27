@@ -405,19 +405,36 @@ const testimonials = new Swiper(
 
 
 
-// 
-function increaseValue() {
-  let input = document.getElementById('quantity');
+
+// function increaseValue() {
+//   let input = document.getElementById('quantity');
+//   input.value = parseInt(input.value) + 1;
+// }
+
+// function decreaseValue() {
+//   let input = document.getElementById('quantity');
+//   let current = parseInt(input.value);
+//   if (current > 1) {
+//     input.value = current - 1;
+//   }
+// }
+
+
+// همه دکمه‌های افزایش
+function increaseValue(button) {
+  // پیدا کردن input مربوط به همین دکمه
+  let input = button.parentNode.querySelector('.quantity, .cart-quantity');
   input.value = parseInt(input.value) + 1;
 }
 
-function decreaseValue() {
-  let input = document.getElementById('quantity');
+function decreaseValue(button) {
+  let input = button.parentNode.querySelector('.quantity, .cart-quantity');
   let current = parseInt(input.value);
   if (current > 1) {
     input.value = current - 1;
   }
 }
+
 
 //   
 

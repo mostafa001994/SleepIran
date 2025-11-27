@@ -17,6 +17,47 @@
     <svg class="hidden">
 
 
+        <symbol id="delete" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 4H3.33333H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path
+                d="M12.6673 4V13.3333C12.6673 13.687 12.5268 14.0261 12.2768 14.2761C12.0267 14.5262 11.6876 14.6667 11.334 14.6667H4.66732C4.3137 14.6667 3.97456 14.5262 3.72451 14.2761C3.47446 14.0261 3.33398 13.687 3.33398 13.3333V4M5.33398 4V2.66667C5.33398 2.31305 5.47446 1.97391 5.72451 1.72386C5.97456 1.47381 6.3137 1.33334 6.66732 1.33334H9.33398C9.68761 1.33334 10.0267 1.47381 10.2768 1.72386C10.5268 1.97391 10.6673 2.31305 10.6673 2.66667V4"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.66602 7.33334V11.3333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M9.33398 7.33334V11.3333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
+
+
+        <symbol id="plus" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_439_19959)">
+                <path
+                    d="M8.00065 14.6667C11.6825 14.6667 14.6673 11.6819 14.6673 8C14.6673 4.3181 11.6825 1.33334 8.00065 1.33334C4.31875 1.33334 1.33398 4.3181 1.33398 8C1.33398 11.6819 4.31875 14.6667 8.00065 14.6667Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8 5.33334V10.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M5.33398 8H10.6673" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </g>
+            <defs>
+                <clipPath id="clip0_439_19959">
+                    <rect fill="white" />
+                </clipPath>
+            </defs>
+        </symbol>
+
+
+        <symbol id="shield" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M10.4899 2.23L5.49991 4.11C4.34991 4.54 3.40991 5.9 3.40991 7.12V14.55C3.40991 15.73 4.18991 17.28 5.13991 17.99L9.43991 21.2C10.8499 22.26 13.1699 22.26 14.5799 21.2L18.8799 17.99C19.8299 17.28 20.6099 15.73 20.6099 14.55V7.12C20.6099 5.89 19.6699 4.53 18.5199 4.1L13.5299 2.23C12.6799 1.92 11.3199 1.92 10.4899 2.23Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.05078 11.87L10.6608 13.48L14.9608 9.17999" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+
+
+
 
         <symbol id="shipping" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 18.6667H17.3333C18.8 18.6667 20 17.4667 20 16V2.66669H8C6 2.66669 4.25335 3.77334 3.34668 5.4"
@@ -2837,191 +2878,65 @@
 
 
 
-
-
-
-        <header class="md:p-5 p-3 rounded-2xl bg-white my-4 md:h-20 h-12">
-
-            <h3 class="flex items-center gap-4 px-4 md:text-3xl">
-                <svg class="md:w-6 md:h-6 w-4 h-4 rotate-180">
-                    <use xlink:href="#arrow-left"></use>
-                </svg>
-
-                ثبت نهایی
-            </h3>
-        </header>
-
-
-        <section class="flex md:flex-row flex-col items-start gap-4">
-        
-            <div class="md:w-2/3 w-full">
-
-                <section class="bg-white p-6 rounded-2xl">
-
-
-                    <form class="flex flex-col gap-2 font-medium md:text-lg text-xs">
-
-                        <div class="flex flex-col gap-2 p-2 text-right">
-                            <label for="name" class="text-[#808184] required">نام و نام خانوادگی</label>
-                            <input type="text" class="bg-[#F4F5FC] rounded-full md:h-14 h-10 px-6" id="name">
-                        </div>
-
-
-
-
-                        <div class="flex flex-col gap-2 p-2 text-right">
-                            <label for="email" class="text-[#808184]">
-
-                                ایمیل
-                                <small> (اختیاری)</small>
-
-                            </label>
-                            <input type="email" id="email" class=" bg-[#F4F5FC] rounded-full md:h-14 h-10 px-6">
-                        </div>
-
-
-                        <div class="flex flex-col gap-2 p-2 text-right ">
-                            <label for="province" class="required text-[#808184]">استان</label>
-                            <select id="province" class="bg-[#F4F5FC] text-[#808184] rounded-full md:h-14 h-10 px-6">
-                                <option> استان مورد نظر خود را انتخاب کنید</option>
-                                <option>تهران</option>
-                                <option>قم</option>
-                                <option>اراک</option>
-                                <option>مشهد</option>
-                                <option>تبریز</option>
-                                <option>شیراز</option>
-                            </select>
-
-                        </div>
-
-
-                        <div class="flex flex-col gap-2 p-2 text-right">
-                            <label for="number" class="required text-[#808184]">شماره تماس</label>
-                            <input type="text" id="number" class=" bg-[#F4F5FC] rounded-full md:h-14 h-10 px-6">
-                        </div>
-
-
-                        <div class="flex flex-col gap-2 p-2 text-right">
-                            <label for="addtess" class="required text-[#808184]">آدرس دقیق </label>
-                            <input type="text" id="addtess" class="bg-[#F4F5FC] rounded-full md:h-14 h-10 px-6">
-                        </div>
-
-
-
-
-                        <div class="flex flex-col gap-2 p-2 text-right ">
-                            <label for="city" class="required text-[#808184]">شهر</label>
-                            <select id="city" class="bg-[#F4F5FC] text-[#808184] rounded-full md:h-14 h-10 px-6">
-                                <option> شهر مورد نظر خود را انتخاب کنید</option>
-                                <option>تهران</option>
-                                <option>قم</option>
-                                <option>اراک</option>
-                                <option>مشهد</option>
-                                <option>تبریز</option>
-                                <option>شیراز</option>
-                            </select>
-
-                        </div>
-
-
-                        <div class="flex gap-2 items-center my-4 pt-4 md:text-lg text-sm">
-
-                            <svg class="md:w-6 md:h-6 w-4 h-4 text-sky-500">
-                                <use xlink:href="#shipping"></use>
-                            </svg>
-                            انتخاب نحوه ارسال
-
-                        </div>
-
-
-
-                        <div class="flex md:flex-row flex-col md:items-center md:gap-8 gap-4 md:text-lg text-sm">
-
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="option" value="choice3" checked="" class="hidden peer">
-                                <span class="radio-btn"></span>
-                                پست پیشتاز (معمولی)
-                            </label>
-
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="option" value="choice3" class="hidden peer">
-                                <span class="radio-btn"></span>
-                                تیپاکس
-                            </label>
-
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="option" value="choice3" class="hidden peer">
-                                <span class="radio-btn"></span>
-                                باربری
-                            </label>
-                        </div>
-
-
-
-
-                    </form>
-
-
-                </section>
-
-            </div>
-            <div class="md:w-1/3 w-full md:text-lg text-sm md:sticky top-36">
-
-
-                <section class="p-4 py-6 rounded-2xl bg-white flex flex-col md:gap-4 gap-3">
-
-
-
-                    <div class="flex items-center justify-between">
-
-                        <span>
-                            قیمت کالا ها:
-                        </span>
-                        <span>
-                            ۱۳٬۹۰۰٬۰۰۰ تومان
-                        </span>
-
-
-                    </div>
-
-                    <div class="flex items-center justify-between text-sky-500">
-
-                        <div class="flex gap-2 items-center my-4 pt-4">
-
-                            <svg class="md:w-6 md:h-6 w-4 h-4 text-sky-500">
-                                <use xlink:href="#shipping"></use>
-                            </svg>
-                            انتخاب نحوه ارسال
-
-                        </div>
-                        <span>
-                            ۱۳٬۹۰۰٬۰۰۰ تومان
-                        </span>
-
-
-                    </div>
-
-
-                    <div class="flex items-center justify-between bg-[#E6F4FF] md:rounded-xl rounded-lg md:p-4 p-3">
-
-                        <span>
-                            قیمت کالا ها:
-                        </span>
-                        <span>
-                            ۱۳٬۹۰۰٬۰۰۰ تومان
-                        </span>
-
-                    </div>
-
-
-                    <button class="bg-sky-500 md:rounded-xl rounded-lg md:h-14 h-12 text-center w-full text-white">
-                        پرداخت
-                    </button>
-
-                </section>
-
-
-            </div>
+        <!-- Breadcrumb -->
+        <section class="my-4 p-2">
+            <nav aria-label="Breadcrumb " class="md:hidden text-base overflow-scroll text-xs">
+                <ol class="flex w-max items-center space-x-2 font-medium text-neutral-400 fill-neutral-400">
+                    <li>
+                        <a href="#" class="text-">
+                            اسلیپیران
+                        </a>
+                    </li>
+                    <svg class="w-4 h-4 rotate-90">
+                        <use xlink:href="#chevron-down"></use>
+                    </svg>
+
+
+                    <li aria-current="page" class="text-black">
+                        درباره ما
+                    </li>
+                </ol>
+            </nav>
+        </section>
+        <!-- Breadcrumb -->
+
+
+        <section>
+
+            <header>
+                <figure class="relative text-white md:h-full h-52">
+                    <div class="bg-[#6ABCFF50] absolute top-0 right-0 w-full h-full"></div>
+                    <img src="./src/img/image 55.png" alt="درباره اسلیپ ایران" class="rounded-lg h-full object-cover">
+                    <figcaption class="absolute inset-0 flex flex-col md:-mt-24 items-center justify-center md:gap-4">
+
+                        <h1 class="md:text-6xl text-2xl font-bold">درباره ما</h1>
+                        <p class="md:text-2xl">
+                            ما کی هستیم؟
+                        </p>
+                    </figcaption>
+                </figure>
+            </header>
+
+
+            <article
+                class="bg-white md:rounded-xl rounded w-11/12 m-auto md:p-8 p-5 md:-mt-32 -mt-8 relative text-justify">
+
+                <h2 class="text-sky-500 md:text-3xl font-semibold md:py-6 py-3">
+                    درباره ما بیشتر بدانید
+                </h2>
+
+                <p class="md:text-xl text-sm text-[#808184] md:leading-14 leading-5">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                    گیرد.
+                </p>
+
+            </article>
 
         </section>
 
