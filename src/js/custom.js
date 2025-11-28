@@ -13,6 +13,8 @@ var main_slider = new Swiper(".main_slider", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  watchOverflow: false, // 👈 اینو اضافه کن
+
 
 });
 
@@ -231,6 +233,184 @@ const products = new Swiper(
 
 
 
+const blog_products = new Swiper(
+  ".blog_products", {
+  spaceBetween: 15
+  ,
+
+  loop: true,
+
+  // centeredSlides:true,
+  slidesPerView: 3,
+
+  // autoplay: true,
+  // using "ratio" endpoints
+
+  breakpoints: {
+    // when window width is >= 320px
+
+    300: {
+      slidesPerView: 1,
+
+    },
+
+    320: {
+      slidesPerView: 1,
+    },
+
+    480: {
+      slidesPerView: 1,
+
+    },
+
+    640: {
+      slidesPerView: 2,
+      // spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+
+    },
+    1265: {
+      slidesPerView: 3,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+}
+)
+
+
+
+const related_posts = new Swiper(
+  ".related_posts", {
+  spaceBetween: 15
+  ,
+
+  loop: true,
+
+  // centeredSlides:true,
+  slidesPerView: 3,
+
+  // autoplay: true,
+  // using "ratio" endpoints
+
+  breakpoints: {
+    // when window width is >= 320px
+
+    300: {
+      slidesPerView: 1,
+
+    },
+
+    320: {
+      slidesPerView: 2,
+    },
+
+    480: {
+      slidesPerView: 2,
+
+    },
+
+    640: {
+      slidesPerView: 2,
+      // spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+
+    },
+    1265: {
+      slidesPerView: 3,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+}
+)
+
+
+
+const more_products = new Swiper(
+  ".more_products", {
+  spaceBetween: 15
+  ,
+
+  loop: true,
+
+  // centeredSlides:true,
+  slidesPerView: 3,
+
+  // autoplay: true,
+  // using "ratio" endpoints
+
+  breakpoints: {
+    // when window width is >= 320px
+
+    300: {
+      slidesPerView: 1,
+
+    },
+
+    320: {
+      slidesPerView: 2,
+    },
+
+    480: {
+      slidesPerView: 2,
+
+    },
+
+    640: {
+      slidesPerView: 2,
+      // spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+
+    },
+    1265: {
+      slidesPerView: 4,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+}
+)
+
+
+
+
 
 const offers_slider = new Swiper(
   ".offers_slider", {
@@ -400,6 +580,9 @@ const testimonials = new Swiper(
 
 }
 )
+
+
+
 
 
 
@@ -677,6 +860,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const emailFields = document.querySelectorAll('input[type="email"]');
+
+  emailFields.forEach(field => {
+    field.addEventListener("blur", () => {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const errorSpan = field.parentNode.querySelector('.error-message');
+
+      if (!regex.test(field.value) && field.value.trim() !== "") {
+        errorSpan.innerHTML = `
+                  <span class="text-red-600 text-sm">  فرمت ایمیل اشتباه است.</span>
+        <svg class="w-4 h-4">
+            <use xlink:href="#danger"></use>
+        </svg>
+`;field.classList.add("border-red-500", "text-red-600");
+      } else {
+        errorSpan.innerHTML = "";
+
+         
+
+        field.classList.remove("border-red-500", "text-red-600");
+
+      }
+    });
+  });
+});
+
 
 
 
@@ -1130,5 +1342,23 @@ const countdownEl = document.getElementById("countdown");
 
     countdownEl.innerHTML = `<span>${h}</span>:<span>${m}</span>:<span>${s}</span>`;
   }, 1000);
+
+
+
+
+
+
+
+function toggleContent(button) {
+  // پیدا کردن بخش table-content مربوط به همین section
+  let section = button.closest('.table-of-contents');
+  let content = section.querySelector('.table-content');
+
+  if (content) {
+    content.classList.toggle('closed');
+  }
+}
+
+
 
 

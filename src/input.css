@@ -310,6 +310,10 @@ table td::-webkit-scrollbar {
   }
 
 
+  .border-red-500{
+    @apply border-red-500! border
+  }
+
 
   #mobileCart{
     @apply fixed z-50 overflow-scroll w-9/12 h-full pb-6 bg-white shadow-lg transform transition-transform duration-300 ease-in-out
@@ -380,6 +384,20 @@ table td::-webkit-scrollbar {
     @apply relative overflow-visible md:bottom-[115px] bottom-[100px] z-1
   }
 
+  .Complementary_products .swiper-navs{
+    @apply relative overflow-visible md:bottom-[205px] bottom-[80px] z-1
+  }
+
+  
+  .Complementary_products .swiper-navs .swiper-button-prev{
+    @apply md:-left-6! -left-3!
+  }
+
+   .Complementary_products .swiper-navs .swiper-button-next{
+    @apply md:-right-6! -right-3!
+  }
+
+
   #testimonials  .swiper-navs{
     @apply relative overflow-visible md:bottom-[115px] bottom-[200px] z-1
   }
@@ -391,8 +409,8 @@ table td::-webkit-scrollbar {
     @apply relative overflow-visible md:bottom-[168px] bottom-[95px] z-1
   }
 
-  #related-products .swiper-slide  ,  #Best-selling .swiper-slide {
-    @apply relative flex! rounded-xl md:flex-col md:gap-5 gap-2 md:p-3 px-1.5 py-1 bg-white
+  #related-products .swiper-slide , .blog_products .swiper-slide  ,  #Best-selling .swiper-slide {
+    @apply relative flex! rounded-xl md:flex-col md:gap-5 gap-2 md:p-3 px-1.5 py-1 bg-white border-0
   }
 
   .brands_slider article{
@@ -762,6 +780,44 @@ footer .e-namad img{
     @apply md:text-base text-[10px] grid grid-flow-col md:grid-rows-3 grid-rows-6  gap-4 md:grid-cols-3 grid-cols-1 text-right pr-4 list-disc pl-3 text-[#808184]
   }
 
+
+
+
+  .table-of-contents{
+    @apply bg-white rounded-xl my-6
+  }
+  .table-of-contents > button{
+    @apply bg-[#E6F4FF] md:rounded-t-2xl md:rounded-b-lg rounded-t-xl rounded-b-md  md:h-20 h-12 flex items-center justify-between md:px-8 px-4 w-full
+  }
+
+
+  .table-of-contents ul li{
+    @apply before:content-['•']  flex md:gap-4 gap-3
+  }
+
+  .table-content.closed{
+
+    @apply h-0 opacity-0 hidden
+  }
+
+  
+  .table-of-contents ul li::before{
+
+    @apply md:w-3 w-2.5 md:h-3 h-2.5 md:text-6xl text-5xl relative md:-top-2 -top-2 text-[#007ADF]
+  }
+
+  .blog-product{
+    @apply flex md:flex-row flex-col md:gap-0 gap-4 md:shadow-md items-stretch md:text-right bg-white rounded-lg md:p-0 p-3 md:border-0 border border-[#D9D9D9] my-8
+  }
+
+  .post-rate{
+    @apply flex md:flex-row flex-col items-center md:justify-between justify-around shadow-md rounded-xl md:px-6 px-4 h-28 bg-white my-8
+  }
+
+  .comment-reply li{
+    /*  */
+  }
+
 }
 
 
@@ -792,6 +848,12 @@ footer .e-namad img{
     }
 
     .products .swiper-slide{
+      margin-top: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .blog_products .swiper-slide{
       margin-top: 20px;
       margin-bottom: 20px;
       flex-wrap: wrap;
