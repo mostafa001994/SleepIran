@@ -13,7 +13,6 @@ var main_slider = new Swiper(".main_slider", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  watchOverflow: false, // 👈 اینو اضافه کن
 
 
 });
@@ -582,7 +581,220 @@ const testimonials = new Swiper(
 )
 
 
+// difftent_product
 
+
+const difftent_products = new Swiper(
+  ".difftent_products", {
+  spaceBetween: 15
+  ,
+
+  loop: true,
+
+  breakpoints: {
+    // when window width is >= 320px
+
+
+    300: {
+      slidesPerView: 2,
+
+    },
+
+    320: {
+      slidesPerView: 2,
+    },
+
+    480: {
+      slidesPerView: 2,
+
+    },
+
+    640: {
+      slidesPerView: 2,
+      // spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+
+    },
+    1265: {
+      slidesPerView: 4,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+}
+)
+
+
+const category_brands = new Swiper(
+  ".category_brands", {
+  spaceBetween: 15
+  ,
+
+  loop: true,
+
+  breakpoints: {
+    // when window width is >= 320px
+
+
+    300: {
+      slidesPerView: 2,
+
+    },
+
+    320: {
+      slidesPerView: 2,
+    },
+
+    480: {
+      slidesPerView: 2,
+
+    },
+
+    640: {
+      slidesPerView: 2,
+      // spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+
+    },
+    1265: {
+      slidesPerView: 4,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+}
+)
+
+
+
+const category_sizes_tab = new Swiper(
+  ".category_sizes_tab", {
+  spaceBetween: 15
+  ,
+
+  loop: true,
+
+  breakpoints: {
+    // when window width is >= 320px
+
+
+    300: {
+      slidesPerView: 3,
+
+    },
+
+    320: {
+      slidesPerView: 3,
+    },
+
+    480: {
+      slidesPerView: 3,
+
+    },
+
+    640: {
+      slidesPerView: 3,
+      // spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+
+    },
+    1265: {
+      slidesPerView: 6,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+}
+)
+
+
+const category_sizes = new Swiper(
+  ".category_sizes", {
+  spaceBetween: 15
+  ,
+
+  loop: true,
+
+  breakpoints: {
+    // when window width is >= 320px
+
+
+    300: {
+      slidesPerView: 1.5,
+
+    },
+
+    320: {
+      slidesPerView: 1.5,
+    },
+
+    480: {
+      slidesPerView: 1.5,
+
+    },
+
+    640: {
+      slidesPerView: 1.5,
+      // spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 2,
+
+    },
+    1265: {
+      slidesPerView: 3,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+}
+)
 
 
 
@@ -1361,4 +1573,16 @@ function toggleContent(button) {
 
 
 
+
+  function toggleContent(contentId, btnId) {
+    const content = document.getElementById(contentId);
+    const btn = document.getElementById(btnId);
+
+    content.classList.toggle('max-h-40');
+    content.classList.toggle('max-h-full');
+
+    btn.textContent = content.classList.contains('max-h-40') 
+      ? '+ نمایش بیشتر' 
+      : '− نمایش کمتر';
+  }
 

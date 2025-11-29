@@ -309,10 +309,40 @@ table td::-webkit-scrollbar {
     /* @apply font-iranSans; */
   }
 
+  input:focus{
+    @apply border border-sky-500
+  }
+
+  input , textarea{
+
+    @apply focus:outline-none focus:ring-1 focus:ring-[#209AFF] focus:border-[#209AFF]
+  }
+
 
   .border-red-500{
     @apply border-red-500! border
   }
+  
+
+.scroll-thin {
+  @apply overflow-auto; /* برای فعال شدن اسکرول */
+}
+
+.scroll-thin::-webkit-scrollbar {
+  @apply w-1
+}
+
+.scroll-thin::-webkit-scrollbar-thumb {
+  @apply bg-[#FF9C00] rounded-full; /* رنگ و گردی دسته */
+}
+
+.scroll-thin::-webkit-scrollbar-track {
+  @apply bg-[#FFEBCE]; /* زمینه  */
+}
+
+.scroll-thin::-webkit-scrollbar-button {
+  display: none; /* حذف دکمه‌های بالا و پایین */
+}
 
 
   #mobileCart{
@@ -396,6 +426,70 @@ table td::-webkit-scrollbar {
    .Complementary_products .swiper-navs .swiper-button-next{
     @apply md:-right-6! -right-3!
   }
+
+  .category_size .swiper-navs{
+    @apply relative overflow-visible md:bottom-[25px] bottom-[5px] z-1
+  }
+
+  
+  .category_size .swiper-navs .swiper-button-prev{
+    @apply md:-left-6! -left-3!
+  }
+
+   .category_size .swiper-navs .swiper-button-next{
+    @apply md:-right-6! -right-3!
+  }
+
+  .category_size .swiper-navs .swiper-button-prev{
+    @apply md:-left-6! -left-3!
+  }
+
+   .category_size .swiper-navs .swiper-button-next{
+    @apply md:-right-6! -right-3!
+  }
+
+
+
+
+  .category_brand .swiper-navs{
+    @apply relative overflow-visible md:bottom-[110px] bottom-[45px] z-1
+  }
+
+  .category_brand .swiper-navs .swiper-button-prev{
+    @apply md:-left-6! -left-3!
+  }
+
+   .category_brand .swiper-navs .swiper-button-next{
+    @apply md:-right-6! -right-3!
+  }
+  .category_brand .swiper-navs .swiper-button-prev:after,.category_brand .swiper-navs .swiper-button-next:after {
+    @apply  text-[10px]! md:text-sm! font-bold
+  }
+
+
+  .category_size .swiper-navs .swiper-button-prev:after,.category_size .swiper-navs .swiper-button-next:after {
+    @apply  text-[10px]! md:text-sm! font-bold
+  }
+
+
+  .difftent_product .swiper-navs .swiper-button-prev:after,.difftent_product .swiper-navs .swiper-button-next:after {
+    @apply  text-[10px]! md:text-sm! font-bold
+  }
+
+  .difftent_product .swiper-navs{
+    @apply relative overflow-visible md:bottom-[63px] bottom-[15px] z-1
+  }
+
+  
+  .difftent_product .swiper-navs .swiper-button-prev{
+    @apply md:-left-6! -left-3!
+  }
+
+   .difftent_product .swiper-navs .swiper-button-next{
+    @apply md:-right-6! -right-3!
+  }
+
+
 
 
   #testimonials  .swiper-navs{
@@ -518,16 +612,20 @@ table td::-webkit-scrollbar {
   @apply bg-amber-500!
 }
 
+.main_slider .swiper-pagination{
+  @apply h-5 md:bottom-2! md:opacity-100 px-5 bottom-0! flex items-center left-0 right-0 m-auto w-max! z-20 md:bg-transparent bg-white rounded-t-md
+}
 
 
 
-  article .swiper-slide {
+
+  .thumbs_image_gallery  .swiper-slide {
     @apply border border-gray-300 rounded-xl
   }
 
-  .thumbs_movie .swiper-slide:nth-child(4) {
+  /* .thumbs_image_gallery .swiper-slide:nth-child(4) {
     @apply blur-xs border-0
-  }
+  } */
 
 
   .gap-y-3 > li:nth-child(even) 
