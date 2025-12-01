@@ -15,6 +15,14 @@
 
     <svg class="hidden">
 
+        <symbol id="fearch-filter" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M13 20C8.02944 20 4 15.9706 4 11C4 6.02944 8.02944 2 13 2C17.9706 2 22 6.02944 22 11C22 15.9706 17.9706 20 13 20Z"
+                stroke="#808184" stroke-width="1.14545" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M5.06959 20.6898C4.53959 22.2898 3.32959 22.4498 2.39959 21.0498C1.54959 19.7698 2.10959 18.7198 3.64959 18.7198C4.78959 18.7098 5.42959 19.5998 5.06959 20.6898Z"
+                stroke="#808184" stroke-width="1.14545" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
 
         <symbol id="category" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -744,7 +752,7 @@
 
             <!-- <section class="header-top"></section> -->
 
-            <section class="header-main md:flex hidden justify-between items-center">
+            <section class="header-main lg:flex hidden justify-between items-center">
 
                 <div class="flex gap-10 h-14">
 
@@ -785,7 +793,7 @@
 
             </section>
 
-            <section class="header-botton md:flex hidden justify-between items-center">
+            <section class="header-botton lg:flex hidden justify-between items-center">
 
 
                 <nav class="flex items-center text-gray-700 h-10">
@@ -1059,7 +1067,7 @@
                         <section class="search-resault hidden">
                             <form class="w-full py-3">
 
-                                <input type="search" class="h-[42px] w-full px-3 bg-[#f9f9f9]"
+                                <input type="search" class="h-[42px] rounded w-full px-3 bg-[#f9f9f9]"
                                     placeholder="محصول مد نظر را جستجو کنید...">
 
 
@@ -1439,7 +1447,7 @@
             </section>
 
 
-            <section class="mobile-header flex md:hidden justify-between items-center">
+            <section class="mobile-header flex lg:hidden justify-between items-center">
 
 
                 <div id="backdrop" class="fixed z-30 inset-0 bg-[#738395f7] hidden"></div>
@@ -2403,7 +2411,6 @@
                 <!-- -->
 
 
-
                 <!-- سبد خرید موبایل -->
                 <div id="mobileCart" class="-translate-x-full  top-0 left-0">
                     <div class="p-4 ">
@@ -2582,7 +2589,6 @@
                         </div>
 
 
-
                         <section class="relative ">
 
 
@@ -2699,16 +2705,11 @@
                         </section>
 
 
-
-
-
                         <div class="my-4 pt-4  pb-2  flex justify-between items-center">
                             <h3 class="text-lg font-medium">
                                 محصولات پیشنهادی
                             </h3>
                         </div>
-
-
 
                         <section class="relative h-full ">
 
@@ -2787,8 +2788,6 @@
                             </div>
                         </section>
 
-
-
                         <div class="cart-footer bg-white">
 
 
@@ -2814,6 +2813,382 @@
 
                     </div>
 
+
+                </div>
+
+
+
+
+                <!-- فیلتر  موبایل -->
+                <div id="mobileFilter" class="translate-x-full  top-0 right-0">
+                    <div class="p-4 ">
+
+                        <div class="my-4 flex justify-between items-center">
+                            <h3 class="text-lg font-medium">
+                                با چند کلیک محصول رو پیاده کن
+                            </h3>
+
+                            <button id="closeFilter">
+                                <svg class="w-6 h-6 text-sky-500">
+                                    <use xlink:href="#close-rounded"></use>
+                                </svg>
+                            </button>
+
+                        </div>
+
+
+                        <form class="relative">
+                            <input placeholder="دنبال چه محصولی هستی؟"
+                                class="h-11 my-3 px-3 w-full bg-[#f9f9f9] text-sm rounded">
+
+                            <svg class="w-6 h-6 text-sky-500 absolute left-2 top-[22px] z-10">
+                                <use xlink:href="#fearch-filter"></use>
+                            </svg>
+                        </form>
+
+                        <section class="relative h-full pb-16">
+
+
+                            <div class="flex flex-col gap-4">
+
+                                <label
+                                    class="flex w-full items-center cursor-pointer group bg-white rounded-lg px-2 h-[52px] justify-between border border-[#F9F9F9]">
+                                    <span class="mr-3 text-[#2F3136]">محصولات تخفیف دار </span>
+
+                                    <input type="checkbox" class="sr-only peer" checked=""
+                                        aria-label="محصولات تخفیف دار  ">
+
+                                    <div class="relative md:w-12 w-10 md:h-6 h-5 rounded-full bg-gray-200 transition-colors peer-checked:bg-[#FFEBCE]"
+                                        aria-hidden="true">
+                                        <span
+                                            class="absolute top-1 right-1 md:w-4 w-3 h-3 md:h-4 bg-[#FF9C00] rounded-full transition-transform group-has-checked:left-1 group-has-checked:right-auto"
+                                            aria-hidden="true"></span>
+                                    </div>
+                                </label>
+
+
+                                <label
+                                    class="flex w-full items-center cursor-pointer group bg-white rounded-lg px-2 h-[52px] justify-between border border-[#F9F9F9]">
+                                    <span class="mr-3 text-[#2F3136]"> محصولات موجود</span>
+
+                                    <input type="checkbox" class="sr-only peer" checked="" aria-label=" محصولات موجود">
+
+                                    <div class="relative md:w-12 w-10 md:h-6 h-5 rounded-full bg-gray-200 transition-colors peer-checked:bg-[#FFEBCE]"
+                                        aria-hidden="true">
+                                        <span
+                                            class="absolute top-1 right-1 md:w-4 w-3 h-3 md:h-4 bg-[#FF9C00] rounded-full transition-transform group-has-checked:left-1 group-has-checked:right-auto"
+                                            aria-hidden="true"></span>
+                                    </div>
+                                </label>
+
+
+                                <div class="border border-[#F9F9F9] bg-white rounded-lg">
+                                    <button
+                                        onclick="document.getElementById('filterBox').classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')"
+                                        class="w-full flex justify-between items-center px-4 h-[52px]">
+                                        <span>
+                                            درجه نرمی یا سفتی
+                                        </span>
+                                        <svg class="arrow w-4 h-4" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+
+
+
+                                    <fieldset>
+
+
+                                        <div id="filterBox"
+                                            class="scroll-thin hidden max-h-40 px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice1" checked=""
+                                                    class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                مثل چوب سفت
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice2" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                متوسط تا کمی سفت
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice3" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                متوسط تا کمی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice4" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                مثل ابر نرم و فنری
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice6" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice7" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice8" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+                                        </div>
+                                    </fieldset>
+
+
+                                </div>
+
+                                <div class="border border-[#F9F9F9] bg-white rounded-lg">
+                                    <button
+                                        onclick="document.getElementById('filterBox2').classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')"
+                                        class="w-full flex justify-between items-center px-4 h-[52px]">
+                                        <span>
+                                            نوع تشک
+                                        </span>
+                                        <svg class="arrow w-4 h-4" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+
+
+
+                                    <fieldset>
+
+
+                                        <div id="filterBox2"
+                                            class="scroll-thin max-h-40 hidden px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice1" checked=""
+                                                    class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                مثل چوب سفت
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice2" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                متوسط تا کمی سفت
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice3" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                متوسط تا کمی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice4" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                مثل ابر نرم و فنری
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice6" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice7" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice8" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+                                        </div>
+                                    </fieldset>
+
+
+                                </div>
+
+                                <div class="border border-[#F9F9F9] bg-white rounded-lg">
+                                    <button
+                                        onclick="document.getElementById('filterBox2').classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')"
+                                        class="w-full flex justify-between items-center px-4 h-[52px]">
+                                        <span>
+                                            مدت زمان گارانتی
+                                        </span>
+                                        <svg class="arrow w-4 h-4" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+
+
+
+                                    <fieldset>
+
+
+                                        <div id="filterBox2"
+                                            class="scroll-thin max-h-40 hidden px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice1" checked=""
+                                                    class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                مثل چوب سفت
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice2" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                متوسط تا کمی سفت
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice3" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                متوسط تا کمی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice4" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                مثل ابر نرم و فنری
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice6" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice7" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice8" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+                                        </div>
+                                    </fieldset>
+
+
+                                </div>
+
+                                <div class="border border-[#F9F9F9] bg-white rounded-lg">
+                                    <button
+                                        onclick="document.getElementById('filterBox2').classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')"
+                                        class="w-full flex justify-between items-center px-4 h-[52px]">
+                                        <span>
+                                            تعداد نفرات
+                                        </span>
+                                        <svg class="arrow w-4 h-4" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+
+
+
+                                    <fieldset>
+
+
+                                        <div id="filterBox2"
+                                            class="scroll-thin max-h-40 hidden px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice1" checked=""
+                                                    class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                مثل چوب سفت
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice2" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                متوسط تا کمی سفت
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice3" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                متوسط تا کمی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice4" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                مثل ابر نرم و فنری
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice6" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice7" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="softness" value="choice8" class="hidden peer">
+                                                <span class="radio-btn" aria-hidden="true"></span>
+                                                تشک خیلی نرم
+                                            </label>
+                                        </div>
+                                    </fieldset>
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="cart-footer bg-white border-0">
+
+
+                                <div class="cart-btns">
+                                    <a href="#" class="bg-[#F9F9F9] text-[#808184]">غیرفعال کردن فیلترها </a>
+                                    <a href="#">اعمال فیلترها </a>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </div>
+
+
+
+                </div>
+                <!--  -->
+
+
+
+
+
+
+
+
+
+
             </section>
 
         </div>
@@ -2830,7 +3205,7 @@
 
                 <div class="my-4 flex justify-between items-center">
                     <h3 class="text-lg font-medium">
-                        جستجو
+                        با چند کلیک محصول رو پیاده کن
                     </h3>
 
                     <button id="closeSearch">
@@ -2842,9 +3217,14 @@
                 </div>
 
 
-                <form>
-                    <input placeholder="دنبال چه محصولی هستی؟"
-                        class="h-11 my-3 px-3 w-full bg-[#f9f9f9] text-sm rounded">
+
+
+                <form class="relative">
+                    <input placeholder="   جستوجوی محصول" class="h-11 my-3 px-3 w-full bg-[#f9f9f9] text-sm rounded">
+
+                    <svg class="w-6 h-6 text-sky-500 absolute left-2 top-[22px] z-10">
+                        <use xlink:href="#fearch-filter"></use>
+                    </svg>
                 </form>
 
 
@@ -3043,438 +3423,6 @@
         </section>
 
 
-        <section class="category_brand">
-
-
-            <h3 class="md:text-2xl text-sm md:pb-8 pb-6 font-medium text-right">
-                دنبال چه برندی هستی؟
-            </h3>
-
-
-            <div class="category_brands swiper">
-
-                <div class="swiper-wrapper">
-
-                    <article
-                        class="swiper-slide relative overflow-hidden h-full md:h-auto rounded-lg flex items-center justify-center">
-                        <div class="absolute bg-linear-to-b from-[#DDC3B200] to-white bottom-0 h-3/5 w-full rounded-lg">
-                        </div>
-                        <figure class="w-full h-full">
-                            <img src="./src/img/Rectangle 148970 (15).png" class="w-full h-full object-cover rounded-lg"
-                                alt="">
-                            <figcaption class="absolute bottom-[8%]  w-full flex flex-col items-center md:gap-4 gap-3">
-                                <h3 class="md:text-3xl text-sm text-center font-semibold">
-                                    تشک خوشخواب
-
-                                </h3>
-                                <a href="#"
-                                    class="lg:text-base text-[10px] md:rounded-lg rounded-full bg-white text-[#808184] font-medium md:h-11 flex items-center h-6 w-fit md:px-6 px-3">
-
-                                    لیست مدلهای تشک خوشخواب
-
-                                </a>
-                            </figcaption>
-                        </figure>
-                    </article>
-
-                    <article
-                        class="swiper-slide relative overflow-hidden h-full md:h-auto rounded-lg flex items-center justify-center">
-                        <div class="absolute bg-linear-to-b from-[#DDC3B200] to-white bottom-0 h-3/5 w-full rounded-lg">
-                        </div>
-                        <figure class="w-full h-full">
-                            <img src="./src/img/Rectangle 148970 (15).png" class="w-full h-full object-cover rounded-lg"
-                                alt="">
-                            <figcaption class="absolute bottom-[8%]  w-full flex flex-col items-center md:gap-4 gap-3">
-                                <h3 class="md:text-3xl text-sm text-center font-semibold">
-                                    تشک خوشخواب
-
-                                </h3>
-                                <a href="#"
-                                    class="lg:text-base text-[10px] md:rounded-lg rounded-full bg-white text-[#808184] font-medium md:h-11 flex items-center h-6 w-fit md:px-6 px-3">
-
-                                    لیست مدلهای تشک خوشخواب
-
-                                </a>
-                            </figcaption>
-                        </figure>
-                    </article>
-
-                    <article
-                        class="swiper-slide relative overflow-hidden h-full md:h-auto rounded-lg flex items-center justify-center">
-                        <div class="absolute bg-linear-to-b from-[#DDC3B200] to-white bottom-0 h-3/5 w-full rounded-lg">
-                        </div>
-                        <figure class="w-full h-full">
-                            <img src="./src/img/Rectangle 148970 (15).png" class="w-full h-full object-cover rounded-lg"
-                                alt="">
-                            <figcaption class="absolute bottom-[8%]  w-full flex flex-col items-center md:gap-4 gap-3">
-                                <h3 class="md:text-3xl text-sm text-center font-semibold">
-                                    تشک خوشخواب
-
-                                </h3>
-                                <a href="#"
-                                    class="lg:text-base text-[10px] md:rounded-lg rounded-full bg-white text-[#808184] font-medium md:h-11 flex items-center h-6 w-fit md:px-6 px-3">
-
-                                    لیست مدلهای تشک خوشخواب
-
-                                </a>
-                            </figcaption>
-                        </figure>
-                    </article>
-
-                    <article
-                        class="swiper-slide relative overflow-hidden h-full md:h-auto rounded-lg flex items-center justify-center">
-                        <div class="absolute bg-linear-to-b from-[#DDC3B200] to-white bottom-0 h-3/5 w-full rounded-lg">
-                        </div>
-                        <figure class="w-full h-full">
-                            <img src="./src/img/Rectangle 148970 (15).png" class="w-full h-full object-cover rounded-lg"
-                                alt="">
-                            <figcaption class="absolute bottom-[8%]  w-full flex flex-col items-center md:gap-4 gap-3">
-                                <h3 class="md:text-3xl text-sm text-center font-semibold">
-                                    تشک خوشخواب
-
-                                </h3>
-                                <a href="#"
-                                    class="lg:text-base text-[10px] md:rounded-lg rounded-full bg-white text-[#808184] font-medium md:h-11 flex items-center h-6 w-fit md:px-6 px-3">
-
-                                    لیست مدلهای تشک خوشخواب
-
-                                </a>
-                            </figcaption>
-                        </figure>
-                    </article>
-
-                    <article
-                        class="swiper-slide relative overflow-hidden h-full md:h-auto rounded-lg flex items-center justify-center">
-                        <div class="absolute bg-linear-to-b from-[#DDC3B200] to-white bottom-0 h-3/5 w-full rounded-lg">
-                        </div>
-                        <figure class="w-full h-full">
-                            <img src="./src/img/Rectangle 148970 (15).png" class="w-full h-full object-cover rounded-lg"
-                                alt="">
-                            <figcaption class="absolute bottom-[8%] w-full flex flex-col items-center md:gap-4 gap-3">
-                                <h3 class="md:text-3xl text-sm text-center font-semibold">
-                                    تشک خوشخواب
-
-                                </h3>
-                                <a href="#"
-                                    class="lg:text-base text-[10px] md:rounded-lg rounded-full bg-white text-[#808184] font-medium md:h-11 flex items-center h-6 w-fit md:px-6 px-3">
-
-                                    لیست مدلهای تشک خوشخواب
-
-                                </a>
-                            </figcaption>
-                        </figure>
-                    </article>
-
-
-
-                </div>
-
-            </div>
-
-            <div class="flex swiper-navs">
-                <div class="swiper-button-prev text-white"></div>
-                <div class="swiper-button-next text-white"></div>
-            </div>
-
-
-        </section>
-
-
-
-
-        <section class="category_size relative">
-
-
-
-            <div class="">
-
-                <header class="md:py-4 mt-4">
-                    <h3 class="md:text-2xl text-sm text-right md:py-8 h-9 flex items-center ">
-                        چه سایز مناسبتونه؟
-                    </h3>
-
-                </header>
-
-                <section class="swiper category_sizes_tab">
-
-                    <div class="swiper-wrapper md:text-xl text-[10px]">
-                        <button class="swiper-slide  tab-btn md:px-6 p-2 md:rounded-lg rounded md:h-12 h-[30px] active">
-                            تشک تک نفره
-                        </button>
-                        <button class="swiper-slide  tab-btn md:rounded-lg rounded md:h-12 h-[30px] p-2">
-                            تشک دونفره
-                        </button>
-                        <button class="swiper-slide  tab-btn md:rounded-lg rounded md:h-12 h-[30px] p-2">
-                            تشک یک و نیم نفره
-                        </button>
-
-                        <button class="swiper-slide  tab-btn md:rounded-lg rounded md:h-12 h-[30px] p-2">
-                            تشک سایز 120 سانت
-                        </button>
-
-                        <button class="swiper-slide  tab-btn md:rounded-lg rounded md:h-12 h-[30px] p-2">
-                            تشک سایز 140 سانت
-                        </button>
-                        <button class="swiper-slide  tab-btn md:rounded-lg rounded md:h-12 h-[30px] p-2">
-                            تشک سایز 160 سانت
-                        </button>
-
-                        <button class="swiper-slide  tab-btn md:rounded-lg rounded md:h-12 h-[30px] p-2">
-                            تشک سایز 180 سانت
-                        </button>
-                    </div>
-                </section>
-
-                <div class="flex swiper-navs">
-                    <div class="swiper-button-prev text-white"></div>
-                    <div class="swiper-button-next text-white"></div>
-                </div>
-
-
-            </div>
-
-
-            <div class="tab-content md:py-10 py-4">
-
-                <section class="swiper category_sizes">
-                    <div class="swiper-wrapper">
-
-                        <article
-                            class="swiper-slide relative overflow-hidden h-full md:h-auto rounded-lg flex items-center justify-center col-start-2 row-start-3 md:col-start-3 md:row-start-2">
-                            <div
-                                class="absolute bg-linear-to-b from-[#DDC3B200] to-[#FFFFFF] bottom-0 h-3/5 w-full rounded-lg">
-                            </div>
-                            <figure class="w-full h-full">
-                                <img src="./src/img/image 69 (1).png" class="w-full h-full object-cover rounded-xl"
-                                    alt="">
-                                <figcaption class="">
-                                    <h3>
-                                        <a href="#"
-                                            class="md:text-2xl absolute bottom-[8%] font-semibold text-center w-full block">جدیدترین
-                                            راهنمای خرید تشک
-                                        </a>
-                                    </h3>
-                                </figcaption>
-                            </figure>
-                        </article>
-
-                        <article
-                            class="swiper-slide relative overflow-hidden h-full md:h-auto rounded-lg flex items-center justify-center col-start-2 row-start-3 md:col-start-3 md:row-start-2">
-                            <div
-                                class="absolute bg-linear-to-b from-[#DDC3B200] to-[#FFFFFF] bottom-0 h-3/5 w-full rounded-lg">
-                            </div>
-                            <figure class="w-full h-full">
-                                <img src="./src/img/image 69 (1).png" class="w-full h-full object-cover rounded-xl"
-                                    alt="">
-                                <figcaption class="">
-                                    <h3>
-                                        <a href="#"
-                                            class="md:text-2xl absolute bottom-[8%] font-semibold text-center w-full block">جدیدترین
-                                            راهنمای خرید تشک
-                                        </a>
-                                    </h3>
-                                </figcaption>
-                            </figure>
-                        </article>
-
-                        <article
-                            class="swiper-slide relative overflow-hidden h-full md:h-auto rounded-lg flex items-center justify-center col-start-2 row-start-3 md:col-start-3 md:row-start-2">
-                            <div
-                                class="absolute bg-linear-to-b from-[#DDC3B200] to-[#FFFFFF] bottom-0 h-3/5 w-full rounded-lg">
-                            </div>
-                            <figure class="w-full h-full">
-                                <img src="./src/img/image 69 (1).png" class="w-full h-full object-cover rounded-xl"
-                                    alt="">
-                                <figcaption class="">
-                                    <h3>
-                                        <a href="#"
-                                            class="md:text-2xl absolute bottom-[8%] font-semibold text-center w-full block">جدیدترین
-                                            راهنمای خرید تشک
-                                        </a>
-                                    </h3>
-                                </figcaption>
-                            </figure>
-                        </article>
-
-                    </div>
-                </section>
-
-            </div>
-
-            <div class="tab-content p-4 hidden">
-                محصولات2
-            </div>
-
-            <div class="tab-content p-4 hidden">
-
-                محصولات3
-
-            </div>
-
-
-        </section>
-
-
-
-        <section class="difftent_product relative">
-
-            <header class="md:py-4 mt-4">
-                <h3 class="md:text-2xl text-sm text-right md:py-8 h-9 flex items-center ">
-                    دنبال تشک متفاوت هستی؟
-                </h3>
-
-            </header>
-
-            <section class="swiper difftent_products">
-
-                <div class="swiper-wrapper">
-
-                    <article class="swiper-slide relative">
-                        <figure class="relative">
-                            <img src="./src/img/image 69 (2).png" class="w-full object-cover md:h-32 h-14 rounded-lg"
-                                alt="">
-                            <figcaption
-                                class="bg-[#2f31368f] text-white md:text-2xl rounded-lg p-1 absolute right-[5%] top-[10%] w-[90%] h-[80%] flex flex-col justify-center ">
-
-
-                                <h2 class="text-center">
-                                    <a>
-                                        تشک مناسب دیسک کمر
-                                    </a>
-                                </h2>
-
-                            </figcaption>
-                        </figure>
-                    </article>
-
-
-                    <article class="swiper-slide relative">
-                        <figure class="relative">
-                            <img src="./src/img/image 69 (2).png" class="w-full object-cover md:h-32 h-14 rounded-lg"
-                                alt="">
-                            <figcaption
-                                class="bg-[#2f31368f] text-white md:text-2xl rounded-lg p-1 absolute right-[5%] top-[10%] w-[90%] h-[80%] flex flex-col justify-center ">
-
-
-                                <h2 class="text-center">
-                                    <a>
-                                        تشک مناسب دیسک کمر
-                                    </a>
-                                </h2>
-
-                            </figcaption>
-                        </figure>
-                    </article>
-
-
-                    <article class="swiper-slide relative">
-                        <figure class="relative">
-                            <img src="./src/img/image 69 (2).png" class="w-full object-cover md:h-32 h-14 rounded-lg"
-                                alt="">
-                            <figcaption
-                                class="bg-[#2f31368f] text-white md:text-2xl rounded-lg p-1 absolute right-[5%] top-[10%] w-[90%] h-[80%] flex flex-col justify-center ">
-
-
-                                <h2 class="text-center">
-                                    <a>
-                                        تشک مناسب دیسک کمر
-                                    </a>
-                                </h2>
-
-                            </figcaption>
-                        </figure>
-                    </article>
-
-
-                    <article class="swiper-slide relative">
-                        <figure class="relative">
-                            <img src="./src/img/image 69 (2).png" class="w-full object-cover md:h-32 h-14 rounded-lg"
-                                alt="">
-                            <figcaption
-                                class="bg-[#2f31368f] text-white md:text-2xl rounded-lg p-1 absolute right-[5%] top-[10%] w-[90%] h-[80%] flex flex-col justify-center ">
-
-
-                                <h2 class="text-center">
-                                    <a>
-                                        تشک مناسب دیسک کمر
-                                    </a>
-                                </h2>
-
-                            </figcaption>
-                        </figure>
-                    </article>
-
-
-                    <article class="swiper-slide relative">
-                        <figure class="relative">
-                            <img src="./src/img/image 69 (2).png" class="w-full object-cover md:h-32 h-14 rounded-lg"
-                                alt="">
-                            <figcaption
-                                class="bg-[#2f31368f] text-white md:text-2xl rounded-lg p-1 absolute right-[5%] top-[10%] w-[90%] h-[80%] flex flex-col justify-center ">
-
-
-                                <h2 class="text-center">
-                                    <a>
-                                        تشک مناسب دیسک کمر
-                                    </a>
-                                </h2>
-
-                            </figcaption>
-                        </figure>
-                    </article>
-
-
-                </div>
-
-            </section>
-
-
-            <div class="flex swiper-navs">
-                <div class="swiper-button-prev text-white"></div>
-                <div class="swiper-button-next text-white"></div>
-            </div>
-
-        </section>
-
-
-        <section class="grid md:grid-cols-2 grid-cols-1 gap-4 my-8">
-
-
-
-            <article class="relative h-full md:h-auto rounded-lg flex items-center justify-center ">
-                <div class="absolute bg-linear-to-b from-[#DDC3B200] to-[#FFFFFF] bottom-0 h-3/5 w-full rounded-lg">
-                </div>
-                <figure class="w-full h-full">
-                    <img src="./src/img/image 69 (1).png" class="w-full md:h-60 h-32 object-cover rounded-xl" alt="">
-                    <figcaption class="">
-                        <h3>
-                            <a href="#"
-                                class="md:text-2xl absolute bottom-[8%] font-semibold text-center w-full block">جدیدترین
-                                لیست تشک های مهمان
-                            </a>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </article>
-
-            <article class="relative h-full md:h-auto rounded-lg flex items-center justify-center ">
-                <div class="absolute bg-linear-to-b from-[#DDC3B200] to-[#FFFFFF] bottom-0 h-3/5 w-full rounded-lg">
-                </div>
-                <figure class="w-full h-full">
-                    <img src="./src/img/image 69 (1).png" class="w-full md:h-60 h-32 object-cover rounded-xl" alt="">
-                    <figcaption class="">
-                        <h3>
-                            <a href="#"
-                                class="md:text-2xl absolute bottom-[8%] font-semibold text-center w-full block">جدیدترین
-                                لیست تشک های مهمان
-                            </a>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </article>
-
-        </section>
-
 
         <!-- products -->
 
@@ -3484,48 +3432,48 @@
 
 
                 <div class="flex md:flex-col items-center gap-4 justify-between">
-                <label
-                    class="flex w-full items-center cursor-pointer group bg-white rounded-lg px-2 md:h-[52px] h-9 justify-between border border-[#D9D9D9]">
-                    <span class="mr-3">ارسال فوری</span>
+                    <label
+                        class="flex w-full items-center cursor-pointer group bg-white rounded-lg px-2 md:h-[52px] h-9 justify-between border border-[#D9D9D9]">
+                        <span class="mr-3">ارسال فوری</span>
 
-                    <input type="checkbox" class="sr-only peer" checked aria-label="ارسال فوری">
+                        <input type="checkbox" class="sr-only peer" checked aria-label="ارسال فوری">
 
-                    <div class="relative md:w-12 w-10 md:h-6 h-5 rounded-full bg-gray-200 transition-colors peer-checked:bg-[#FFEBCE]"
-                        aria-hidden="true">
-                        <span
-                            class="absolute top-1 right-1 md:w-4 w-3 h-3 md:h-4 bg-[#FF9C00] rounded-full transition-transform group-has-checked:left-1 group-has-checked:right-auto"
-                            aria-hidden="true"></span>
-                    </div>
-                </label>
+                        <div class="relative md:w-12 w-10 md:h-6 h-5 rounded-full bg-gray-200 transition-colors peer-checked:bg-[#FFEBCE]"
+                            aria-hidden="true">
+                            <span
+                                class="absolute top-1 right-1 md:w-4 w-3 h-3 md:h-4 bg-[#FF9C00] rounded-full transition-transform group-has-checked:left-1 group-has-checked:right-auto"
+                                aria-hidden="true"></span>
+                        </div>
+                    </label>
 
 
-                <label
-                    class="flex w-full items-center cursor-pointer group bg-white rounded-lg px-2 md:h-[52px] h-9 justify-between border border-[#D9D9D9]">
-                    <span class="mr-3"> تخفیف ویژه</span>
+                    <label
+                        class="flex w-full items-center cursor-pointer group bg-white rounded-lg px-2 md:h-[52px] h-9 justify-between border border-[#D9D9D9]">
+                        <span class="mr-3"> تخفیف ویژه</span>
 
-                    <input type="checkbox" class="sr-only peer" aria-label="تخفیف ویژه ">
+                        <input type="checkbox" class="sr-only peer" aria-label="تخفیف ویژه ">
 
-                    <div class="relative md:w-12 w-10 md:h-6 h-5 rounded-full bg-gray-200 transition-colors peer-checked:bg-[#FFEBCE]"
-                        aria-hidden="true">
-                        <span
-                            class="absolute top-1 right-1 md:w-4 w-3 h-3 md:h-4 bg-[#FF9C00] rounded-full transition-transform group-has-checked:left-1 group-has-checked:right-auto"
-                            aria-hidden="true"></span>
-                    </div>
-                </label>
+                        <div class="relative md:w-12 w-10 md:h-6 h-5 rounded-full bg-gray-200 transition-colors peer-checked:bg-[#FFEBCE]"
+                            aria-hidden="true">
+                            <span
+                                class="absolute top-1 right-1 md:w-4 w-3 h-3 md:h-4 bg-[#FF9C00] rounded-full transition-transform group-has-checked:left-1 group-has-checked:right-auto"
+                                aria-hidden="true"></span>
+                        </div>
+                    </label>
 
-                <label
-                    class="md:flex hidden w-full items-center cursor-pointer group bg-white rounded-lg px-2 h-[52px] justify-between border border-[#D9D9D9]">
-                    <span class="mr-3"> محصولات موجود</span>
+                    <label
+                        class="md:flex hidden w-full items-center cursor-pointer group bg-white rounded-lg px-2 h-[52px] justify-between border border-[#D9D9D9]">
+                        <span class="mr-3"> محصولات موجود</span>
 
-                    <input type="checkbox" class="sr-only peer" checked aria-label=" محصولات موجود ">
+                        <input type="checkbox" class="sr-only peer" checked aria-label=" محصولات موجود ">
 
-                    <div class="relative w-12 h-6 rounded-full bg-gray-200 transition-colors peer-checked:bg-[#FFEBCE]"
-                        aria-hidden="true">
-                        <span
-                            class="absolute top-1 right-1 w-4 h-4 bg-[#FF9C00] rounded-full transition-transform group-has-checked:left-1 group-has-checked:right-auto"
-                            aria-hidden="true"></span>
-                    </div>
-                </label>
+                        <div class="relative w-12 h-6 rounded-full bg-gray-200 transition-colors peer-checked:bg-[#FFEBCE]"
+                            aria-hidden="true">
+                            <span
+                                class="absolute top-1 right-1 w-4 h-4 bg-[#FF9C00] rounded-full transition-transform group-has-checked:left-1 group-has-checked:right-auto"
+                                aria-hidden="true"></span>
+                        </div>
+                    </label>
 
 
 
@@ -3533,310 +3481,312 @@
                 </div>
 
                 <div class="md:hidden ">
-                    <button class="w-full rounded-lg bg-white border text-right px-4 border-[#D9D9D9] h-9">
+                    <button id="FilterBtn"
+                        class="w-full rounded-lg bg-white border text-right px-4 border-[#D9D9D9] h-9">
                         فیلتر و مرتب‌سازی
                     </button>
                 </div>
 
                 <section class="md:flex flex-col gap-4 hidden">
 
-                                    <div class="border border-[#D9D9D9] bg-white rounded-lg">
-                    <button
-                        onclick="document.getElementById('filterBox').classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')"
-                        class="w-full flex justify-between items-center px-4 h-[52px] border-b border-b-[#D9D9D9]">
-                        <span>فیلترها</span>
-                        <svg class="arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
+                    <div class="border border-[#D9D9D9] bg-white rounded-lg">
+                        <button
+                            onclick="document.getElementById('filterBox').classList.toggle('hidden'); this.querySelector('.arrow').classList.toggle('rotate-180')"
+                            class="w-full flex justify-between items-center px-4 h-[52px] border-b border-b-[#D9D9D9]">
+                            <span>فیلترها</span>
+                            <svg class="arrow w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
 
-                    <div id="filterBox" class="hidden px-4 py-3">
-                        <label class="block mb-2 text-right ">
-                            <span>دسته‌بندی</span>
-                            <select class="mt-1 block w-full h-12 border border-[#D9D9D9] rounded-lg">
-                                <option>همه</option>
-                                <option>جدید</option>
-                                <option>پرفروش</option>
-                            </select>
-                        </label>
-
-                        <div class="w-full max-w-md py-4">
-                            <label for="priceRange" class="block mb-2 text-right text-sm font-medium text-gray-700">
-                                محدوده قیمت
+                        <div id="filterBox" class="hidden px-4 py-3">
+                            <label class="block mb-2 text-right ">
+                                <span>دسته‌بندی</span>
+                                <select class="mt-1 block w-full h-12 border border-[#D9D9D9] rounded-lg">
+                                    <option>همه</option>
+                                    <option>جدید</option>
+                                    <option>پرفروش</option>
+                                </select>
                             </label>
-                            <input id="priceRange" type="range" min="0" max="10000000000" step="2000" value="1000"
-                                class="w-full accent-[#FF9C00] cursor-pointer"
-                                oninput="document.getElementById('rangeValue').textContent = this.value">
-                            <div class="mt-2 text-right text-sm text-gray-600">
-                                مقدار انتخابی: <span id="rangeValue">40000000</span>
+
+                            <div class="w-full max-w-md py-4">
+                                <label for="priceRange" class="block mb-2 text-right text-sm font-medium text-gray-700">
+                                    محدوده قیمت
+                                </label>
+                                <input id="priceRange" type="range" min="0" max="10000000000" step="2000" value="1000"
+                                    class="w-full accent-[#FF9C00] cursor-pointer"
+                                    oninput="document.getElementById('rangeValue').textContent = this.value">
+                                <div class="mt-2 text-right text-sm text-gray-600">
+                                    مقدار انتخابی: <span id="rangeValue">40000000</span>
+                                </div>
                             </div>
+
+
                         </div>
-
-
                     </div>
-                </div>
 
 
-                <div class="border border-[#D9D9D9] bg-white rounded-lg">
-                    <fieldset>
-                        <legend
-                            class="w-full flex justify-between items-center px-4 h-[52px] border-b border-b-[#D9D9D9] font-semibold">
-                            <span class="flex items-center gap-4">
-                                <svg class="w-6 h-6" aria-hidden="true">
-                                    <use xlink:href="#sun"></use>
-                                </svg>
-                                درجه نرمی یا سفتی
-                            </span>
-                        </legend>
+                    <div class="border border-[#D9D9D9] bg-white rounded-lg">
+                        <fieldset>
+                            <legend
+                                class="w-full flex justify-between items-center px-4 h-[52px] border-b border-b-[#D9D9D9] font-semibold">
+                                <span class="flex items-center gap-4">
+                                    <svg class="w-6 h-6" aria-hidden="true">
+                                        <use xlink:href="#sun"></use>
+                                    </svg>
+                                    درجه نرمی یا سفتی
+                                </span>
+                            </legend>
 
-                        <div id="filterBox2"
-                            class="scroll-thin max-h-40 px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="softness" value="choice1" checked class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                مثل چوب سفت
-                            </label>
+                            <div id="filterBox2"
+                                class="scroll-thin max-h-40 px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="softness" value="choice1" checked class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    مثل چوب سفت
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="softness" value="choice2" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                متوسط تا کمی سفت
-                            </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="softness" value="choice2" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    متوسط تا کمی سفت
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="softness" value="choice3" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                متوسط تا کمی نرم
-                            </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="softness" value="choice3" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    متوسط تا کمی نرم
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="softness" value="choice4" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                مثل ابر نرم و فنری
-                            </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="softness" value="choice4" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    مثل ابر نرم و فنری
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="softness" value="choice6" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                تشک خیلی نرم
-                            </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="softness" value="choice6" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک خیلی نرم
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="softness" value="choice7" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                تشک خیلی نرم
-                            </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="softness" value="choice7" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک خیلی نرم
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="softness" value="choice8" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                تشک خیلی نرم
-                            </label>
-                        </div>
-                    </fieldset>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="softness" value="choice8" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک خیلی نرم
+                                </label>
+                            </div>
+                        </fieldset>
 
-                    <button id="toggleBtn2" onclick="toggleContent('filterBox2','toggleBtn2')"
-                        class="w-full text-right pr-5 p-2">
-                        + نمایش بیشتر
-                    </button>
-                </div>
-
-
-                
-                <div class="border border-[#D9D9D9] bg-white rounded-lg">
-                    <fieldset>
-                        <legend
-                            class="w-full flex justify-between items-center px-4 h-[52px] border-b border-b-[#D9D9D9] font-semibold">
-                            <span class="flex items-center gap-4">
-                                <svg class="w-6 h-6" aria-hidden="true">
-                                    <use xlink:href="#sun"></use>
-                                </svg>
-                               نوع تشک
-                            </span>
-                        </legend>
-
-                        <div id="filterBox3"
-                            class="scroll-thin max-h-40 px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="type" value="choice1" checked class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               تشک طبی
-                            </label>
-
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="type" value="choice2" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               تشک فنری فنر منفصل
-                            </label>
-
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="type" value="choice3" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               تشک فنری فنر منفصل
-                            </label>
-
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="type" value="choice4" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               تشک مموری فوم
-                            </label>
-
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="type" value="choice6" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                تشک خیلی نرم
-                            </label>
-
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="type" value="choice7" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                تشک خیلی نرم
-                            </label>
-
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="type" value="choice8" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                تشک خیلی نرم
-                            </label>
-                        </div>
-                    </fieldset>
-
-                    <button id="toggleBtn3" onclick="toggleContent('filterBox3','toggleBtn3')"
-                        class="w-full text-right pr-5 p-2">
-                        + نمایش بیشتر
-                    </button>
-                </div>
+                        <button id="toggleBtn2" onclick="toggleContent('filterBox2','toggleBtn2')"
+                            class="w-full text-right pr-5 p-2">
+                            + نمایش بیشتر
+                        </button>
+                    </div>
 
 
-                
-                <div class="border border-[#D9D9D9] bg-white rounded-lg">
-                    <fieldset>
-                        <legend
-                            class="w-full flex justify-between items-center px-4 h-[52px] border-b border-b-[#D9D9D9] font-semibold">
-                            <span class="flex items-center gap-4">
-                                <svg class="w-6 h-6" aria-hidden="true">
-                                    <use xlink:href="#sun"></use>
-                                </svg>
-                               مناسب چه افرادی
-                            </span>
-                        </legend>
 
-                        <div id="filterBox4"
-                            class="scroll-thin max-h-40 px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="suitable " value="choice1" checked class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               کمر درد و درد پایین کمر
-                            </label>
+                    <div class="border border-[#D9D9D9] bg-white rounded-lg">
+                        <fieldset>
+                            <legend
+                                class="w-full flex justify-between items-center px-4 h-[52px] border-b border-b-[#D9D9D9] font-semibold">
+                                <span class="flex items-center gap-4">
+                                    <svg class="w-6 h-6" aria-hidden="true">
+                                        <use xlink:href="#sun"></use>
+                                    </svg>
+                                    نوع تشک
+                                </span>
+                            </legend>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="suitable " value="choice2" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               گودی کمر زیاد
-                            </label>
+                            <div id="filterBox3"
+                                class="scroll-thin max-h-40 px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="type" value="choice1" checked class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک طبی
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="softness" value="choice3" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               گردن درد
-                            </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="type" value="choice2" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک فنری فنر منفصل
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="suitable " value="choice4" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               دیسک کمر و سیاتیک
-                            </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="type" value="choice3" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک فنری فنر منفصل
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="suitable " value="choice6" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                تشک خیلی نرم
-                            </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="type" value="choice4" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک مموری فوم
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="suitable " value="choice7" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               دیسک کمر و سیاتیک
-                            </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="type" value="choice6" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک خیلی نرم
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="suitable " value="choice8" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                                تشک خیلی نرم
-                            </label>
-                        </div>
-                    </fieldset>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="type" value="choice7" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک خیلی نرم
+                                </label>
 
-                    <button id="toggleBtn4" onclick="toggleContent('filterBox4','toggleBtn4')"
-                        class="w-full text-right pr-5 p-2">
-                        + نمایش بیشتر
-                    </button>
-                </div>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="type" value="choice8" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک خیلی نرم
+                                </label>
+                            </div>
+                        </fieldset>
 
-                                
-                <div class="border border-[#D9D9D9] bg-white rounded-lg">
-                    <fieldset>
-                        <legend
-                            class="w-full flex justify-between items-center px-4 h-[52px] border-b border-b-[#D9D9D9] font-semibold">
-                            <span class="flex items-center gap-4">
-                                <svg class="w-6 h-6" aria-hidden="true">
-                                    <use xlink:href="#sun"></use>
-                                </svg>
-                              حداکثر وزن
-                            </span>
-                        </legend>
+                        <button id="toggleBtn3" onclick="toggleContent('filterBox3','toggleBtn3')"
+                            class="w-full text-right pr-5 p-2">
+                            + نمایش بیشتر
+                        </button>
+                    </div>
 
-                        <div id="filterBox5"
-                            class="scroll-thin max-h-40 px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="weight " value="choice1" checked class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               وزن 80 کیلو
-                            </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="weight " value="choice2" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               وزن 95 کیلو
-                            </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="weight" value="choice3" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               وزن 110 کیلو
-                            </label>
+                    <div class="border border-[#D9D9D9] bg-white rounded-lg">
+                        <fieldset>
+                            <legend
+                                class="w-full flex justify-between items-center px-4 h-[52px] border-b border-b-[#D9D9D9] font-semibold">
+                                <span class="flex items-center gap-4">
+                                    <svg class="w-6 h-6" aria-hidden="true">
+                                        <use xlink:href="#sun"></use>
+                                    </svg>
+                                    مناسب چه افرادی
+                                </span>
+                            </legend>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="weight " value="choice4" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               وزن 120 کیلو
-                            </label>
+                            <div id="filterBox4"
+                                class="scroll-thin max-h-40 px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="suitable " value="choice1" checked class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    کمر درد و درد پایین کمر
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="weight " value="choice6" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               وزن 130 کیلو
-                            </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="suitable " value="choice2" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    گودی کمر زیاد
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="weight " value="choice7" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                               وزن 140 کیلو
-                            </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="softness" value="choice3" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    گردن درد
+                                </label>
 
-                            <label class="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="weight " value="choice8" class="hidden peer">
-                                <span class="radio-btn" aria-hidden="true"></span>
-                              وزن 150 کیلو
-                            </label>
-                        </div>
-                    </fieldset>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="suitable " value="choice4" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    دیسک کمر و سیاتیک
+                                </label>
 
-                    <button id="toggleBtn5" onclick="toggleContent('filterBox5','toggleBtn5')"
-                        class="w-full text-right pr-5 p-2">
-                        + نمایش بیشتر
-                    </button>
-                </div>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="suitable " value="choice6" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک خیلی نرم
+                                </label>
+
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="suitable " value="choice7" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    دیسک کمر و سیاتیک
+                                </label>
+
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="suitable " value="choice8" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    تشک خیلی نرم
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <button id="toggleBtn4" onclick="toggleContent('filterBox4','toggleBtn4')"
+                            class="w-full text-right pr-5 p-2">
+                            + نمایش بیشتر
+                        </button>
+                    </div>
+
+
+                    <div class="border border-[#D9D9D9] bg-white rounded-lg">
+                        <fieldset>
+                            <legend
+                                class="w-full flex justify-between items-center px-4 h-[52px] border-b border-b-[#D9D9D9] font-semibold">
+                                <span class="flex items-center gap-4">
+                                    <svg class="w-6 h-6" aria-hidden="true">
+                                        <use xlink:href="#sun"></use>
+                                    </svg>
+                                    حداکثر وزن
+                                </span>
+                            </legend>
+
+                            <div id="filterBox5"
+                                class="scroll-thin max-h-40 px-4 py-3 flex flex-col gap-3 text-sm text-[#2F3136]">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="weight " value="choice1" checked class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    وزن 80 کیلو
+                                </label>
+
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="weight " value="choice2" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    وزن 95 کیلو
+                                </label>
+
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="weight" value="choice3" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    وزن 110 کیلو
+                                </label>
+
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="weight " value="choice4" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    وزن 120 کیلو
+                                </label>
+
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="weight " value="choice6" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    وزن 130 کیلو
+                                </label>
+
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="weight " value="choice7" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    وزن 140 کیلو
+                                </label>
+
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="weight " value="choice8" class="hidden peer">
+                                    <span class="radio-btn" aria-hidden="true"></span>
+                                    وزن 150 کیلو
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <button id="toggleBtn5" onclick="toggleContent('filterBox5','toggleBtn5')"
+                            class="w-full text-right pr-5 p-2">
+                            + نمایش بیشتر
+                        </button>
+                    </div>
                 </section>
 
 
@@ -3948,8 +3898,7 @@
 
                         <header>
 
-                            <div
-                                class="absolute w-full flex items-start justify-between right-0 top-0 p-3">
+                            <div class="absolute w-full flex items-start justify-between right-0 top-0 p-3">
 
                                 <div class="flex flex-col gap-2 ">
                                     <button>
@@ -3965,7 +3914,8 @@
                                 </div>
 
                                 <div>
-                                    <a href="#" class="h-6 px-3 text-xs flex items-center gap-2 hover:text-gray-500 rounded-lg bg-[#F9F9F9]">
+                                    <a href="#"
+                                        class="h-6 px-3 text-xs flex items-center gap-2 hover:text-gray-500 rounded-lg bg-[#F9F9F9]">
                                         حذف فیلتر
                                         <svg class="w-4 h-4 hover:text-red-500">
                                             <use xlink:href="#close-2"></use>
@@ -4127,7 +4077,7 @@
 
                 </section>
 
-                
+
                 <nav class="mt-6 flex items-center md:justify-end justify-center" aria-label="صفحه‌بندی">
                     <ul class="inline-flex items-center md:gap-4 gap-3 text-sm" dir="rtl">
                         <!-- قبلی -->
@@ -4211,10 +4161,10 @@
 
 
 
-        
+
         <section class="Complementary_products py-6">
             <header class="flex items-center justify-between md:px-0 md:py-4 ">
-                <h3 class="md:text-2xl text-sm text-right md:py-8 h-9 flex items-center">
+                <h3 class="md:text-2xl  font-semibold text-sm text-right md:py-8 h-9 flex items-center">
                     محصولات تکمیل کننده
                 </h3>
 
@@ -4335,7 +4285,7 @@
 
             <header class="flex items-center justify-between md:pt-0 pt-10">
                 <div class="flex flex-col gap-4 md:m-0 m-auto">
-                    <h3 class="text-2xl font-medium md:text-right text-center">
+                    <h3 class="text-2xl  font-semibold md:text-right text-center">
                         تجربه مشتریان
                     </h3>
 
@@ -4790,13 +4740,232 @@
 
 
 
+        <section class="products-posts relative">
+            <h3 class="text-2xl md:block hidden font-semibold text-right pt-10">
+               هر آنچه باید در زمان خرید تشک بدانید
+            </h3>
 
-        <section>
+            <h3 class="text-sm font-medium md:hidden text-right pt-6">
+
+                             دنبال تشک متفاوت هستی؟
+            </h3>
+           
+
+
+            <div class="swiper blog_archive w-full">
+                <div class="swiper-wrapper items-center py-8">
+
+                            <article class="swiper-slide bg-white md:p-4 p-3 rounded-lg border-0">
+
+                                <main>
+
+                                    <figure>
+                                        <img src="./src/img/image 446.png" class="w-full rounded-lg">
+
+                                        <figcaption>
+                                            <h2 class="md:text-xl text-xs py-4 text-right font-medium">
+                                                <a>تشک نرم یا سفت کدام بهتر است؟</a>
+                                            </h2>
+
+                                        </figcaption>
+
+
+                                    </figure>
+                                </main>
+                                <footer class="flex items-center justify-between md:text-base text-[9px]">
+                                    <a
+                                        class="bg-sky-200 h-[22px] md:h-9 font-medium rounded md:px-5 px-3 flex items-center justify-center">مطالعه</a>
+
+                                    <a class="text-gray-500 h-[22px]  flex items-center justify-center">1404/04/20 </a>
+
+                                </footer>
+
+                            </article>
+
+                            <article class="swiper-slide bg-white md:p-4 p-3 rounded-lg border-0">
+
+                                <main>
+
+                                    <figure>
+                                        <img src="./src/img/image 446.png" class="w-full rounded-lg">
+
+                                        <figcaption>
+                                            <h2 class="md:text-xl text-xs py-4 text-right font-medium">
+                                                <a>تشک نرم یا سفت کدام بهتر است؟</a>
+                                            </h2>
+
+                                        </figcaption>
+
+
+                                    </figure>
+                                </main>
+                                <footer class="flex items-center justify-between md:text-base text-[9px]">
+                                    <a
+                                        class="bg-sky-200 h-[22px] md:h-9 font-medium rounded md:px-5 px-3 flex items-center justify-center">مطالعه</a>
+
+                                    <a class="text-gray-500 h-[22px]  flex items-center justify-center">1404/04/20 </a>
+
+                                </footer>
+
+                            </article>
+
+                            <article class="swiper-slide bg-white md:p-4 p-3 rounded-lg border-0">
+
+                                <main>
+
+                                    <figure>
+                                        <img src="./src/img/image 446.png" class="w-full rounded-lg">
+
+                                        <figcaption>
+                                            <h2 class="md:text-xl text-xs py-4 text-right font-medium">
+                                                <a>تشک نرم یا سفت کدام بهتر است؟</a>
+                                            </h2>
+
+                                        </figcaption>
+
+
+                                    </figure>
+                                </main>
+                                <footer class="flex items-center justify-between md:text-base text-[9px]">
+                                    <a
+                                        class="bg-sky-200 h-[22px] md:h-9 font-medium rounded md:px-5 px-3 flex items-center justify-center">مطالعه</a>
+
+                                    <a class="text-gray-500 h-[22px]  flex items-center justify-center">1404/04/20 </a>
+
+                                </footer>
+
+                            </article>
+
+                            <article class="swiper-slide bg-white md:p-4 p-3 rounded-lg border-0">
+
+                                <main>
+
+                                    <figure>
+                                        <img src="./src/img/image 446.png" class="w-full rounded-lg">
+
+                                        <figcaption>
+                                            <h2 class="md:text-xl text-xs py-4 text-right font-medium">
+                                                <a>تشک نرم یا سفت کدام بهتر است؟</a>
+                                            </h2>
+
+                                        </figcaption>
+
+
+                                    </figure>
+                                </main>
+                                <footer class="flex items-center justify-between md:text-base text-[9px]">
+                                    <a
+                                        class="bg-sky-200 h-[22px] md:h-9 font-medium rounded md:px-5 px-3 flex items-center justify-center">مطالعه</a>
+
+                                    <a class="text-gray-500 h-[22px]  flex items-center justify-center">1404/04/20 </a>
+
+                                </footer>
+
+                            </article>
+
+                            <article class="swiper-slide bg-white md:p-4 p-3 rounded-lg border-0">
+
+                                <main>
+
+                                    <figure>
+                                        <img src="./src/img/image 446.png" class="w-full rounded-lg">
+
+                                        <figcaption>
+                                            <h2 class="md:text-xl text-xs py-4 text-right font-medium">
+                                                <a>تشک نرم یا سفت کدام بهتر است؟</a>
+                                            </h2>
+
+                                        </figcaption>
+
+
+                                    </figure>
+                                </main>
+                                <footer class="flex items-center justify-between md:text-base text-[9px]">
+                                    <a
+                                        class="bg-sky-200 h-[22px] md:h-9 font-medium rounded md:px-5 px-3 flex items-center justify-center">مطالعه</a>
+
+                                    <a class="text-gray-500 h-[22px]  flex items-center justify-center">1404/04/20 </a>
+
+                                </footer>
+
+                            </article>
+                            
+                    
+                </div>
+
+            </div>
+
+                        <div class="swiper-navs  ">
+                <div class="swiper-button-prev text-white"></div>
+                <div class="swiper-button-next text-white"></div>
+            </div>
+
+        </section>
+
+
+        <section class="text-justify">
+
+            <h3 class="md:text-2xl text-xl font-semibold py-4">
+                راهنمای خرید تشک
+            </h3>
+
+            <p class="md:text-2xl text-base md:leading-11 leading-8 text[#2F3136]">
+                سرویس‌خواب نیلسا&nbsp;یکی مدل‌های مدرن است که مناسب فضا‌های بزرگ است؛ زیرا این مدل به دلیل طراحی
+                مکعبی که دارد، فضای زیادی را در اتاق اشغال میکند. تاج تخت از دو ردیف مکعب تشکیل شده و کادر
+                دور
+                تخت از یک ردیف مکعب به هم چسبیده مشابه با تاج تخت طراحی شده است که با پارچه و اسفنج پوشیده
+                شده‌اند. ابعاد تخت‌خواب دو‌نفره: 160 سانتی متر در عرض و 2 متر در طول است که عرض تخت را با
+                180
+                سانتی‌متر هم میتوانید سفارش دهید.
+            </p>
+
+            <p class="md:text-2xl text-base md:leading-11 leading-8 text[#2F3136]">
+                سرویس‌خواب نیلسا&nbsp;یکی مدل‌های مدرن است که مناسب فضا‌های بزرگ است؛ زیرا این مدل به دلیل طراحی
+                مکعبی که دارد، فضای زیادی را در اتاق اشغال میکند. تاج تخت از دو ردیف مکعب تشکیل شده و کادر
+                دور
+                تخت از یک ردیف مکعب به هم چسبیده مشابه با تاج تخت طراحی شده است که با پارچه و اسفنج پوشیده
+                شده‌اند. ابعاد تخت‌خواب دو‌نفره: 160 سانتی متر در عرض و 2 متر در طول است که عرض تخت را با
+                180
+                سانتی‌متر هم میتوانید سفارش دهید.
+            </p>
+        </section>
+
+        <section class="text-justify">
+
+            <h3 class="md:text-2xl text-xl font-semibold py-4">
+                راهنمای خرید تشک
+            </h3>
+
+            <p class="md:text-2xl text-base md:leading-11 leading-8 text[#2F3136]">
+                سرویس‌خواب نیلسا&nbsp;یکی مدل‌های مدرن است که مناسب فضا‌های بزرگ است؛ زیرا این مدل به دلیل طراحی
+                مکعبی که دارد، فضای زیادی را در اتاق اشغال میکند. تاج تخت از دو ردیف مکعب تشکیل شده و کادر
+                دور
+                تخت از یک ردیف مکعب به هم چسبیده مشابه با تاج تخت طراحی شده است که با پارچه و اسفنج پوشیده
+                شده‌اند. ابعاد تخت‌خواب دو‌نفره: 160 سانتی متر در عرض و 2 متر در طول است که عرض تخت را با
+                180
+                سانتی‌متر هم میتوانید سفارش دهید.
+            </p>
+
+            <p class="md:text-2xl text-base md:leading-11 leading-8 text[#2F3136]">
+                سرویس‌خواب نیلسا&nbsp;یکی مدل‌های مدرن است که مناسب فضا‌های بزرگ است؛ زیرا این مدل به دلیل طراحی
+                مکعبی که دارد، فضای زیادی را در اتاق اشغال میکند. تاج تخت از دو ردیف مکعب تشکیل شده و کادر
+                دور
+                تخت از یک ردیف مکعب به هم چسبیده مشابه با تاج تخت طراحی شده است که با پارچه و اسفنج پوشیده
+                شده‌اند. ابعاد تخت‌خواب دو‌نفره: 160 سانتی متر در عرض و 2 متر در طول است که عرض تخت را با
+                180
+                سانتی‌متر هم میتوانید سفارش دهید.
+            </p>
+        </section>
+
+
+        <section class="trust">
 
             <div class="my-10 pt-4">
 
                 <div class="flex items-center gap-4 justify-center text-amber-500">
-                    <hr class="md:w-1/10 md:border-2">
+                    <span class="w-1/10">
+                        <hr class=" border-2">
+                    </span>
                     <h4 class="md:text-2xl md:block hidden">
                         چرا چرا اسلیپیران؟!...به چی اعتماد کنم؟
                     </h4>
@@ -4805,7 +4974,9 @@
                         چرا اسلیپیران؟
                     </h4>
 
-                    <hr class="md:w-1/10 md:border-2">
+                    <span class="w-1/10">
+                        <hr class=" border-2">
+                    </span>
 
                 </div>
 
@@ -5116,7 +5287,7 @@
                         <svg class="w-9 h-6 text-sky-500">
                             <use xlink:href="#location"></use>
                         </svg>
-                        <span class="text-[15px] font-medium text-black text-right">
+                        <span class="text-[14px] font-medium text-black text-right">
                             شعبه 1: استان فارسف شیراز، پاسداران، خیابان سوم شرقی، بعد از اولین
                             تقاطع، کالای خواب
                             اسلیپیران

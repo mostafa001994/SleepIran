@@ -318,7 +318,10 @@ table td::-webkit-scrollbar {
     @apply focus:outline-none focus:ring-1 focus:ring-[#209AFF] focus:border-[#209AFF]
   }
 
-
+  button
+{
+  @apply cursor-pointer
+}
   .border-red-500{
     @apply border-red-500! border
   }
@@ -347,6 +350,11 @@ table td::-webkit-scrollbar {
 
   #mobileCart{
     @apply fixed z-50 overflow-scroll w-9/12 h-full pb-6 bg-white shadow-lg transform transition-transform duration-300 ease-in-out
+  }
+
+  
+  #mobileFilter{
+    @apply fixed z-50 overflow-scroll h-full w-9/12 bg-white shadow-lg transform  transition-transform duration-300 ease-in-out md:hidden
   }
 
 
@@ -500,8 +508,13 @@ table td::-webkit-scrollbar {
   }
 
   .offers .swiper-navs , .brands .swiper-navs {
-    @apply relative overflow-visible md:bottom-[168px] bottom-[95px] z-1
+    @apply relative overflow-visible md:bottom-[150px] bottom-[95px] z-1
   }
+
+  .products-posts .swiper-navs , .brands .swiper-navs {
+    @apply relative overflow-visible md:bottom-[180px] bottom-[110px] z-1
+  }
+
 
   #related-products .swiper-slide , .blog_products .swiper-slide  ,  #Best-selling .swiper-slide {
     @apply relative flex! rounded-xl md:flex-col md:gap-5 gap-2 md:p-3 px-1.5 py-1 bg-white border-0
@@ -557,17 +570,37 @@ table td::-webkit-scrollbar {
     @apply md:-left-4! -left-2! 
   }
 
-    .offers .swiper-navs .swiper-button-next{
+  .offers .swiper-navs .swiper-button-next{
     @apply md:-right-4! -right-2!
   }
 
 
-  .brands hr:first-child{
-    @apply relative after:content-['']
+  .products-posts  .swiper-navs .swiper-button-next{
+    @apply md:-right-4! -right-2!
+  }
+
+  .products-posts .swiper-navs .swiper-button-prev{
+    @apply md:-left-4! -left-2! 
+  }
+
+
+
+
+
+  .brands span:first-child , .trust span:first-child{
+    @apply relative after:content-[''] md:block hidden
   }
   
-  .brands hr:first-child::after{
-    @apply absolute w-2 h-2 bg-amber-500 rotate-45
+  .brands span:first-child::after , .trust span:first-child::after {
+    @apply absolute w-2 h-2 bg-amber-500 rotate-45 right-0 -top-[3px]
+  }
+
+  .brands span:last-child , .trust span:last-child{
+    @apply relative after:content-[''] md:block hidden
+  }
+  
+  .brands span:last-child::after , .trust span:last-child::after{
+    @apply absolute w-2 h-2 bg-amber-500 rotate-45 left-0 -top-[3px]
   }
 
 
@@ -605,7 +638,7 @@ table td::-webkit-scrollbar {
 
 
 .main_slider .swiper-pagination .swiper-pagination-bullet {
-  @apply md:w-3! md:h-3! w-2! h-2! md:bg-white! md:opacity-100!
+  @apply md:w-3! md:h-3! w-1.5! h-1.5! md:bg-white! md:opacity-100!
 }
 
 .main_slider .swiper-pagination .swiper-pagination-bullet-active {
@@ -615,6 +648,21 @@ table td::-webkit-scrollbar {
 .main_slider .swiper-pagination{
   @apply h-5 md:bottom-2! md:opacity-100 px-5 bottom-0! flex items-center left-0 right-0 m-auto w-max! z-20 md:bg-transparent bg-white rounded-t-md
 }
+
+.nav-box .swiper-button-prev {
+  @apply absolute! top-2.5! -right-1! z-20!
+}
+
+
+.nav-box .swiper-button-next{
+  @apply absolute! top-2.5! -left-1! z-10!
+}
+
+.nav-box .swiper-button-prev:after, .nav-box .swiper-button-next:after{
+  @apply bg-transparent! text-[10px]! text-black! font-bold
+}
+
+
 
 
 

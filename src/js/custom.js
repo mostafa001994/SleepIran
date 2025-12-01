@@ -20,21 +20,6 @@ var main_slider = new Swiper(".main_slider", {
 
 
 
-var blog_slider = new Swiper(".blog_slider", {
-  spaceBetween: 20,
-  slidesPerView: 2,
-
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-});
 
 
 
@@ -169,6 +154,22 @@ var slider_image_gallery2 = new Swiper(
 
 
 
+var blog_slider = new Swiper(".blog_slider", {
+  spaceBetween: 20,
+  slidesPerView: 2,
+
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+
+});
+
 
 
 
@@ -229,6 +230,68 @@ const products = new Swiper(
 
 }
 )
+
+
+
+
+const blog_archive_products = new Swiper(
+  ".blog_archive", {
+  spaceBetween: 15
+  ,
+
+  loop: true,
+
+  // centeredSlides:true,
+  slidesPerView: 3,
+
+  // autoplay: true,
+  // using "ratio" endpoints
+
+  breakpoints: {
+    // when window width is >= 320px
+
+    300: {
+      slidesPerView: 2,
+
+    },
+
+    320: {
+      slidesPerView: 2,
+    },
+
+    480: {
+      slidesPerView: 2,
+
+    },
+
+    640: {
+      slidesPerView: 2,
+      // spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+
+    },
+    1265: {
+      slidesPerView: 4,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+}
+)
+
+
 
 
 
@@ -1029,7 +1092,6 @@ window.addEventListener("scroll", () => {
 
 //mobile menu 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
@@ -1072,6 +1134,57 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // 
+
+
+//mobile filter 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("FilterBtn");
+  const mobileMenu = document.getElementById("mobileFilter");
+  const closeMenu = document.getElementById("closeFilter");
+  const backdrop = document.getElementById("backdrop");
+
+
+  // باز کردن منو
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("translate-x-full");
+    backdrop.classList.remove("hidden");
+
+  });
+
+  // بستن منو با دکمه بستن
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
+
+  });
+
+  // بستن منو با کلیک بیرون
+  document.addEventListener("click", (e) => {
+    const isClickInsideMenu = mobileMenu.contains(e.target) || menuBtn.contains(e.target);
+    if (!isClickInsideMenu && !mobileMenu.classList.contains("translate-x-full")) {
+      mobileMenu.classList.add("translate-x-full");
+      backdrop.classList.add("hidden");
+    }
+  });
+
+
+  // بستن منو با کلیک روی بک‌دراپ
+  backdrop.addEventListener("click", () => {
+    mobileMenu.classList.add("translate-x-full");
+    backdrop.classList.add("hidden");
+  });
+
+
+
+});
+
+// 
+
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1585,4 +1698,5 @@ function toggleContent(button) {
       ? '+ نمایش بیشتر' 
       : '− نمایش کمتر';
   }
+
 
