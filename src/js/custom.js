@@ -539,6 +539,73 @@ const offers_slider = new Swiper(
 
 
 
+
+const landing_slider = new Swiper(
+  ".landing_slider", {
+  spaceBetween: 15
+  ,
+
+  loop: true,
+
+  // centeredSlides:true,
+  slidesPerView: 6,
+
+  // autoplay: true,
+  // using "ratio" endpoints
+
+  breakpoints: {
+    // when window width is >= 320px
+
+    300: {
+      slidesPerView: 2,
+      spaceBetween: 10
+
+
+    },
+
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 10
+
+    },
+
+    480: {
+      slidesPerView: 2,
+
+      spaceBetween: 10
+
+    },
+
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 3,
+
+    },
+    1265: {
+      slidesPerView: 4,
+    }
+
+
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+}
+)
+
+
+
+
 const brands_slider = new Swiper(
   ".brands_slider", {
   spaceBetween: 15

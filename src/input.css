@@ -105,6 +105,10 @@ table td::-webkit-scrollbar {
     background: #fff;
   }
 
+  .landing-products  .tab-btn.active{
+    background-color: #209BFE;
+    color: #fff;
+  }
 
 
 .fixed-tabs .container{
@@ -474,6 +478,35 @@ table td::-webkit-scrollbar {
     @apply  text-[10px]! md:text-sm! font-bold
   }
 
+  .landing-products .swiper-navs .swiper-button-prev,.landing-products  .swiper-navs .swiper-button-next{
+    @apply bg-transparent! shadow-none!
+  }
+
+  .landing-products .swiper-navs .swiper-button-prev:after,.landing-products  .swiper-navs .swiper-button-next:after{
+    @apply bg-transparent! shadow-none! font-thin text-white!
+  }
+
+  .landing-products  .swiper-navs .swiper-button-next{
+    @apply  -right-2.5!
+  }
+
+   .landing-products .swiper-navs .swiper-button-prev{
+    @apply -left-2.5!
+  }
+
+
+
+  .landing-swiper{
+    @apply w-max absolute left-0 bottom-0 bg-[#f9fcfd] z-10 py-9 px-[67px] rounded-tr-xl
+  }
+
+  .landing-swiper .swiper-button-prev , .landing-swiper .swiper-button-next  {
+    @apply text-white flex items-center justify-center bg-sky-500 rounded-full w-12! h-12!
+  }
+
+  .landing-swiper *::after{
+     @apply text-white flex items-center justify-center bg-sky-500! rounded-full w-12! h-12!
+  }
 
   .category_size .swiper-navs .swiper-button-prev:after,.category_size .swiper-navs .swiper-button-next:after {
     @apply  text-[10px]! md:text-sm! font-bold
